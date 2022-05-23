@@ -153,17 +153,26 @@ a:hover, a:after {
   margin-top: 5vh;
 }
 
+h3 {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  margin-top: 5vh;
+  margin-left: 25vh;
+  font-family: 'Raleway', sans-serif;  
+  position: absolute;
+}
+
 .doc-table {
   height: 95vh;
-  width: 90vh;
+  width: 175vh;
   background-color: rgb(148, 74, 74);
-  margin-top: 4vh;
-  margin-left: 110vh;
+  margin-top: 10vh;
+  margin-left: 25vh;
 }
 
 .left {
   height: 10vh;
-  width: 30vh;
+  width: 25vh;
   background-color: rgb(240, 232, 239);
   display: absolute;
 }
@@ -180,51 +189,10 @@ a:hover, a:after {
   position: absolute;
 }
 
-p2 {
-  color: rgb(0, 0, 0);
-  margin-left: 10vh;
-  margin-top: 4vh;
-  position: absolute;
-
-}
-
-.middle {
-  height: 10vh;
-  width: 30vh;
-  margin-left: 30vh;
-  margin-top: -10vh;
-  background-color: rgb(218, 206, 217);
-  display: absolute;
-}
-
-p1 {
-  color: rgb(0, 0, 0);
-  margin-left: 3vh;
-  margin-top: 4vh;
-  position: absolute;
-}
-
-.right {
-  height: 10vh;
-  width: 30vh;
-  margin-left: 60vh;
-  margin-top: -10vh;
-  background-color: rgb(193, 172, 190);
-  display: absolute;
-
-}
-
-.left2 {
-  height: 10vh;
-  width: 30vh;
-  background-color: rgb(240, 232, 239);
-  display: absolute;
-}
-
-.doc-image2 {
+.pat-image {
   height: 6vh;
   width: 6vh;
-  background-image: url("./Images/doc2.jpeg");
+  background-image: url("./Images/add_user.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
@@ -233,42 +201,103 @@ p1 {
   position: absolute;
 }
 
-.middle2 {
+p2 {
+  color: rgb(0, 0, 0);
+  margin-left: 10vh;
+  margin-top: 4vh;
+  position: absolute;
+
+}
+
+.doc-age {
   height: 10vh;
-  width: 30vh;
-  margin-left: 30vh;
-  margin-top: -10vh;
+  width: 25vh;
   background-color: rgb(218, 206, 217);
   display: absolute;
-
-}
-
-.right2 {
-  height: 10vh;
-  width: 30vh;
-  margin-left: 60vh;
+  margin-left: 25vh;
   margin-top: -10vh;
-  background-color: rgb(193, 172, 190);
-  display: absolute;
+
 }
 
-.cal {
-  height: 40vh;
-  width: 85vh;
-  margin-left: 24vh;
-  background-color: rgb(122, 49, 90);
-  margin-top: -95vh;
-  float: left; 
+p1 {
+  color: rgb(0, 0, 0);
+  margin-left: 1.5vh;
+  margin-top: 4vh;
   position: absolute;
 }
 
-.profile-table {
-  height: 44vh;
-  width: 85vh;
-  margin-left: 24vh;
-  background-color: rgb(109, 80, 97);
-  margin-top: -45vh;
-  float: left;
+.doc-email {
+  height: 10vh;
+  width: 25vh;
+  margin-left: 50vh;
+  background-color: rgb(193, 172, 190);
+  display: absolute;
+  margin-top: -10vh;
+}
+
+.doc-password {
+  height: 10vh;
+  width: 25vh;
+  margin-left: 75vh;
+  background-color: rgb(104, 4, 89);
+  display: absolute;
+  margin-top: -10vh;
+}
+
+.doc-num {
+  height: 10vh;
+  width: 25vh;
+  margin-left: 100vh;
+  margin-top: -10vh;
+  background-color: rgb(164, 115, 157);
+  display: absolute;
+}
+
+.doc-id {
+  height: 10vh;
+  width: 25vh;
+  margin-left: 125vh;
+  margin-top: -10vh;
+  background-color: rgb(145, 221, 124);
+  display: absolute;
+}
+
+.doc-room {
+  height: 10vh;
+  width: 25vh;
+  margin-left: 150vh;
+  margin-top: -10vh;
+  background-color: rgb(224, 220, 153);
+  display: absolute;
+}
+
+.pat-rank {
+  height: 10vh;
+  width: 25vh;
+  margin-left: 125vh;
+  margin-top: -10vh;
+  background-color: rgb(224, 220, 153);
+  display: absolute;
+}
+
+.pat-head {
+  height: 10vh;
+  width: 25vh;
+  margin-left: 150vh;
+  margin-top: -10vh;
+  background-color: rgb(143, 140, 99);
+  display: absolute;
+}
+
+.pat-remove {
+  background-image: url("./Images/remove.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 5vh;
+  width: 5vh;
+  margin: 3vh;
+  margin-left: 10vh;
+ 
   position: absolute;
 }
 
