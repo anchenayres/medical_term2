@@ -16,6 +16,42 @@ html, p, body {
 
 }
 
+.planner-img {
+  height: 3vh;
+  width: 3vh;
+  margin-left: 2vh;
+  margin-top: 41vh;
+  border-radius: 50%;
+  background-image: url("./Images/planner.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.patients-img {
+  height: 3vh;
+  width: 3vh;
+  margin-left: 2vh;
+  margin-top: 46vh;
+  border-radius: 50%;
+  background-image: url("./Images/patients.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.docter-img {
+  height: 3vh;
+  width: 3vh;
+  margin-left: 2vh;
+  margin-top: 51vh;
+  border-radius: 50%;
+  background-image: url("./Images/docter.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 h1 {
   color: rgb(255, 255, 255);
@@ -39,7 +75,7 @@ h1 {
 
 .side-nav {
   height: 100%;
-  width: 15vh;
+  width: 20vh;
   background-color: rgb(213, 177, 198);
   position: absolute;
   margin-top: -10vh;
@@ -50,7 +86,6 @@ h1 {
   font-family: 'Roboto Mono', monospace;
   margin-top: 40vh;
   line-height: 5vh;
-  text-align: center;
   font-size: 12px;
 }
 
@@ -61,15 +96,14 @@ a {
   cursor: pointer;
   color: rgb(255, 255, 255);
   padding-top: 5px;
+  margin-left: 2vh;
+
 }
 
 a:hover, a:after {
-  background-color: rgb(255, 255, 255);
   height: 20px;
   padding: 10px;
-  color: black;
-  
-
+  color: rgb(171, 59, 171);
 }
 
 .facebook {

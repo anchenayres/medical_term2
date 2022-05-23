@@ -16,8 +16,10 @@ const Navigation = () => {
 
         <div className="nav"></div>
         <div className="side-nav">
+                <div className="planner-img"></div>
+                <div className="patients-img"></div>
+                <div className="docter-img"></div>
         <ul>
-            
             <li><a href="/Appointments">Appointments</a></li>
             <li><a href="/Patients">Patients</a></li>
             <li><a href="/Doctors">Doctors</a></li>
