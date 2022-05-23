@@ -5,11 +5,11 @@ html, p, body {
   }
 
 .pro-image {
-  height: 15vh;
-  width: 15vh;
+  height: 18vh;
+  width: 18vh;
   border-radius: 50%;
   float: right;
-  margin: 2vh;
+  margin: 1vh;
   background-image: url("./Images/doc1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,14 +52,28 @@ html, p, body {
   background-size: cover;
 }
 
+.reception-img {
+  height: 3vh;
+  width: 3vh;
+  margin-left: 2vh;
+  margin-top: 55.5vh;
+  border-radius: 50%;
+  background-image: url("./Images/reception.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 h1 {
   color: rgb(255, 255, 255);
   position: absolute;
   font-size: 20px;
   font-family: 'Roboto Mono', monospace;
-  margin-left: 95vh;
   margin-top: 9vh;
+  margin-left: 3vh;
+  float: left;
+  font-family: 'Raleway', sans-serif;
   
 }
 
@@ -74,16 +88,15 @@ h1 {
 }
 
 .side-nav {
-  height: 100%;
+  height: 100vh;
   width: 20vh;
   background-color: rgb(213, 177, 198);
   position: absolute;
-  margin-top: -10vh;
 }
 
 .nav a, ul {
   list-style-type: none;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Raleway', sans-serif;  
   margin-top: 40vh;
   line-height: 5vh;
   font-size: 12px;
@@ -141,11 +154,11 @@ a:hover, a:after {
 }
 
 .doc-table {
-  height: 100vh;
+  height: 95vh;
   width: 90vh;
-  background-color: rgb(244, 208, 208);
-  margin-top: -10vh;
-  margin-left: 98vh;
+  background-color: rgb(148, 74, 74);
+  margin-top: 4vh;
+  margin-left: 110vh;
 }
 
 .left {
@@ -240,22 +253,23 @@ p1 {
 }
 
 .cal {
-  height: 50vh;
-  width: 87vh;
-  margin-right: 5vh;
-  background-color: rgb(247, 213, 232);
-  margin-top: -100vh;
-  float: left;
-  
+  height: 40vh;
+  width: 85vh;
+  margin-left: 24vh;
+  background-color: rgb(122, 49, 90);
+  margin-top: -95vh;
+  float: left; 
+  position: absolute;
 }
 
 .profile-table {
-  height: 40vh;
-  width: 87vh;
-  margin-right: 5vh;
+  height: 44vh;
+  width: 85vh;
+  margin-left: 24vh;
   background-color: rgb(109, 80, 97);
-  margin-top: -40vh;
+  margin-top: -45vh;
   float: left;
+  position: absolute;
 }
 
 /*PROFILE HEADING*/
