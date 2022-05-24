@@ -6,6 +6,13 @@ const Patients = () => {
     return (
     <>
     <h3>Current Patients</h3>
+    <h4>Name</h4>
+    <h5>Age</h5>
+    <h6>Email</h6>
+    <h7>Password</h7>
+    <h8>Number</h8>
+    <h9>Id</h9>
+    <h10>Room</h10>
     <div className="doc-table">
         <div className="left">
             <div className="pat-image"></div>

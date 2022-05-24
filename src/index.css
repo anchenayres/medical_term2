@@ -160,20 +160,21 @@ h3 {
   margin-left: 25vh;
   font-family: 'Raleway', sans-serif;  
   position: absolute;
+  border-bottom: 5px solid rgb(234, 198, 236); 
 }
 
 .doc-table {
   height: 95vh;
   width: 175vh;
   background-color: rgb(148, 74, 74);
-  margin-top: 10vh;
+  margin-top: 15vh;
   margin-left: 25vh;
 }
 
 .left {
   height: 10vh;
   width: 25vh;
-  background-color: rgb(240, 232, 239);
+  background-color: rgb(255, 255, 255);
   display: absolute;
 }
 
@@ -212,7 +213,7 @@ p2 {
 .doc-age {
   height: 10vh;
   width: 25vh;
-  background-color: rgb(218, 206, 217);
+  background-color: rgb(255, 255, 255);
   display: absolute;
   margin-left: 25vh;
   margin-top: -10vh;
@@ -230,7 +231,7 @@ p1 {
   height: 10vh;
   width: 25vh;
   margin-left: 50vh;
-  background-color: rgb(193, 172, 190);
+  background-color: rgb(255, 255, 255);
   display: absolute;
   margin-top: -10vh;
 }
@@ -239,7 +240,7 @@ p1 {
   height: 10vh;
   width: 25vh;
   margin-left: 75vh;
-  background-color: rgb(104, 4, 89);
+  background-color: rgb(255, 255, 255);
   display: absolute;
   margin-top: -10vh;
 }
@@ -249,7 +250,7 @@ p1 {
   width: 25vh;
   margin-left: 100vh;
   margin-top: -10vh;
-  background-color: rgb(164, 115, 157);
+  background-color: rgb(255, 255, 255);
   display: absolute;
 }
 
@@ -258,7 +259,7 @@ p1 {
   width: 25vh;
   margin-left: 125vh;
   margin-top: -10vh;
-  background-color: rgb(145, 221, 124);
+  background-color: rgb(255, 255, 255);
   display: absolute;
 }
 
@@ -267,7 +268,7 @@ p1 {
   width: 25vh;
   margin-left: 150vh;
   margin-top: -10vh;
-  background-color: rgb(224, 220, 153);
+  background-color: rgb(255, 255, 255);
   display: absolute;
 }
 
@@ -306,6 +307,74 @@ h2 {
   color: black;
   margin-top: -45vh;
   position: absolute;
+}
+
+h4 {
+  color: black;
+  margin-left: 25vh;
+  margin-top: 12vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+}
+
+h5 {
+  color: black;
+  margin-left: 52vh;
+  margin-top: 12vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+}
+
+h6 {
+  color: black;
+  margin-left: 80vh;
+  margin-top: 12vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+}
+
+h7 {
+  color: black;
+  margin-left: 100vh;
+  margin-top: 12vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+h8 {
+  color: black;
+  margin-left: 125vh;
+  margin-top: 12vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+h9 {
+  color: black;
+  margin-left: 155vh;
+  margin-top: 12vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+h10 {
+  color: black;
+  margin-left: 175vh;
+  margin-top: 12vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+
 }
 
 .footer {

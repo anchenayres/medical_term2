@@ -5,7 +5,24 @@ const Reception = () => {
 
     return (
     <>
-      <h3>All Receptionists</h3>
+    <h3>All Receptionists</h3>
+    <h4>Name</h4>
+    <h5>Age</h5>
+    <h6>Email</h6>
+    <h7>Password</h7>
+    <h8>Number</h8>
+    <h9>Rank</h9>
+    <h10>Edit</h10>
+
+    <div id="calendar">
+        <div id="calendar-header">
+            <i className="calendar-arrow-left"></i>
+            <i className="calendar-arrow-right"></i>
+        </div>
+        <div id="calendar-weekdays"></div>
+        <div id="calendar-content"></div>
+    </div>
+
     <div className="doc-table">
         <div className="left">
             <div className="pat-image"></div>
