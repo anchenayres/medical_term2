@@ -5,7 +5,16 @@ const Patients = () => {
 
     return (
     <>
+
+    <div className="calendar">
+        <div className="cal-heading">
+            <h11>April 2022</h11>
+        </div>
+    </div>
+
+    <div className="headings">
     <h3>Current Patients</h3>
+
     <h4>Name</h4>
     <h5>Age</h5>
     <h6>Email</h6>
@@ -13,6 +22,7 @@ const Patients = () => {
     <h8>Number</h8>
     <h9>Id</h9>
     <h10>Room</h10>
+    </div>
     <div className="doc-table">
         <div className="left">
             <div className="pat-image"></div>
