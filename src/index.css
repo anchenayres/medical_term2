@@ -88,7 +88,7 @@ h1 {
 }
 
 .side-nav {
-  height: 100vh;
+  height: 140vh;
   width: 20vh;
   background-color: rgb(213, 177, 198);
   position: absolute;
@@ -156,7 +156,7 @@ a:hover, a:after {
 h3 {
   color: rgb(0, 0, 0);
   font-size: 20px;
-  margin-top: 5vh;
+  margin-top: 35vh;
   margin-left: 25vh;
   font-family: 'Raleway', sans-serif;  
   position: absolute;
@@ -167,7 +167,7 @@ h3 {
   height: 95vh;
   width: 175vh;
   background-color: rgb(148, 74, 74);
-  margin-top: 50vh;
+  margin-top: 70vh;
   margin-left: 25vh;
 }
 
@@ -176,6 +176,9 @@ h3 {
   width: 25vh;
   background-color: rgb(255, 255, 255);
   display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+
 }
 
 .doc-image {
@@ -188,6 +191,7 @@ h3 {
   margin-left: 2vh;
   margin-top: 2vh;
   position: absolute;
+  
 }
 
 .pat-image {
@@ -197,17 +201,15 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
-  margin-left: 2vh;
-  margin-top: 2vh;
+  margin-top: 3.1vh;
   position: absolute;
 }
 
 p2 {
   color: rgb(0, 0, 0);
-  margin-left: 10vh;
+  margin-left: 7vh;
   margin-top: 4vh;
   position: absolute;
-
 }
 
 .doc-age {
@@ -217,12 +219,13 @@ p2 {
   display: absolute;
   margin-left: 25vh;
   margin-top: -10vh;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
 
 }
 
 p1 {
   color: rgb(0, 0, 0);
-  margin-left: 1.5vh;
   margin-top: 4vh;
   position: absolute;
 }
@@ -234,6 +237,8 @@ p1 {
   background-color: rgb(255, 255, 255);
   display: absolute;
   margin-top: -10vh;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
 }
 
 .doc-password {
@@ -243,6 +248,9 @@ p1 {
   background-color: rgb(255, 255, 255);
   display: absolute;
   margin-top: -10vh;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+
 }
 
 .doc-num {
@@ -252,6 +260,9 @@ p1 {
   margin-top: -10vh;
   background-color: rgb(255, 255, 255);
   display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+
 }
 
 .doc-id {
@@ -261,6 +272,9 @@ p1 {
   margin-top: -10vh;
   background-color: rgb(255, 255, 255);
   display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+
 }
 
 .doc-room {
@@ -270,6 +284,8 @@ p1 {
   margin-top: -10vh;
   background-color: rgb(255, 255, 255);
   display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
 }
 
 .pat-rank {
@@ -286,7 +302,7 @@ p1 {
   width: 25vh;
   margin-left: 150vh;
   margin-top: -10vh;
-  background-color: rgb(143, 140, 99);
+  background-color: rgb(255, 246, 126);
   display: absolute;
 }
 
@@ -313,25 +329,142 @@ h2 {
   background-color:rgb(147, 113, 173);
   width: 55vh;
   height: 10vh;
+  border-top-right-radius: 5vh;
+  border-top-left-radius: 5vh;
+
 }
 
 .calendar {
   background-color:rgb(236, 219, 249);
   width: 55vh;
   height: 50vh;
-  margin-top: -20vh;;
-  margin-left: 145vh;
+  margin-top: 5vh;;
+  margin-left: 25vh;
   position: absolute;
-  border-bottom-right-radius: 10vh;
-  border-bottom-left-radius: 10vh;
+  border-bottom-right-radius: 5vh;
+  border-bottom-left-radius: 5vh;
+  border-top-right-radius: 5vh;
+  border-top-left-radius: 5vh;
 
 }
 
 .headings {
-  background-color:rgb(143, 140, 99);
   width: 100%;
   height: 20vh;
-  margin-top: 50vh;
+  margin-top: 25vh;
+  position: absolute;
+  
+}
+
+.week {
+  color: rgb(2, 2, 2);
+  margin-top: 1vh;
+  margin-left: -5vh;
+  position: absolute;
+}
+
+.week li {
+  display: inline-block;
+  margin: 2.5vh;
+}
+
+.sun {
+  color: rgb(2, 2, 2);
+  margin-top: 15vh;
+  margin-left: 23vh;
+  position: absolute;
+
+}
+
+.sun li {
+  margin-left: -24.5vh;
+}
+
+.mon {
+  color: rgb(2, 2, 2);
+  margin-top: 15vh;
+  margin-left: 31.5vh;
+  position: absolute;
+}
+
+.mon li {
+  margin-left: -24.5vh;
+}
+
+.tue {
+  color: rgb(2, 2, 2);
+  margin-top: 15vh;
+  margin-left: 31vh;
+  position: absolute;
+}
+
+.tue li {
+  margin-left: -16vh;
+}
+
+.wed {
+  color: rgb(2, 2, 2);
+  margin-top: 15vh;
+  margin-left: 39vh;
+  position: absolute;
+}
+
+.wed li {
+  margin-left: -16vh;
+}
+
+.thu {
+  color: rgb(2, 2, 2);
+  margin-top: 15vh;
+  margin-left: 46.5vh;
+  position: absolute;
+}
+
+.thu li {
+  margin-left: -16vh;
+}
+
+.fri {
+  color: rgb(2, 2, 2);
+  margin-top: 10vh;
+  margin-left: 53.4vh;
+  position: absolute;
+}
+
+.fri li {
+  margin-left: -16vh;
+}
+
+.sat {
+  color: rgb(2, 2, 2);
+  margin-top: 10vh;
+  margin-left: 61vh;
+  position: absolute;
+}
+
+.sat li {
+  margin-left: -16vh;
+}
+
+.left-arrow {
+  background-image: url("./Images/left-arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 5vh;
+  width: 5vh;
+  margin-top: 2vh;
+  margin-left: 45vh;
+  position: absolute;
+}
+
+.right-arrow {
+  background-image: url("./Images/right-arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 5vh;
+  width: 5vh;
+  margin-top: 2vh;
+  margin-left: 35vh;
   position: absolute;
 }
 
@@ -341,23 +474,23 @@ h11 {
   font-size: 3vh;
   margin-top: 3vh;
   margin-left: 3vh;
-
   position: absolute;
 }
 
 h4 {
   color: black;
   margin-left: 25vh;
-  margin-top: 12vh;
+  margin-top: 42vh;
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
+  
 }
 
 h5 {
-  color: black;
-  margin-left: 52vh;
-  margin-top: 12vh;
+  color: rgb(0, 0, 0);
+  margin-left: 50vh;
+  margin-top: 42vh;
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
@@ -365,17 +498,17 @@ h5 {
 
 h6 {
   color: black;
-  margin-left: 80vh;
-  margin-top: 12vh;
+  margin-left: 75vh;
+  margin-top: 42vh;
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
 }
 
 h7 {
-  color: black;
+  color: rgb(0, 0, 0);
   margin-left: 100vh;
-  margin-top: 12vh;
+  margin-top: 42vh;
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
@@ -385,7 +518,7 @@ h7 {
 h8 {
   color: black;
   margin-left: 125vh;
-  margin-top: 12vh;
+  margin-top: 42vh;
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
@@ -394,8 +527,8 @@ h8 {
 
 h9 {
   color: black;
-  margin-left: 155vh;
-  margin-top: 12vh;
+  margin-left: 150vh;
+  margin-top: 42vh;
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
@@ -405,7 +538,7 @@ h9 {
 h10 {
   color: black;
   margin-left: 175vh;
-  margin-top: 12vh;
+  margin-top: 42vh;
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
@@ -413,7 +546,7 @@ h10 {
 }
 
 .footer {
-  margin-top: 100vh;
+  margin-top: 135vh;
   height: 10vh;
   width: 100%;
   position: absolute;
