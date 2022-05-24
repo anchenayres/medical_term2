@@ -10,11 +10,9 @@ const Navigation = () => {
         <div className="pictures">
         <h1>Welcome Back Dr.Manley</h1>
         <div className="pro-image"></div>
+        </div>
 
-    
-  
-       
-    </div>
+        <div className="logo"></div>
 
         <div className="nav"></div>
         <div className="side-nav">
