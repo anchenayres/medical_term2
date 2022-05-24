@@ -12,10 +12,10 @@ const Navigation = () => {
         <div className="pro-image"></div>
         </div>
 
-        <div className="logo"></div>
-
         <div className="nav"></div>
         <div className="side-nav">
+        <div className="logo"></div>
+
 
                 <div className="planner-img"></div>
                 <div className="patients-img"></div>

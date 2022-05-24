@@ -267,13 +267,12 @@ p1 {
 
 .logo {
   height: 15vh;
-  width: 21vh;
-  background-size: cover;
-  margin-left: 5vh;
-  margin-top: -19vh;
-  background-image: url("./Images/logooo.png");
-  background-repeat: no-repeat;
+  width: 15vh;
+  background-color: white;
+  margin-left: 2vh;
+  border-radius: 50%;
   position: absolute;
+  margin-top: 20vh;
 }
 
 .doc-id {
@@ -337,16 +336,15 @@ h2 {
 }
 
 .cal-heading {
-  background-color:rgb(147, 113, 173);
+  background-color:rgb(224, 186, 224);
   width: 55vh;
   height: 10vh;
   border-top-right-radius: 5vh;
   border-top-left-radius: 5vh;
-
 }
 
 .calendar {
-  background-color:rgb(236, 219, 249);
+  background-color: rgb(250, 236, 252);
   width: 55vh;
   height: 50vh;
   margin-top: 5vh;;
@@ -488,6 +486,15 @@ h11 {
   position: absolute;
 }
 
+h12 {
+  color: white;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 3vh;
+  margin-top: 3vh;
+  margin-left: 3vh;
+  position: absolute;
+}
+
 h4 {
   color: black;
   margin-left: 25vh;
@@ -554,6 +561,113 @@ h10 {
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
   font-weight: bolder;
+}
+
+.heading {
+  background-color:rgb(224, 186, 224);
+  width: 40vh;
+  height: 10vh;
+  border-top-right-radius: 5vh;
+  border-top-left-radius: 5vh;
+}
+
+.today-appointments {
+  width: 40vh;
+  height:50vh;
+  background-color: rgb(250, 236, 252);
+  position: absolute;
+  margin-left: 85vh;
+  margin-top: 5vh;
+  border-bottom-right-radius: 5vh;
+  border-bottom-left-radius: 5vh;
+  border-top-right-radius: 5vh;
+  border-top-left-radius: 5vh;
+}
+
+.month-balance {
+  width: 40vh;
+  height: 23vh;
+  background-color: rgb(250, 236, 252);
+  position: absolute;
+  margin-left: 130vh;
+  margin-top: 5vh;
+  border-bottom-right-radius: 5vh;
+  border-bottom-left-radius: 5vh;
+  border-top-right-radius: 5vh;
+  border-top-left-radius: 5vh;
+}
+
+h13 {
+  color:rgb(97, 66, 102);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 10vh;
+  margin-top: 37vh;
+  margin-left: 15vh;
+  position: absolute
+}
+
+.client-app1 {
+  color: rgb(2, 2, 2);
+  margin-top: 12vh;
+  margin-left: 2vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 5vh;
+  width: 33vh;
+}
+
+.client-app1 li {
+  margin-left: -4vh;
+  display: inline-block;
+  margin-right: 7vh;
+}
+
+.client-app2 {
+  color: rgb(2, 2, 2);
+  margin-top: 18vh;
+  margin-left: 2vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 5vh;
+  width: 33vh;
+}
+
+.client-app2 li {
+  margin-left: -4vh;
+  display: inline-block;
+  margin-right: 7vh;
+}
+
+.client-app3 {
+  color: rgb(2, 2, 2);
+  margin-top: 24vh;
+  margin-left: 2vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 5vh;
+  width: 33vh;
+}
+
+.client-app3 li {
+  margin-left: -4vh;
+  display: inline-block;
+  margin-right: 7vh;
+}
+
+.client-app4 {
+  color: rgb(2, 2, 2);
+  margin-top: 30vh;
+  margin-left: 2vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 5vh;
+  width: 33vh;
+}
+
+.client-app4 li {
+  margin-left: -4vh;
+  display: inline-block;
+  margin-right: 7vh;
 }
 
 .footer {

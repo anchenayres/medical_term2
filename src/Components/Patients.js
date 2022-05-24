@@ -6,6 +6,18 @@ const Patients = () => {
     return (
     <>
 
+<div className="today-appointments">
+        <div className="heading">
+            <h12>Upcoming Appointments</h12>
+        </div>
+    </div>
+
+    <div className="month-balance">
+        <div className="heading">
+            <h12>Past Appointments</h12>
+        </div>
+    </div>
+
     <div className="calendar">
         <div className="cal-heading">
             <h11>April 2022</h11>

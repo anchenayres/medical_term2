@@ -5,9 +5,43 @@ import React from "react";
 const Appointments = () => {
 
     return (
-
-        
     <>
+
+    <div className="today-appointments">
+        <div className="heading">
+            <h12>Today's Appointments</h12>
+           
+            
+            <ul className="client-app1">
+                <li><b>Mrs. Lane </b></li>
+                <li>13:30 PM </li>
+                <li>Dr. Manley</li>
+            </ul>
+            <ul className="client-app2">
+                <li><b>Mrs. Charnel </b></li>
+                <li>15:30 PM</li>
+                <li>Dr. Manley</li>
+            </ul>
+            <ul className="client-app3">
+                <li><b>Mrs. Staden </b></li>
+                <li>17:00 PM</li>
+                <li>Dr. Manley</li>
+            </ul>
+            <ul className="client-app4">
+                <li><b>Mrs. Chew </b></li>
+                <li>19:15 PM</li>
+                <li>Dr. Manley</li>
+            </ul>
+            <h13>4</h13>
+        </div>
+    </div>
+
+    <div className="month-balance">
+        <div className="heading">
+            <h12>This Month</h12>
+        </div>
+    </div>
+
     <div className="calendar">
         <div className="cal-heading">
             <h11>April 2022</h11>
@@ -69,7 +103,6 @@ const Appointments = () => {
         </ul>
     </div>
 
-    <div className="g"></div>
 
 
     <div className="headings">
@@ -125,3 +158,8 @@ const Appointments = () => {
 };
 
 export default Appointments;
+
+//doctors who are on leave
+//total patients
+//staff members
+//upcoming and past treatments
