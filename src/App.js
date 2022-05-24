@@ -12,7 +12,8 @@ function App() {
     <div className="app">
       <Navigation />
       <Routes>
-        <Route path="/" element = {<Appointments />} />
+        <Route path="/" element = {<Navigation />} />
+        <Route path="/Appointments" element = {<Appointments />} />
         <Route path="/Patients" element = {<Patients />} />
         <Route path="/Doctors" element = {<Doctors />} />
         <Route path="/Reception" element = {<Reception />} />

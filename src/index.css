@@ -374,7 +374,76 @@ h10 {
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
   font-weight: bolder;
+}
 
+#calendar {
+  width: 320px;
+  font-family: 'Raleway', sans-serif;  
+  background-color:rgb(143, 140, 99);
+  height: 320px;
+  margin-left: 20vh;
+}
+
+#calendar-weekdays div {
+  display: inline-block;
+  vertical-align:top;
+}
+
+#calendar-context, #calendar-weekdays, #calendar-header {
+  position: relative;
+  width:320px;
+  overflow: hidden;
+  text-align: center;
+  background-color: aqua;
+  color: black;
+}
+
+#calendar-weekdays div, #calendar-content div{
+  width:40px;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #dd5e5e;
+  color: #787878;
+}
+
+#calendar-content{
+  -webkit-border-radius: 0px 0px 12px 12px;
+  -moz-border-radius: 0px 0px 12px 12px; 
+  border-radius: 0px 0px 12px 12px;
+}
+#calendar-content div{
+  float: left;
+}
+#calendar-content div:hover{
+  background-color: #F8F8F8;
+}
+#calendar-content div.blank{
+  background-color: #E8E8E8;
+}
+#calendar-header, #calendar-content div.today{
+  zoom: 1;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+#calendar-content div.today{
+  color: #FFFFFF;
+}
+#calendar-header{
+  width: 100%;
+  height: 37px;
+  text-align: center;
+  background-color: #FF6860;
+  padding: 18px 0;
+  -webkit-border-radius: 12px 12px 0px 0px;
+  -moz-border-radius: 12px 12px 0px 0px; 
+  border-radius: 12px 12px 0px 0px;
+}
+#calendar-header h1{
+  font-size: 1.5em;
+  color: #FFFFFF;
+  float:left;
+  width:70%;
 }
 
 .footer {

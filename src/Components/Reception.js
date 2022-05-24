@@ -14,14 +14,7 @@ const Reception = () => {
     <h9>Rank</h9>
     <h10>Edit</h10>
 
-    <div id="calendar">
-        <div id="calendar-header">
-            <i className="calendar-arrow-left"></i>
-            <i className="calendar-arrow-right"></i>
-        </div>
-        <div id="calendar-weekdays"></div>
-        <div id="calendar-content"></div>
-    </div>
+
 
     <div className="doc-table">
         <div className="left">
