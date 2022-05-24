@@ -4,6 +4,84 @@ html, p, body {
     background-color: rgb(255, 255, 255);
   }
 
+.search-bar {
+  height: 5vh;
+  width: 20vh;
+  border: 1px solid rgb(228, 188, 238);
+  margin-left: 148vh;
+  margin-top: -19vh;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  position: absolute;
+}
+
+h15 {
+  color: rgb(2, 2, 2);
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;  
+  margin-left: 12vh;
+  margin-top: 1.3vh;
+  position: absolute;
+}
+
+.login {
+  margin-left: 170vh;
+  margin-top:-19vh;
+  color: black;
+  position: absolute;
+  height: 5vh;
+  width: 10vh;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  border: 1px solid rgb(228, 188, 238);
+
+}
+
+.login li a{
+  color: black;
+  list-style-type: none;
+  font-size: 15px;
+  margin-left: -0.2vh;
+}
+
+.login a:hover, a:after {
+  height: 20px;
+  padding: 10px;
+  color: rgb(171, 59, 171);
+}
+
+.register {
+  margin-left: 187vh;
+  margin-top:-19vh;
+  color: black;
+  position: absolute;
+  height: 5vh;
+  width: 10vh;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  border: 1px solid rgb(228, 188, 238);
+
+}
+
+.register li a{
+  color: black;
+  list-style-type: none;
+  font-size: 15px;
+  margin-left: -0.5vh;
+}
+
+.register a:hover, a:after {
+  height: 20px;
+  padding: 10px;
+  color: rgb(171, 59, 171);
+}
+
 .pro-image {
   height: 18vh;
   width: 18vh;
@@ -69,7 +147,7 @@ h1 {
   color: rgb(0, 0, 0);
   position: absolute;
   font-size: 20px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Raleway', sans-serif;  
   margin-top: 9vh;
   margin-left: 145vh;
   float: left;
