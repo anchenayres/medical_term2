@@ -163,6 +163,16 @@ h3 {
   border-bottom: 5px solid rgb(234, 198, 236); 
 }
 
+h14 {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  margin-top: 60vh;
+  margin-left: 25vh;
+  font-family: 'Raleway', sans-serif;  
+  position: absolute;
+  border-bottom: 5px solid rgb(234, 198, 236); 
+}
+
 .doc-table {
   height: 95vh;
   width: 175vh;
@@ -184,7 +194,7 @@ h3 {
 .doc-image {
   height: 6vh;
   width: 6vh;
-  background-image: url("./Images/doc1.jpeg");
+  background-image: url("./Images/add_user.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
@@ -514,6 +524,16 @@ h5 {
   font-size: 15px;
 }
 
+h15 {
+  color: rgb(0, 0, 0);
+  margin-left: 25vh;
+  margin-top: 70vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+
 h6 {
   color: black;
   margin-left: 75vh;
@@ -523,10 +543,31 @@ h6 {
   font-size: 15px;
 }
 
+h16 {
+  color: black;
+  margin-left: 50vh;
+  margin-top: 70vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+
+}
+
 h7 {
   color: rgb(0, 0, 0);
   margin-left: 100vh;
   margin-top: 42vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+h17 {
+  color: rgb(0, 0, 0);
+  margin-left: 75vh;
+  margin-top: 70vh;
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
@@ -543,6 +584,16 @@ h8 {
   font-weight: bolder;
 }
 
+h18 {
+  color: black;
+  margin-left: 100vh;
+  margin-top: 70vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+
 h9 {
   color: black;
   margin-left: 150vh;
@@ -553,10 +604,40 @@ h9 {
   font-weight: bolder;
 }
 
+h19 {
+  color: black;
+  margin-left: 125vh;
+  margin-top: 70vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+
 h10 {
   color: black;
   margin-left: 175vh;
   margin-top: 42vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+h20 {
+  color: black;
+  margin-left: 150vh;
+  margin-top: 70vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+h21 {
+  color: black;
+  margin-left: 175vh;
+  margin-top: 70vh;
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;

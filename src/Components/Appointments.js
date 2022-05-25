@@ -13,8 +13,8 @@ const Appointments = () => {
            
             
             <ul className="client-app1">
-                <li><b>Mrs. Lane </b></li>
-                <li>13:30 PM </li>
+                <li><b>Mrs. Lay </b></li>
+                <li>11:45 PM </li>
                 <li>Dr. Manley</li>
             </ul>
             <ul className="client-app2">
@@ -28,9 +28,9 @@ const Appointments = () => {
                 <li>Dr. Manley</li>
             </ul>
             <ul className="client-app4">
-                <li><b>Mrs. Chew </b></li>
+                <li><b>Mrs. Ley </b></li>
                 <li>19:15 PM</li>
-                <li>Dr. Manley</li>
+                <li>Dr. Chew</li>
             </ul>
             <h13>4</h13>
         </div>
