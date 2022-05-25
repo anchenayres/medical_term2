@@ -1,4 +1,6 @@
 import Navigation from "./Components/Navigation";
+import Login from "./Components/Login";
+import Register from "./Components/Register";
 import Appointments from "./Components/Appointments";
 import Patients from "./Components/Patients";
 import Doctors from "./Components/Doctors";
@@ -17,6 +19,9 @@ function App() {
         <Route path="/Patients" element = {<Patients />} />
         <Route path="/Doctors" element = {<Doctors />} />
         <Route path="/Reception" element = {<Reception />} />
+        <Route path="/Login" element = {<Login />} />
+        <Route path="/Register" element = {<Register />} />
+
       </Routes>
     </div>
     </>

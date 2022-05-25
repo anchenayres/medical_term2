@@ -11,6 +11,15 @@ const Navigation = () => {
         <h1>Welcome Back Dr.Manley</h1>
         <div className="pro-image"></div>
         </div>
+        <div className="search-bar">
+            <h15>Search</h15>
+        </div>
+        <ul className="login">
+            <li><a href="/Login">Sign In</a></li>
+        </ul>
+        <ul className="register">
+            <li><a href="/Register">Sign Up</a></li>
+        </ul>
 
         <div className="nav"></div>
         <div className="side-nav">
