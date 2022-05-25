@@ -4,6 +4,160 @@ html, p, body {
     background-color: rgb(255, 255, 255);
   }
 
+.behind {
+  height: 100vh;
+  width:100%;
+  background-image: url("./Images/cancer5.jpg");
+  opacity: 0.5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.login-heading {
+  height: 60vh;
+  width: 50vh;
+  margin-left: 130vh;
+  margin-top: 35vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  background-color: rgb(250, 231, 246);
+}
+
+.box1 {
+  height: 5vh;
+  width: 35vh;
+  background-color: rgb(254, 254, 254);
+  margin-left: 8vh;
+  margin-top: 20vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
+.box2 {
+  height: 5vh;
+  width: 35vh;
+  background-color: rgb(254, 254, 254);
+  margin-left: 8vh;
+  margin-top: 32vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
+.box3 {
+  height: 5vh;
+  width: 15vh;
+  background-color: rgb(254, 195, 253);
+  margin-left: 18vh;
+  margin-top: 50vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+}
+.box4 {
+  height: 5vh;
+  width: 35vh;
+  background-color: rgb(254, 254, 254);
+  margin-left: 18vh;
+  margin-top: 20vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
+.box5 {
+  height: 5vh;
+  width: 35vh;
+  background-color: rgb(254, 254, 254);
+  margin-left: 18vh;
+  margin-top: 32vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
+.box6 {
+  height: 5vh;
+  width: 15vh;
+  background-color: rgb(254, 195, 253);
+  margin-left: 28vh;
+  margin-top: 50vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+}
+.box7 {
+  height: 5vh;
+  width: 15vh;
+  background-color: rgb(254, 195, 253);
+  margin-left: 28vh;
+  margin-top: 50vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+}
+.box8 {
+  height: 5vh;
+  width: 15vh;
+  background-color: rgb(254, 195, 253);
+  margin-left: 28vh;
+  margin-top: 50vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+}
+.box9 {
+  height: 5vh;
+  width: 15vh;
+  background-color: rgb(254, 195, 253);
+  margin-left: 28vh;
+  margin-top: 50vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+}
+p1 {
+  margin-top: 20vh;
+  margin-left: 20vh;
+  font-size: 3vh;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-weight: lighter;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
+
+.username-login {
+  margin-left: 2vh;
+  margin-top: -3vh;
+  font-size: 2vh;
+  font-family: 'Raleway', sans-serif;  
+  position: absolute;
+}
+
 .search-bar {
   height: 5vh;
   width: 20vh;
@@ -185,7 +339,7 @@ a {
   line-height: 5vh;
   text-decoration: none;
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding-top: 5px;
   margin-left: 2vh;
 
