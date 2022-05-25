@@ -604,12 +604,11 @@ h5 {
 
 h15 {
   color: rgb(0, 0, 0);
-  margin-left: 25vh;
-  margin-top: 70vh;
+  margin-left: 12vh;
+  margin-top: 1.2vh;
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
-  font-weight: bolder;
 }
 
 h6 {
