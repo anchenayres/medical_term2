@@ -21,11 +21,12 @@ const Register = () => {
         <div className="box5"><div className="surname-reg">Surname</div></div>
         <div className="box6"><div className="age-reg">Age</div></div>
         <div className="box7"><div className="gender-reg">Gender</div></div>
-        <div className="box8"><div className="cell-reg">Phone Number</div></div>
+        <div className="box8"><div className="number-reg">Phone Number</div></div>
         <div className="box9"><div className="email-reg">Email</div></div>
         <div className="box10"><div className="pass-reg">Password</div></div>
         <div className="box11"><div className="conpass-reg">Confirm Password</div></div>
-        <div className="box12"><div className="reg-button">Confirm</div></div>
+        <div className="box12"><div className="reg-button">Sign Up</div></div>
+        <div className="login-link">Already have an account?<a href="/Login">Login</a></div>
 
     </div>
     </>

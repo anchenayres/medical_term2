@@ -91,6 +91,13 @@ html, p, body {
   border-top-left-radius: 10vh;
   border-bottom: 2px solid rgb(254, 195, 253);
 }
+.name-reg {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  margin-top: 1vh;
+  margin-left: 1vh;
+}
 .box5 {
   height: 5vh;
   width: 33vh;
@@ -103,6 +110,13 @@ html, p, body {
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
   border-bottom: 2px solid rgb(254, 195, 253);
+}
+.surname-reg {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  margin-top: 1vh;
+  margin-left: 1vh;
 }
 .box6 {
   height: 5vh;
@@ -117,6 +131,13 @@ html, p, body {
   border-top-left-radius: 10vh;
   border-bottom: 2px solid rgb(254, 195, 253);
 }
+.age-reg {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  margin-top: 1vh;
+  margin-left: 1vh;
+}
 .box7 {
   height: 5vh;
   width: 33vh;
@@ -129,6 +150,13 @@ html, p, body {
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
   border-bottom: 2px solid rgb(254, 195, 253);
+}
+.gender-reg {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  margin-top: 1vh;
+  margin-left: 1vh;
 }
 .box8 {
   height: 5vh;
@@ -143,6 +171,13 @@ html, p, body {
   border-top-left-radius: 10vh;
   border-bottom: 2px solid rgb(254, 195, 253);
 }
+.number-reg {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  margin-top: 1vh;
+  margin-left: 1vh;
+}
 .box9 {
   height: 5vh;
   width: 33vh;
@@ -155,6 +190,13 @@ html, p, body {
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
   border-bottom: 2px solid rgb(254, 195, 253);
+}
+.email-reg {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  margin-top: 1vh;
+  margin-left: 1vh;
 }
 .box10 {
   height: 5vh;
@@ -169,6 +211,13 @@ html, p, body {
   border-top-left-radius: 10vh;
   border-bottom: 2px solid rgb(254, 195, 253);
 }
+.pass-reg {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  margin-top: 1vh;
+  margin-left: 1vh;
+}
 .box11 {
   height: 5vh;
   width: 70vh;
@@ -182,25 +231,19 @@ html, p, body {
   border-top-left-radius: 10vh;
   border-bottom: 2px solid rgb(254, 195, 253);
 }
-.box11 {
-  height: 5vh;
-  width: 70vh;
-  background-color: rgb(255, 255, 255);
-  margin-left: 5vh;
-  margin-top: 60vh;
-  position: absolute;
-  border-bottom-right-radius: 10vh;
-  border-top-right-radius: 10vh;
-  border-bottom-left-radius: 10vh;
-  border-top-left-radius: 10vh;
-  border-bottom: 2px solid rgb(254, 195, 253);
+.conpass-reg {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  margin-top: 1vh;
+  margin-left: 1vh;
 }
 .box12 {
   height: 5vh;
   width: 33vh;
   background-color: rgb(255, 255, 255);
   margin-left: 23vh;
-  margin-top: 80vh;
+  margin-top: 75vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
@@ -208,12 +251,33 @@ html, p, body {
   border-top-left-radius: 10vh;
   border-bottom: 2px solid rgb(254, 195, 253);
 }
-
+.reg-button {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  margin-top: 1.2vh;
+  margin-left: 13vh;
+}
+.login-link  {
+  color: rgb(0, 0, 0);
+  margin-top: 80vh;
+  margin-left: 27vh;
+  position: absolute;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;  
+}
+.login-link a {
+  color: rgb(240, 121, 235);
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;  
+  margin-left: 1vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
 
 p1 {
   margin-top: 20vh;
-  margin-left: 20vh;
-  font-size: 3vh;
+  margin-left: 23vh;
+  font-size: 5vh;
   color: rgb(255, 255, 255);
   position: absolute;
   font-family: 'Raleway', sans-serif;  
