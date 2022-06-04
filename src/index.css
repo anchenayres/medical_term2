@@ -27,10 +27,23 @@ html, p, body {
   background-color: rgb(250, 231, 246);
 }
 
+.reg-box {
+  height: 90vh;
+  width: 80vh;
+  margin-left: 115vh;
+  margin-top: 5vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  background-color: rgb(250, 231, 246);
+}
+
 .box1 {
   height: 5vh;
   width: 35vh;
-  background-color: rgb(254, 254, 254);
+  background-color: rgb(237, 142, 142);
   margin-left: 8vh;
   margin-top: 20vh;
   position: absolute;
@@ -67,9 +80,9 @@ html, p, body {
 }
 .box4 {
   height: 5vh;
-  width: 35vh;
+  width: 33vh;
   background-color: rgb(254, 254, 254);
-  margin-left: 18vh;
+  margin-left: 5vh;
   margin-top: 20vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
@@ -80,10 +93,10 @@ html, p, body {
 }
 .box5 {
   height: 5vh;
-  width: 35vh;
+  width: 33vh;
   background-color: rgb(254, 254, 254);
-  margin-left: 18vh;
-  margin-top: 32vh;
+  margin-left: 42vh;
+  margin-top: 20vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
@@ -93,52 +106,110 @@ html, p, body {
 }
 .box6 {
   height: 5vh;
-  width: 15vh;
-  background-color: rgb(254, 195, 253);
-  margin-left: 28vh;
-  margin-top: 50vh;
+  width: 33vh;
+  background-color: rgb(254, 254, 254);
+  margin-left: 5vh;
+  margin-top: 30vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
 }
 .box7 {
   height: 5vh;
-  width: 15vh;
-  background-color: rgb(254, 195, 253);
-  margin-left: 28vh;
-  margin-top: 50vh;
+  width: 33vh;
+  background-color: rgb(254, 254, 254);
+  margin-left: 42vh;
+  margin-top: 30vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
 }
 .box8 {
   height: 5vh;
-  width: 15vh;
-  background-color: rgb(254, 195, 253);
-  margin-left: 28vh;
-  margin-top: 50vh;
+  width: 33vh;
+  background-color: rgb(254, 254, 254);
+  margin-left: 5vh;
+  margin-top: 40vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
 }
 .box9 {
   height: 5vh;
-  width: 15vh;
-  background-color: rgb(254, 195, 253);
-  margin-left: 28vh;
+  width: 33vh;
+  background-color: rgb(254, 254, 254);
+  margin-left: 42vh;
+  margin-top: 40vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
+.box10 {
+  height: 5vh;
+  width: 70vh;
+  background-color: rgb(254, 254, 254);
+  margin-left: 5vh;
   margin-top: 50vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
 }
+.box11 {
+  height: 5vh;
+  width: 70vh;
+  background-color: rgb(254, 254, 254);
+  margin-left: 5vh;
+  margin-top: 60vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
+.box11 {
+  height: 5vh;
+  width: 70vh;
+  background-color: rgb(255, 255, 255);
+  margin-left: 5vh;
+  margin-top: 60vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
+.box12 {
+  height: 5vh;
+  width: 33vh;
+  background-color: rgb(255, 255, 255);
+  margin-left: 23vh;
+  margin-top: 80vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
+
+
 p1 {
   margin-top: 20vh;
   margin-left: 20vh;
