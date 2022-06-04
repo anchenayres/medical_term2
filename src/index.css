@@ -15,10 +15,10 @@ html, p, body {
 }
 
 .login-heading {
-  height: 60vh;
-  width: 50vh;
-  margin-left: 130vh;
-  margin-top: 35vh;
+  height: 90vh;
+  width: 80vh;
+  margin-left: 10vh;
+  margin-top: 5vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
@@ -42,10 +42,10 @@ html, p, body {
 
 .box1 {
   height: 5vh;
-  width: 35vh;
-  background-color: rgb(237, 142, 142);
-  margin-left: 8vh;
-  margin-top: 20vh;
+  width: 65vh;
+  background-color: rgb(255, 255, 255);
+  margin-left: 7vh;
+  margin-top: 35vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
@@ -55,10 +55,10 @@ html, p, body {
 }
 .box2 {
   height: 5vh;
-  width: 35vh;
+  width: 65vh;
   background-color: rgb(254, 254, 254);
-  margin-left: 8vh;
-  margin-top: 32vh;
+  margin-left: 7vh;
+  margin-top: 50vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
@@ -238,7 +238,7 @@ html, p, body {
   margin-top: 1vh;
   margin-left: 1vh;
 }
-.box12 {
+.button1 {
   height: 5vh;
   width: 33vh;
   background-color: rgb(255, 255, 255);
@@ -250,13 +250,8 @@ html, p, body {
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
   border-bottom: 2px solid rgb(254, 195, 253);
-}
-.reg-button {
-  color: rgb(0, 0, 0);
   font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  margin-top: 1.2vh;
-  margin-left: 13vh;
+
 }
 .login-link  {
   color: rgb(0, 0, 0);
@@ -274,20 +269,36 @@ html, p, body {
   border-bottom: 2px solid rgb(254, 195, 253);
 }
 
-p1 {
-  margin-top: 20vh;
+p4 {
+  margin-top: 5vh;
   margin-left: 23vh;
   font-size: 5vh;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-weight: lighter;
   border-bottom: 2px solid rgb(254, 195, 253);
 }
-
-.username-login {
+p3 {
+  margin-top: 5vh;
+  margin-left: 30vh;
+  font-size: 5vh;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-weight: lighter;
+  border-bottom: 2px solid rgb(254, 195, 253);
+}
+.email-login {
   margin-left: 2vh;
-  margin-top: -3vh;
+  margin-top: 1vh;
+  font-size: 2vh;
+  font-family: 'Raleway', sans-serif;  
+  position: absolute;
+}
+.password-login {
+  margin-left: 2vh;
+  margin-top: 1vh;
   font-size: 2vh;
   font-family: 'Raleway', sans-serif;  
   position: absolute;
@@ -602,6 +613,11 @@ p2 {
 }
 
 p1 {
+  color: rgb(0, 0, 0);
+  margin-top: 4vh;
+  position: absolute;
+}
+p3 {
   color: rgb(0, 0, 0);
   margin-top: 4vh;
   position: absolute;
