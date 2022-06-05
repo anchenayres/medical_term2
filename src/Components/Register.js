@@ -24,6 +24,7 @@ const Register = () => {
         });
     }
     
+    
 
 
     
@@ -54,6 +55,7 @@ const Register = () => {
         </form>
 
         <div className="login-link">Already have an account?<a href="/Login">Login</a></div>
+       
         </div>
     </>
     )
