@@ -13,7 +13,7 @@ const Login = () => {
         password: ''
     });
 
-    const username = (e) => {
+    const usernameVal = (e) => {
         const value = e.target.value;
         setInputs({...inputs, username: value});
         //here you will validate not empty
@@ -30,13 +30,13 @@ const Login = () => {
         e.preventDefault();
         console.log(inputs);                        //DELETE THIS IN FINAL PROJECT!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        axios.post('http://localhost:8888/api/addPost.php', inputs)
+        axios.post('http://localhost:8888/api/userLogin.php', inputs)
         . then(function(response) {
             console.log(response);
 
             if(response.data === true){
                 sessionStorage.setItem('activeUser', inputs.username);
-                navigate("/doctors");
+                navigate("/Doctors");
             }else {
                 console.log("Not Working!");
             }
@@ -45,22 +45,12 @@ const Login = () => {
     }
 
     return (
-    <>
-    <div className="behind">
-        <ul>
-            <li><a href="/Appointments">Appointments</a></li>
-            <li><a href="/Patients">Patients</a></li>
-            <li><a href="/Doctors">Doctors</a></li>
-            <li><a href="/Reception">Reception</a></li>
-        </ul>
-        
+    <>        
    
-    </div>
     <div className="login-heading">
-    <p3>Sign In</p3>
         <input name="box1" type="username" placeholder="Username" onChange={usernameVal} />
         <input name="box2" type="password" placeholder="Password" onChange={passwordVal} />
-        <button type="button1" onClick={handleSubmit} >Sign Up</button>
+        <button type="button1" onClick={handleSubmit} >Sign In</button>
         <div className="login-link">Register for an account<a href="/Register">Sign Up</a></div>
     </div>
         </>
