@@ -6,6 +6,8 @@ import { useState } from "react";
 
 const Login = () => {
 
+    
+
     const navigate = useNavigate();
 
     const [inputs, setInputs] = useState({
@@ -36,7 +38,7 @@ const Login = () => {
 
             if(response.data === true){
                 sessionStorage.setItem('activeUser', inputs.username);
-                navigate("/patients");
+                navigate("patients");
             }else {
                 console.log("Not Working!");
             }
