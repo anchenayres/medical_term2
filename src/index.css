@@ -735,7 +735,7 @@ h21 {
 /* PATIENTS */
 .create-appointments {
   height: 140vh;
-  width: 120vh;
+  width: 107vh;
   margin-left: 23vh;
   position: absolute;
   background-color: antiquewhite;
@@ -748,7 +748,7 @@ h21 {
   width: 70vh;
   background-color: rgb(244, 198, 198);
   position: absolute;
-  margin-left: 145vh;
+  margin-left: 132vh;
   margin-top: 10vh;
   border-radius: 5vh;
 }

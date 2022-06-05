@@ -33,9 +33,7 @@ const Patients = () => {
             
         
 
-        <div className="create-appointments">
-
-        </div>
+        <div className="create-appointments"></div>
         
         <div className="search-bar">
             <h15>Search</h15>

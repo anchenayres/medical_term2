@@ -7,19 +7,6 @@ const Appointments = () => {
     return (
     <>
 
-<div className="pictures">
-        <h1>Welcome Back Dr.Manley</h1>
-        <div className="pro-image"></div>
-        </div>
-        <div className="search-bar">
-            <h15>Search</h15>
-        </div>
-        <ul className="login">
-            <li><a href="/Login">Sign In</a></li>
-        </ul>
-        <ul className="register">
-            <li><a href="/Register">Sign Up</a></li>
-        </ul>
 
         <div className="nav"></div>
         <div className="side-nav">
@@ -37,6 +24,24 @@ const Appointments = () => {
             <li><a href="/Reception">Reception</a></li>
         </ul>
         </div>
+
+        <div className="create-appointments"></div>
+
+         <div className="add-users">
+    <h25>Add a Patient</h25>
+
+        <input className="user-name-surname" type="text" placeholder="Patient Name and Surname"  />
+        <input className="user-age" type="text" placeholder="Patient Age"  />
+        <input className="user-gender" type="text" placeholder="Patient Gender"  />
+        <input className="user-email" type="text" placeholder="Patient Email"  />
+        <input className="user-password" type="text" placeholder="Patient Password"  />
+        <input className="user-number" type="text" placeholder="Patient Number"  />
+        <input className="user-id" type="text" placeholder="Patient Id"  />
+        <input className="user-medicalaid" type="text" placeholder="Patient Medical Aid Number"  />
+
+
+        <button type="add-user-button" >Add</button>
+    </div>
     
 
     <div className="footer">
@@ -45,102 +50,7 @@ const Appointments = () => {
         <div className="instagram"></div>
     </div>
     
-    <div className="today-appointments">
-        <div className="heading">
-            <h12>Today's Appointments</h12>
-           
-            
-            <ul className="client-app1">
-                <li><b>Mrs. Lay </b></li>
-                <li>11:45 PM </li>
-                <li>Dr. Manley</li>
-            </ul>
-            <ul className="client-app2">
-                <li><b>Mrs. Charnel </b></li>
-                <li>15:30 PM</li>
-                <li>Dr. Manley</li>
-            </ul>
-            <ul className="client-app3">
-                <li><b>Mrs. Staden </b></li>
-                <li>17:00 PM</li>
-                <li>Dr. Manley</li>
-            </ul>
-            <ul className="client-app4">
-                <li><b>Mrs. Ley </b></li>
-                <li>19:15 PM</li>
-                <li>Dr. Chew</li>
-            </ul>
-            <h13>4</h13>
-        </div>
-    </div>
-
-    <div className="month-balance">
-        <div className="heading">
-            <h12>This Month</h12>
-        </div>
-    </div>
-
-    <div className="calendar">
-        <div className="cal-heading">
-            <h11>April 2022</h11>
-            <div className="right-arrow"></div>
-            <div className="left-arrow"></div>
-        </div>
-        <ul className="week">
-            <li>Mon</li>
-            <li>Tues</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
-            <li>Sun</li>
-        </ul>
-        <ul className="mon">
-            <li>4</li>
-            <li>11</li>
-            <li>18</li>
-            <li>25</li>
-        </ul>
-        <ul className="tue">
-            <li>5</li>
-            <li>12</li>
-            <li>19</li>
-            <li>26</li>
-        </ul>
-        <ul className="wed">
-            <li>6</li>
-            <li>13</li>
-            <li>20</li>
-            <li>27</li>
-        </ul>
-        <ul className="thu">
-            <li>7</li>
-            <li>14</li>
-            <li>21</li>
-            <li>28</li>
-        </ul>
-        <ul className="fri">
-            <li>1</li>
-            <li>8</li>
-            <li>15</li>
-            <li>22</li>
-            <li>29</li>
-        </ul>
-        <ul className="sat">
-            <li>2</li>
-            <li>9</li>
-            <li>16</li>
-            <li>23</li>
-            <li>30</li>
-        </ul>
-        <ul className="sun">
-            <li>3</li>
-            <li>10</li>
-            <li>17</li>
-            <li>24</li>
-        </ul>
-    </div>
-
+ 
 
 
     <div className="headings">
@@ -154,33 +64,6 @@ const Appointments = () => {
     <h9>Room</h9>
     <h10>Date and Time</h10>
     </div>
-
-    <div className="doc-table">
-        <div className="left">
-            <div className="pat-image"></div>
-            <p2>Jessie Ley<br />Female</p2>
-        </div>
-        <div className="doc-age">
-        <p1>42</p1>
-        </div>
-        <div className="doc-email">
-        <p1>jessie@gmail.com</p1>
-        </div>
-        <div className="doc-password">
-        <p1>0824588967</p1>
-        </div>
-        <div className="doc-num">
-        <p1>Dr. Manley</p1>
-        </div>
-        <div className="doc-id">
-        <p1>Floor 3A7</p1>
-        </div>
-        <div className="doc-room">
-        <p1>09 Apr 2022 | 11:45 AM</p1>
-        </div>
-        </div>
-    
-   
 
       
     </>
