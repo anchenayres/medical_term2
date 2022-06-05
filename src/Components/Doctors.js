@@ -1,7 +1,17 @@
-import React from "react";
+import axios from "axios";
+import React, {useEffect} from "react";
 
 
 const Doctors = () => {
+
+    useEffect (() => {
+
+        axios.post("http://localhost:8888/api/readUserPosts.php")
+        .then((res) =>{
+            console.log(res);
+        });
+
+    });
 
     return (
     <>

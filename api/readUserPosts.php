@@ -13,7 +13,7 @@ $username = $data->activeUser;
 if($username === ""){
     echo "";
 } else {
-    $sql = "SELECT * FROM appPosts WHERE userpost = '$username';";
+    $sql = "SELECT * FROM users";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
 
