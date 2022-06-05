@@ -14,7 +14,6 @@ if($username === ""){
     echo "";
 } else {
     $sql = "SELECT * FROM doctors";
-    $sql = "SELECT * FROM patients";
 
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);

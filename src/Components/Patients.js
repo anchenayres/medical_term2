@@ -14,16 +14,17 @@ const Patients = () => {
             console.log(res);
             let Patients = res.data.map(item => 
             
-          <div className="docnew-table">
-            
-           {item.name_and_surname}
-            {item.age}
-        {item.gender}
-           {item.email}
-            {item.patient_id}
-         {item.medical_aid_number}
-           {item.past_appointments}
-          
+            <div className="docnew-table">
+              <div className="doc-text">
+            <div className="user-image"></div>
+            <div className="doc-name-sur">{item.name_and_surname}</div>
+            <div className="doc-age">{item.age}</div>
+            <div className="doc-gender">{item.gender}</div>
+            <div className="doc-email">{item.email}</div>
+            <div className="doc-id">{item.patient_id}</div>
+            <div className="doc-spesial">{item.medical_aid_number}</div>
+            <div className="doc-room">{item.past_appointments}</div>
+            </div>         
             </div>
            
         )
@@ -39,8 +40,9 @@ const Patients = () => {
     
     return (
     <>
+    <div className="create-appointments">{patientInfo}</div>
 
-    {patientInfo}
+    
     <div className="add-users">
     <h25>Add a Patient</h25>
 
