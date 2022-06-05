@@ -541,19 +541,11 @@ h3 {
   border-bottom: 5px solid rgb(234, 198, 236); 
 }
 
-h14 {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  margin-top: 60vh;
-  margin-left: 25vh;
-  font-family: 'Raleway', sans-serif;  
-  position: absolute;
-  border-bottom: 5px solid rgb(234, 198, 236); 
-}
+
 
 .doc-table {
   width: 175vh;
-  background-color: rgb(148, 74, 74);
+  background-color: rgb(255, 255, 255);
   margin-left: 25vh;
 }
 
@@ -567,18 +559,6 @@ h14 {
 
 }
 
-.doc-image {
-  height: 6vh;
-  width: 6vh;
-  background-image: url("./Images/add_user.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  margin-left: 2vh;
-  margin-top: 2vh;
-  position: absolute;
-  
-}
 
 .pat-image {
   height: 6vh;
@@ -598,28 +578,192 @@ p2 {
   position: absolute;
 }
 
+/* DOCTORS*/
+h14 {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  margin-top: 21vh;
+  margin-left: 27vh;
+  font-family: 'Raleway', sans-serif;  
+  position: absolute;
+  border-bottom: 5px solid rgb(234, 198, 236); 
+}
+h15 {
+  color: rgb(0, 0, 0);
+  margin-left: 12vh;
+  margin-top: -27vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+}
+h22 {
+  color: black;
+  margin-left: 31vh;
+  margin-top: 27vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+h16 {
+  color: black;
+  margin-left: 49vh;
+  margin-top: 27vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+h17 {
+  color: rgb(0, 0, 0);
+  margin-left: 70vh;
+  margin-top: 27vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+h23 {
+  color: rgb(0, 0, 0);
+  margin-left: 58vh;
+  margin-top: 27vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+h18 {
+  color: black;
+  margin-left: 100vh;
+  margin-top: 27vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+h19 {
+  color: black;
+  margin-left: 125vh;
+  margin-top: 27vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+h20 {
+  color: black;
+  margin-left: 150vh;
+  margin-top: 27vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+h24 {
+  color: black;
+  margin-left: 175vh;
+  margin-top: 27vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+h21 {
+  color: black;
+  margin-left: 195vh;
+  margin-top: 27vh;
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 15px;
+  font-weight: bolder;
+}
+.doc-image {
+  height: 6vh;
+  width: 6vh;
+  background-image: url("./Images/add_user.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  margin-left: -1vh;
+  margin-top: 13vh;
+  position: absolute;
+}
+.doc-name_surname {
+  background-color: rgb(255, 255, 255);
+  color: aqua;
+  margin-left: 6vh;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+  border-bottom: 1px solid rgb(250, 225, 247);
+}
 .doc-age {
-  height: 10vh;
-  width: 25vh;
   background-color: rgb(255, 255, 255);
   display: absolute;
   color: aqua;
   margin-left: 25vh;
-  margin-top: -10vh;
   font-family: 'Raleway', sans-serif;  
   font-size: 12px;
 }
-
 .doc-gender {
-  height: 10vh;
-  width: 25vh;
   color:rgb(183, 152, 170);
   background-color: rgb(255, 255, 255);
   display: absolute;
-  margin-left: 25vh;
-  margin-top: -10vh;
+  margin-left: 34vh;
   font-family: 'Raleway', sans-serif;  
   font-size: 12px;
+}
+.doc-email {
+  margin-left: 45vh;
+  background-color: rgb(255, 255, 255);
+  display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+}
+.doc-password {
+  margin-left: 75vh;
+  background-color: rgb(255, 255, 255);
+  display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+}
+.doc-num {
+  margin-left: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+}
+.doc-id {
+  margin-left: 125vh;
+  background-color: rgb(255, 255, 255);
+  display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+}
+.doc-specialisation {
+  margin-left: 150vh;
+  background-color: rgb(255, 255, 255);
+  display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+}
+.doc-room {
+  margin-left: 170vh;
+  background-color: rgb(255, 255, 255);
+  display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+}
+/* END DOCTORS*/
+
+.logo {
+  height: 15vh;
+  width: 15vh;
+  background-color: white;
+  margin-left: 2vh;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 20vh;
 }
 
 p1 {
@@ -632,86 +776,6 @@ p3 {
   margin-top: 4vh;
   position: absolute;
 }
-
-.doc-email {
-  height: 10vh;
-  width: 25vh;
-  margin-left: 50vh;
-  background-color: rgb(255, 255, 255);
-  display: absolute;
-  margin-top: -10vh;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 12px;
-}
-
-.doc-password {
-  height: 10vh;
-  width: 25vh;
-  margin-left: 75vh;
-  background-color: rgb(255, 255, 255);
-  display: absolute;
-  margin-top: -10vh;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 12px;
-
-}
-
-.doc-num {
-  height: 10vh;
-  width: 25vh;
-  margin-left: 100vh;
-  margin-top: -10vh;
-  background-color: rgb(255, 255, 255);
-  display: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 12px;
-
-}
-
-.logo {
-  height: 15vh;
-  width: 15vh;
-  background-color: white;
-  margin-left: 2vh;
-  border-radius: 50%;
-  position: absolute;
-  margin-top: 20vh;
-}
-
-.doc-id {
-  height: 10vh;
-  width: 25vh;
-  margin-left: 125vh;
-  margin-top: -10vh;
-  background-color: rgb(255, 255, 255);
-  display: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 12px;
-
-}
-
-.doc-specialisation {
-  height: 10vh;
-  width: 25vh;
-  margin-left: 150vh;
-  margin-top: -10vh;
-  background-color: rgb(255, 255, 255);
-  display: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 12px;
-}
-
-.doc-room {
-  height: 10vh;
-  width: 25vh;
-  margin-left: 160vh;
-  margin-top: -10vh;
-  background-color: rgb(255, 255, 255);
-  display: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 12px;
-}
-
 
 
 .pat-rank {
@@ -930,14 +994,7 @@ h5 {
   font-size: 15px;
 }
 
-h15 {
-  color: rgb(0, 0, 0);
-  margin-left: 12vh;
-  margin-top: 1.2vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-}
+
 
 h6 {
   color: black;
@@ -946,17 +1003,6 @@ h6 {
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-size: 15px;
-}
-
-h16 {
-  color: black;
-  margin-left: 50vh;
-  margin-top: 70vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  font-weight: bolder;
-
 }
 
 h7 {
@@ -968,17 +1014,6 @@ h7 {
   font-size: 15px;
   font-weight: bolder;
 }
-
-h17 {
-  color: rgb(0, 0, 0);
-  margin-left: 75vh;
-  margin-top: 70vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  font-weight: bolder;
-}
-
 h8 {
   color: black;
   margin-left: 125vh;
@@ -988,17 +1023,6 @@ h8 {
   font-size: 15px;
   font-weight: bolder;
 }
-
-h18 {
-  color: black;
-  margin-left: 100vh;
-  margin-top: 70vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  font-weight: bolder;
-}
-
 h9 {
   color: black;
   margin-left: 150vh;
@@ -1009,15 +1033,6 @@ h9 {
   font-weight: bolder;
 }
 
-h19 {
-  color: black;
-  margin-left: 125vh;
-  margin-top: 70vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  font-weight: bolder;
-}
 
 h10 {
   color: black;
@@ -1029,25 +1044,9 @@ h10 {
   font-weight: bolder;
 }
 
-h20 {
-  color: black;
-  margin-left: 150vh;
-  margin-top: 70vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  font-weight: bolder;
-}
 
-h21 {
-  color: black;
-  margin-left: 175vh;
-  margin-top: 70vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  font-weight: bolder;
-}
+
+
 
 .heading {
   background-color:rgb(224, 186, 224);
