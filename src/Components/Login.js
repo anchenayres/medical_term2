@@ -30,7 +30,7 @@ const Login = () => {
         e.preventDefault();
         console.log(inputs);                        //DELETE THIS IN FINAL PROJECT!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        axios.post('http://localhost:8888/api/authenticateEmail.php', inputs)
+        axios.post('http://localhost:8888/api/addPost.php', inputs)
         . then(function(response) {
             console.log(response);
 
@@ -60,7 +60,7 @@ const Login = () => {
     <p3>Sign In</p3>
         <input name="box1" type="username" placeholder="Username" onChange={usernameVal} />
         <input name="box2" type="password" placeholder="Password" onChange={passwordVal} />
-        <button type="button1" onclick={} >Sign Up</button>
+        <button type="button1" onClick={handleSubmit} >Sign Up</button>
         <div className="login-link">Register for an account<a href="/Register">Sign Up</a></div>
     </div>
         </>
