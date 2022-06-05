@@ -317,14 +317,6 @@ p3 {
   position: absolute;
 }
 
-h15 {
-  color: rgb(2, 2, 2);
-  font-size: 15px;
-  font-family: 'Raleway', sans-serif;  
-  margin-left: 12vh;
-  margin-top: 1.3vh;
-  position: absolute;
-}
 
 .login {
   margin-left: 170vh;
@@ -380,18 +372,6 @@ h15 {
   height: 20px;
   padding: 10px;
   color: rgb(171, 59, 171);
-}
-
-.pro-image {
-  height: 18vh;
-  width: 18vh;
-  border-radius: 5vh;
-  float: right;
-  margin: 1vh;
-  background-image: url("./Images/doc1.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
 }
 
 .planner-img {
@@ -455,21 +435,16 @@ h1 {
   
 }
 
-.pictures {
-  height: 10vh;
-  width: 140vh;
-  background-size: cover;
-  background-color: rgb(183, 152, 170);
-  border-bottom-right-radius: 5vh;
-  border-top-right-radius: 5vh;
-
-}
-
 .side-nav {
   height: 140vh;
   width: 20vh;
+  margin-top: -0.5vh;
   background-color: rgb(183, 152, 170);
   position: absolute;
+  border-top-right-radius: 5vh;
+  border-bottom-right-radius: 5vh;
+
+
 }
 
 .nav a, ul {
@@ -755,6 +730,17 @@ h21 {
   font-size: 12px;
 }
 /* END DOCTORS*/
+
+
+/* PATIENTS */
+.create-appointments {
+  height: 140vh;
+  width: 120vh;
+  margin-left: 23vh;
+  position: absolute;
+  background-color: antiquewhite;
+  border-radius: 5vh;;
+}
 
 .logo {
   height: 15vh;
@@ -1156,9 +1142,10 @@ h13 {
 }
 
 .footer {
-  margin-top: 135vh;
+  margin-top: 200vh;
   height: 10vh;
   width: 100%;
   position: absolute;
   background-color: rgb(247, 213, 232);
+
 }

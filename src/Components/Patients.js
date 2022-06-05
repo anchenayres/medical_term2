@@ -6,12 +6,18 @@ import { useState } from "react";
 
 const Patients = () => {
 
+
+
+
+
+    
     return (
     <>
 
-<div className="pictures">
-        <h1>Welcome Back Dr.Manley</h1>
+        <div className="create-appointments">
+
         </div>
+        
         <div className="search-bar">
             <h15>Search</h15>
         </div>
