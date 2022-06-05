@@ -31,12 +31,12 @@ const Login = () => {
         console.log(inputs);                        //DELETE THIS IN FINAL PROJECT!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         axios.post('http://localhost:8888/api/userLogin.php', inputs)
-        . then(function(response) {
+        .then(function(response) {
             console.log(response);
 
             if(response.data === true){
                 sessionStorage.setItem('activeUser', inputs.username);
-                navigate("/Doctors");
+                navigate("/patients");
             }else {
                 console.log("Not Working!");
             }
