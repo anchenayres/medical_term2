@@ -13,7 +13,6 @@ $username = $data->activeUser;
 if($username === ""){
     echo "";
 } else {
-    $sql = "SELECT * FROM doctors";
     $sql = "SELECT * FROM patients";
 
     $result = mysqli_query($conn, $sql);

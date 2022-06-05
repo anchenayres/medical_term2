@@ -1,10 +1,36 @@
-import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import React, {useEffect, useState} from "react";
 
 
 const Patients = () => {
+
+    const [patientInfo, setPatientInfo] = useState();
+
+    useEffect (() => {
+
+        axios.post("http://localhost:8888/medical_api/patients.php")
+        .then((res) =>{
+            console.log(res);
+            let Patients = res.data.map(item => 
+            
+          <div className="docnew-table">
+            
+           {item.name_and_surname}
+            {item.age}
+        {item.gender}
+           {item.email}
+            {item.patient_id}
+         {item.medical_aid_number}
+           {item.past_appointments}
+          
+            </div>
+           
+        )
+        setPatientInfo(Patients)
+        });
+
+    });
 
 
 
@@ -14,6 +40,7 @@ const Patients = () => {
     return (
     <>
 
+    {patientInfo}
     <div className="add-users">
     <h25>Add a Patient</h25>
 
