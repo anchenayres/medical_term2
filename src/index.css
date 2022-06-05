@@ -552,10 +552,8 @@ h14 {
 }
 
 .doc-table {
-  height: 95vh;
   width: 175vh;
   background-color: rgb(148, 74, 74);
-  margin-top: 70vh;
   margin-left: 25vh;
 }
 
@@ -605,11 +603,23 @@ p2 {
   width: 25vh;
   background-color: rgb(255, 255, 255);
   display: absolute;
+  color: aqua;
   margin-left: 25vh;
   margin-top: -10vh;
   font-family: 'Raleway', sans-serif;  
   font-size: 12px;
+}
 
+.doc-gender {
+  height: 10vh;
+  width: 25vh;
+  color:rgb(183, 152, 170);
+  background-color: rgb(255, 255, 255);
+  display: absolute;
+  margin-left: 25vh;
+  margin-top: -10vh;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
 }
 
 p1 {
@@ -680,7 +690,7 @@ p3 {
 
 }
 
-.doc-room {
+.doc-specialisation {
   height: 10vh;
   width: 25vh;
   margin-left: 150vh;
@@ -690,6 +700,19 @@ p3 {
   font-family: 'Raleway', sans-serif;  
   font-size: 12px;
 }
+
+.doc-room {
+  height: 10vh;
+  width: 25vh;
+  margin-left: 160vh;
+  margin-top: -10vh;
+  background-color: rgb(255, 255, 255);
+  display: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 12px;
+}
+
+
 
 .pat-rank {
   height: 10vh;
