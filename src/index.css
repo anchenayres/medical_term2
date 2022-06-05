@@ -385,7 +385,7 @@ h15 {
 .pro-image {
   height: 18vh;
   width: 18vh;
-  border-radius: 50%;
+  border-radius: 5vh;
   float: right;
   margin: 1vh;
   background-image: url("./Images/doc1.jpeg");
@@ -456,12 +456,12 @@ h1 {
 }
 
 .pictures {
-  height: 20vh;
+  height: 10vh;
   width: 140vh;
   background-size: cover;
   background-color: rgb(183, 152, 170);
-  border-bottom-right-radius: 10vh;
-  border-top-right-radius: 10vh;
+  border-bottom-right-radius: 5vh;
+  border-top-right-radius: 5vh;
 
 }
 
