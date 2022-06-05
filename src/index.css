@@ -272,8 +272,8 @@ html, p, body {
 p4 {
   margin-top: 5vh;
   margin-left: 23vh;
-  font-size: 5vh;
-  color: rgb(0, 0, 0);
+  font-size: 5px;
+  color: rgb(239, 152, 152);
   position: absolute;
   font-family: 'Raleway', sans-serif;  
   font-weight: lighter;

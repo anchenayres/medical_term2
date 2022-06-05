@@ -2,8 +2,8 @@
 
 include 'db_connection.php';
 
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: * ");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Header: * ");
 
 $request_body = file_get_contents('php://input');
 $data = json_decode($request_body);
@@ -11,13 +11,11 @@ $data = json_decode($request_body);
 $first = $data->first;
 $last = $data->last;
 $email = $data->email;
-$contact = $data->contact;
 $username = $data->username;
+$contact = $data->contact;
 $password = $data->password;
 
-$passwordEncrypt = md5($password);
-
-$sql = "INSERT INTO users (id, first, last, email, contact, username, password, userCreate) VALUES (NULL, '$first','$last', '$email', '$contact', '$username', '$passwordEncrypt', CURRENT_TIMESTAMP);";
+$sql = "INSERT INTO users (id, first, last, email, username, contact, password, userCreate) VALUES (NULL, '$first','$last', '$email', '$username', '$contact', '$password', CURRENT_TIMESTAMP);";
 $result = mysqli_query($conn, $sql);
 
 if(!$result){
