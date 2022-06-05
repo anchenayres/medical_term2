@@ -14,6 +14,25 @@ const Patients = () => {
     return (
     <>
 
+    <div className="add-users">
+    <h25>Add a Patient</h25>
+
+        <input className="user-name-surname" type="text" placeholder="Patient Name and Surname"  />
+        <input className="user-age" type="text" placeholder="Patient Age"  />
+        <input className="user-gender" type="text" placeholder="Patient Gender"  />
+        <input className="user-email" type="text" placeholder="Patient Email"  />
+        <input className="user-password" type="text" placeholder="Patient Password"  />
+        <input className="user-number" type="text" placeholder="Patient Number"  />
+        <input className="user-id" type="text" placeholder="Patient Id"  />
+        <input className="user-medicalaid" type="text" placeholder="Patient Medical Aid Number"  />
+
+
+        <button type="add-user-button" >Add</button>
+    </div>
+
+            
+        
+
         <div className="create-appointments">
 
         </div>
@@ -43,6 +62,10 @@ const Patients = () => {
             <li><a href="/Reception">Reception</a></li>
         </ul>
         </div>
+
+        
+        
+        
     
 
     <div className="footer">

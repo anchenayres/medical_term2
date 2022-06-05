@@ -739,7 +739,124 @@ h21 {
   margin-left: 23vh;
   position: absolute;
   background-color: antiquewhite;
-  border-radius: 5vh;;
+  border-radius: 5vh;
+  margin-top: 10vh;
+}
+
+.add-users {
+  height: 50vh;
+  width: 70vh;
+  background-color: rgb(244, 198, 198);
+  position: absolute;
+  margin-left: 145vh;
+  margin-top: 10vh;
+  border-radius: 5vh;
+}
+
+.user-name-surname {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 65vh;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  margin-top: 10vh;
+  margin-left: 2vh;
+
+}
+.user-age {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 2vh;
+  margin-top:  17vh;
+  width: 31vh;
+
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+}
+.user-gender {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 36vh;
+  margin-top:  17vh;
+  width: 31vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+}
+.user-email {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 2vh;
+  margin-top:  24vh;
+  width: 31vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+} 
+ .user-password {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 36vh;
+  margin-top:  24vh;
+  width: 31vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+}
+.user-number {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 2vh;
+  margin-top:  31vh;
+  width: 31vh;
+
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+}
+.user-id {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 36vh;
+  margin-top:  31vh;
+  width: 31vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+}
+.user-medicalaid {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 2vh;
+  margin-top:  38vh;
+  width: 31vh;
+
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+} 
+
+button {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 36vh;
+  margin-top:  38vh;
+  width: 10vh;
+  position: absolute;
+  background-color: rgb(248, 224, 250);
+}
+
+h25 {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 25px;
+  margin-left: 25vh;
+  margin-top: 2vh;
+  border-bottom: solid rgb(248, 224, 250) 2px;
 }
 
 .logo {
