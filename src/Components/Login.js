@@ -11,13 +11,13 @@ const Login = () => {
     const navigate = useNavigate();
 
     const [inputs, setInputs] = useState({
-        name_surname: '',
+        email: '',
         password: ''
     });
 
     const usernameVal = (e) => {
         const value = e.target.value;
-        setInputs({...inputs, name_surname: value});
+        setInputs({...inputs, email: value});
         //here you will validate not empty
     }
 
@@ -32,12 +32,12 @@ const Login = () => {
         e.preventDefault();
         console.log(inputs);                        //DELETE THIS IN FINAL PROJECT!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        axios.post('http://localhost/api/userLogin.php', inputs)
+        axios.post('http://localhost:8888/medical_api/userLogin.php', inputs)
         .then(function(response) {
             console.log(response);
 
             if(response.data === true){
-                sessionStorage.setItem('activeUser', inputs.name_surname);
+                sessionStorage.setItem('activeUser', inputs.email);
                 navigate("doctors");
             }else {
                 console.log("Not Working!");
