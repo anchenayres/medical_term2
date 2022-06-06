@@ -837,10 +837,30 @@ th, td {
   margin-left: 2vh;
   margin-top:  38vh;
   width: 31vh;
-
   position: absolute;
   background-color: rgb(255, 255, 255);
 } 
+.user-room {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 36vh;
+  margin-top:  38vh;
+  width: 31vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+} 
+
+ .add-user-button2 {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 30vh;
+  margin-top:  45vh;
+  width: 10vh;
+  position: absolute;
+  background-color: rgb(248, 224, 250);
+}
 
 button {
   border-radius: 5vh;

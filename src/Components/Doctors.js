@@ -12,19 +12,29 @@ const Doctors = () => {
         .then((res) =>{
             console.log(res);
             let doctors = res.data.map(item => 
-            
-          <div className="docnew-table">
-              <div className="doc-text">
-            <div className="user-image"></div>
-            <div className="doc-name-sur">{item.name_and_surname}</div>
-            <div className="doc-age">{item.age}</div>
-            <div className="doc-gender">{item.gender}</div>
-            <div className="doc-email">{item.email}</div>
-            <div className="doc-id">{item.doctor_id}</div>
-            <div className="doc-spesial">{item.specialisation}</div>
-            <div className="doc-room">{item.room}</div>
-            </div>
-            </div>
+
+        <table id="patient-table">
+        <tr>
+            <th>Images</th>
+            <th>Name and Surname</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Doctor Id</th>
+            <th>Specialisation</th>
+            <th>Room Number</th>
+        </tr>
+        <tr>
+            <td>Insert Image</td>
+            <td>{item.name_and_surname}</td>
+            <td>{item.age}</td>
+            <td>{item.gender}</td>
+            <td>{item.email}</td>
+            <td>{item.doctor_id}</td>
+            <td>{item.specialisation}</td>
+            <td>{item.room}</td>
+        </tr>
+        </table>
            
         )
         setDoctorInfo(doctors)
@@ -36,24 +46,26 @@ const Doctors = () => {
     <>
 
 <div className="create-appointments">
-<h14>Current Doctors</h14>
-{doctorInfo}
-</div>
+        <h14>Current Doctors</h14>
+        {doctorInfo}
+    </div>
 
          <div className="add-users">
-    <h25>Add a Patient</h25>
+    <h25>Add a Doctor</h25>
 
-        <input className="user-name-surname" type="text" placeholder="Patient Name and Surname"  />
-        <input className="user-age" type="text" placeholder="Patient Age"  />
-        <input className="user-gender" type="text" placeholder="Patient Gender"  />
-        <input className="user-email" type="text" placeholder="Patient Email"  />
-        <input className="user-password" type="text" placeholder="Patient Password"  />
-        <input className="user-number" type="text" placeholder="Patient Number"  />
-        <input className="user-id" type="text" placeholder="Patient Id"  />
-        <input className="user-medicalaid" type="text" placeholder="Patient Medical Aid Number"  />
+        <input className="user-name-surname" type="text" placeholder="Name and Surname"  />
+        <input className="user-age" type="text" placeholder="Age"  />
+        <input className="user-gender" type="text" placeholder="Gender"  />
+        <input className="user-email" type="text" placeholder="Email"  />
+        <input className="user-password" type="text" placeholder="Password"  />
+        <input className="user-number" type="text" placeholder="Number"  />
+        <input className="user-id" type="text" placeholder="Id"  />
+        <input className="user-medicalaid" type="text" placeholder="Specialisation"  />
+        <input className="user-room" type="text" placeholder="Room Number "  />
 
 
-        <button type="add-user-button" >Add</button>
+
+        <button className="add-user-button2" >Add</button>
     </div>
         <ul className="login">
             <li><a href="/Login">Sign In</a></li>

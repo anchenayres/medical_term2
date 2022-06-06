@@ -38,7 +38,7 @@ const Login = () => {
 
             if(response.data === true){
                 sessionStorage.setItem('activeUser', inputs.email);
-                navigate("doctors");
+                navigate("reception");
             }else {
                 console.log("Not Working!");
             }

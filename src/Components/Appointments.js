@@ -1,12 +1,46 @@
-import React from "react";
-
+import axios from "axios";
+import React, {useEffect, useState} from "react";
 
 
 const Appointments = () => {
 
+    const [appointmentInfo, setAppointmentInfo] = useState();
+
+    useEffect (() => {
+
+        axios.post("http://localhost:8888/medical_api/appointments.php")
+        .then((res) =>{
+            console.log(res);
+            let appointments = res.data.map(item => 
+
+        <table id="patient-table">
+        <tr>
+            <th>Room</th>
+            <th>Doctor</th>
+            <th>Patient</th>
+            <th>Patient Id</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td>{item.room}</td>
+            <td>{item.doctor}</td>
+            <td>{item.patient}</td>
+            <td>{item.patient_id}</td>
+            <td>{item.time}</td>
+        </tr>
+        </table>
+           
+        )
+        setAppointmentInfo(appointments)
+        });
+
+    });
     return (
     <>
-
+<div className="create-appointments">
+        <h14>Current Doctors</h14>
+        {appointmentInfo}
+    </div>
 
         <div className="nav"></div>
         <div className="side-nav">
