@@ -10,7 +10,7 @@ $data = json_decode($request_body);
 
 $patient = $data->activeUser;
 
-    $sql = "SELECT * FROM appointments";
+    $sql = "SELECT * FROM users";
 
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
