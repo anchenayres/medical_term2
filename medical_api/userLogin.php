@@ -16,7 +16,7 @@ $encryptedPassword = md5($password);
 if($username === "" && $password === ""){
     echo "Err";
 } else {
-    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$encryptedPassword';";
+    $sql = "SELECT * FROM patients WHERE username = '$username' AND password = '$encryptedPassword';";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
 
