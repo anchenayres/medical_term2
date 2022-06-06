@@ -612,8 +612,8 @@ border: solid 2px rgb(244, 213, 249);
 h14 {
   color: rgb(0, 0, 0);
   font-size: 20px;
-  margin-top: 15vh;
-  margin-left: 33vh;
+  margin-top: -13vh;
+  margin-left: 5vh;
   width: 18vh;
   font-family: 'Raleway', sans-serif;  
   position: absolute;
@@ -714,6 +714,25 @@ h21 {
 
 
 /* END DOCTORS*/
+
+#patient-table {
+  color: rgb(24, 24, 24);
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2vh;
+
+}
+#patient-table, th, td {
+  border-bottom: solid 2px rgb(229, 180, 209);
+  font-family: 'Raleway', sans-serif;  
+  font-size: 10px;
+  text-align: left;
+
+}
+th, td {
+  padding: 6px;
+}
+
 
 
 /* PATIENTS */

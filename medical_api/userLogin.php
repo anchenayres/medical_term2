@@ -8,15 +8,15 @@ header("Access-Control-Allow-Headers: * ");
 $request_body = file_get_contents('php://input');
 $data = json_decode($request_body);
 
-$username = $data->username;
+$name_surname = $data->$name_surname;
 $password = $data->password;
 
 $encryptedPassword = md5($password);
 
-if($username === "" && $password === ""){
+if($name_surname === "" && $password === ""){
     echo "Err";
 } else {
-    $sql = "SELECT * FROM patients WHERE username = '$username' AND password = '$encryptedPassword';";
+    $sql = "SELECT * FROM patients WHERE name_surname = '$name_surname' AND password = '$encryptedPassword';";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
 

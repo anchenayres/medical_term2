@@ -14,18 +14,30 @@ const Patients = () => {
             console.log(res);
             let Patients = res.data.map(item => 
             
-            <div className="docnew-table">
-              <div className="doc-text">
-            <div className="user-image"></div>
-            <div className="doc-name-sur">{item.name_and_surname}</div>
-            <div className="doc-age">{item.age}</div>
-            <div className="doc-gender">{item.gender}</div>
-            <div className="doc-email">{item.email}</div>
-            <div className="doc-id">{item.patient_id}</div>
-            <div className="doc-spesial">{item.medical_aid_number}</div>
-            <div className="doc-room">{item.past_appointments}</div>
-            </div>         
-            </div>
+       
+            <table id="patient-table">
+            <tr>
+                <th>Images</th>
+                <th>Name and Surname</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>ID</th>
+                <th>Medical Aid Number</th>
+          </tr>
+          <tr>
+                <td>Insert Image</td>
+                <td>{item.name_and_surname}</td>
+                <td>{item.age}</td>
+                <td>{item.gender}</td>
+                <td>{item.email}</td>
+                <td>{item.patient_id}</td>
+                <td>{item.medical_aid_number}</td>
+                <td>{item.past_appointments}</td>
+          </tr>
+            </table>
+        
            
         )
         setPatientInfo(Patients)
@@ -40,8 +52,12 @@ const Patients = () => {
     
     return (
     <>
-    <div className="create-appointments">{patientInfo}</div>
+    <div className="create-appointments">
+        <h14>Current Patients</h14>
+        {patientInfo}
+    </div>
 
+     
     
     <div className="add-users">
     <h25>Add a Patient</h25>
@@ -62,7 +78,6 @@ const Patients = () => {
             
         
 
-        <div className="create-appointments"></div>
         
         <div className="search-bar">
             <h15>Search</h15>
@@ -118,3 +133,5 @@ const Patients = () => {
 };
 
 export default Patients;
+
+

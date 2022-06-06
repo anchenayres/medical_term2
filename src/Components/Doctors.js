@@ -35,7 +35,10 @@ const Doctors = () => {
     return (
     <>
 
-<div className="create-appointments">{doctorInfo}</div>
+<div className="create-appointments">
+<h14>Current Doctors</h14>
+{doctorInfo}
+</div>
 
          <div className="add-users">
     <h25>Add a Patient</h25>
@@ -63,13 +66,7 @@ const Doctors = () => {
         <div className="side-nav">
         <div className="logo"></div>
 
-        <h14>Current Doctors</h14>
-    <h22>Name</h22>
-    <h16>Age</h16>
-    <h17>Email</h17>
-    <h20>Id</h20>
-    <h19>Specialisation</h19>
-    <h21>Room</h21>
+    
                 <div className="planner-img"></div>
                 <div className="patients-img"></div>
                 <div className="docter-img"></div>

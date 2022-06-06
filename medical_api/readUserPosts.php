@@ -8,9 +8,9 @@ header('Access-Control-Allow-Headers: *');
 $request_body = file_get_contents('php://input');
 $data = json_decode($request_body);
 
-$username = $data->activeUser;
+$name_surname = $data->activeUser;
 
-if($username === ""){
+if($name_surname === ""){
     echo "";
 } else {
     $sql = "SELECT * FROM doctors";
