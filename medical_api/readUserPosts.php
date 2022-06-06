@@ -10,9 +10,6 @@ $data = json_decode($request_body);
 
 $name_surname = $data->activeUser;
 
-if($name_surname === ""){
-    echo "";
-} else {
     $sql = "SELECT * FROM doctors";
 
     $result = mysqli_query($conn, $sql);
@@ -32,7 +29,5 @@ if($name_surname === ""){
     } else {
         echo "false";
     }
-}
-
 
 ?>
