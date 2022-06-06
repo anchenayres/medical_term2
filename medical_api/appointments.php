@@ -10,9 +10,6 @@ $data = json_decode($request_body);
 
 $patient = $data->activeUser;
 
-if($patient === ""){
-    echo "";
-} else {
     $sql = "SELECT * FROM appointments";
 
     $result = mysqli_query($conn, $sql);
@@ -32,7 +29,5 @@ if($patient === ""){
     } else {
         echo "false";
     }
-}
-
 
 ?>

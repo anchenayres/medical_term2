@@ -8,7 +8,7 @@ const Appointments = () => {
 
     useEffect (() => {
 
-        axios.post("http://localhost:8888/medical_api/appointments.php")
+        axios.post("http://localhost/medical_api/appointments.php")
         .then((res) =>{
             console.log(res);
             let appointments = res.data.map(item => 
