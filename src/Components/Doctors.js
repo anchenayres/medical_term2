@@ -8,7 +8,7 @@ const Doctors = () => {
 
     useEffect (() => {
 
-        axios.post("http://localhost:8888/medical_api/readUserPosts.php")
+        axios.post("http://localhost/medical_api/readUserPosts.php")
         .then((res) =>{
             console.log(res);
             let doctors = res.data.map(item => 
@@ -126,33 +126,3 @@ const Doctors = () => {
 };
 
 export default Doctors;
-{/* <div className="left">
-                <div className="doc-image"></div>
-            </div>
-            <div className="doc-age">
-            <p1>{item.name_and_surname}</p1>
-            </div>
-            <div className="doc-age">
-            <p1>{item.age}</p1>
-            </div>
-            <div className="doc-gender">
-            <p1>{item.gender}</p1>
-            </div>
-            <div className="doc-email">
-            <p1>{item.email}</p1>
-            </div>
-            <div className="doc-password">
-            <p1>{item.password}</p1>
-            </div>
-            <div className="doc-num">
-            <p1>{item.phone_number}</p1>
-            </div>
-            <div className="doc-id">
-            <p1>{item.doctor_id}</p1>
-            </div>
-            <div className="doc-specialisation">
-            <p1>{item.specialisation}</p1>
-            </div>
-            <div className="doc-room">
-            <p1>{item.room}</p1>
-            </div> */}
