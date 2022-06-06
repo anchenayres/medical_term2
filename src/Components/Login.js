@@ -49,11 +49,15 @@ const Login = () => {
     return (
     <>        
    
+   <div className="behind">
+       
     <div className="login-heading">
-        <input name="box1" type="username" placeholder="Username" onChange={usernameVal} />
-        <input name="box2" type="password" placeholder="Password" onChange={passwordVal} />
-        <button type="button1" onClick={handleSubmit} >PRESS IT</button>
+    <h4>Sign In</h4>
+        <input className="box1" type="username" placeholder="Email" onChange={usernameVal} />
+        <input className="box2" type="password" placeholder="Password" onChange={passwordVal} />
+        <button className="button1" onClick={handleSubmit} >Sign In</button>
         <div className="login-link">Register for an account<a href="/Register">Sign Up</a></div>
+    </div>
     </div>
         </>
     )

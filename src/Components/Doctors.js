@@ -45,14 +45,13 @@ const Doctors = () => {
     return (
     <>
 
-<div className="create-appointments">
+<div className="doc-appointments">
         <h14>Current Doctors</h14>
         {doctorInfo}
     </div>
 
          <div className="add-users">
     <h25>Add a Doctor</h25>
-
         <input className="user-name-surname" type="text" placeholder="Name and Surname"  />
         <input className="user-age" type="text" placeholder="Age"  />
         <input className="user-gender" type="text" placeholder="Gender"  />
@@ -62,9 +61,6 @@ const Doctors = () => {
         <input className="user-id" type="text" placeholder="Id"  />
         <input className="user-medicalaid" type="text" placeholder="Specialisation"  />
         <input className="user-room" type="text" placeholder="Room Number "  />
-
-
-
         <button className="add-user-button2" >Add</button>
     </div>
         <ul className="login">
@@ -74,7 +70,6 @@ const Doctors = () => {
             <li><a href="/Register">Sign Up</a></li>
         </ul>
 
-        <div className="nav"></div>
         <div className="side-nav">
         <div className="logo"></div>
 
@@ -92,21 +87,13 @@ const Doctors = () => {
         </div>
     
 
-    <div className="footer">
-        <div className="facebook"></div>
-        <div className="twitter"></div>
-        <div className="instagram"></div>
-    </div>
     
 
 
 
    
   
-    
-    <div className="cal">calendar</div>
-    <div className="my-profile">My Profile</div>
-    <div className="profile-table">profile</div>
+
 
          
 

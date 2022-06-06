@@ -33,34 +33,27 @@ const Register = () => {
 
     return (
     <>
-    <div className="behind">
+    <div className="behind2">
     
-    
+    <div className="reg-box">
     <form>   
-        <input name="first"  type="text" placeholder="Name" onChange={handleChange} />
-        
-        <input name="last"  type="text" placeholder="Surname" onChange={handleChange} />
-      
-        
-        <input name="email"  type="text" placeholder="Email" onChange={handleChange} />
-        
-        <input name="username"  type="text" placeholder="Username"  onChange={handleChange} />
-       
-        <input name="contact" type="text" placeholder="Contact" onChange={handleChange} />
-       
-        <input name="password"  type="text" placeholder="Password" onChange={handleChange} />
-       
-        <input name="conPass"  type="password" placeholder="Confirm Password" />
-        <button type="submit" onClick={handleSubmit} >Sign Up</button>
+    <h5>Sign In</h5>
+        <input className="first_last"  type="text" placeholder="Name and Surname" onChange={handleChange} />
+        <input className="gender"  type="text" placeholder="Gender" onChange={handleChange} />
+        <input className="email"  type="text" placeholder="Email"  onChange={handleChange} />
+        <input className="contact" type="text" placeholder="Contact" onChange={handleChange} />
+        <input className="password"  type="text" placeholder="Password" onChange={handleChange} />
+        <input className="conPass"  type="password" placeholder="Confirm Password" />
+        <button className="button2" onClick={handleSubmit} >Sign Up</button>
         </form>
-
-        <div className="login-link">Already have an account?<a href="/Login">Login</a></div>
-       
+        <div className="login-link1">Already have an account?<a href="/">Login</a></div>
         </div>
+    </div>
     </>
     )
 
 
+   
     
 
 

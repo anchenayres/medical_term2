@@ -14,6 +14,16 @@ html, p, body {
   position: absolute;
 }
 
+.behind2 {
+  height: 100vh;
+  width:100%;
+  background-image: url("./Images/cancer6.jpg");
+  opacity: 0.5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
 .login-heading {
   height: 90vh;
   width: 80vh;
@@ -24,7 +34,8 @@ html, p, body {
   border-top-right-radius: 10vh;
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
-  background-color: rgb(250, 231, 246);
+  background-color: rgb(252, 251, 252);
+  box-shadow: 0px 5px 10px 5px rgb(252, 215, 248);
 }
 
 .reg-box {
@@ -37,34 +48,93 @@ html, p, body {
   border-top-right-radius: 10vh;
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
-  background-color: rgb(250, 231, 246);
+  background-color: rgb(252, 251, 252);
+  box-shadow: 0px 5px 10px 5px rgb(252, 215, 248);
 }
 
 .box1 {
   height: 5vh;
   width: 65vh;
-  background-color: rgb(255, 255, 255);
   margin-left: 7vh;
   margin-top: 35vh;
-  position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
-  border-bottom: 2px solid rgb(254, 195, 253);
+  border: solid 2px #F174AC;
+}
+.first_last {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 65vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: 20vh;
+  margin-left: 7vh;
+}
+.gender {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 20vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: 30vh;
+  margin-left: 7vh;
+}
+.email {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 42vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: 30vh;
+  margin-left: 30vh;
+} 
+ .contact {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 20vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: 40vh;
+  margin-left: 7vh;
+}
+.password {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 42vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: 40vh;
+  margin-left: 30vh;
+}
+.conPass {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 65vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: 50vh;
+  margin-left: 7vh;
 }
 .box2 {
   height: 5vh;
   width: 65vh;
   background-color: rgb(254, 254, 254);
-  margin-left: 7vh;
+  margin-left: -66vh;
   margin-top: 50vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
-  border-bottom: 2px solid rgb(254, 195, 253);
+  border: solid 2px #F174AC;
 }
 .box3 {
   height: 5vh;
@@ -240,33 +310,63 @@ html, p, body {
 }
 .button1 {
   height: 5vh;
-  width: 33vh;
-  background-color: rgb(255, 255, 255);
-  margin-left: 23vh;
+  width: 15vh;
+  background-color: #F174AC;
+  margin-left: -43vh;
   margin-top: 75vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
   border-bottom-left-radius: 10vh;
   border-top-left-radius: 10vh;
-  border-bottom: 2px solid rgb(254, 195, 253);
   font-family: 'Raleway', sans-serif;  
-
+  font-size: 20px;
+  color: white;
+}
+.button2 {
+  height: 5vh;
+  width: 15vh;
+  background-color: #F174AC;
+  margin-left: 33vh;
+  margin-top: 60vh;
+  position: absolute;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 20px;
+  color: white;
 }
 .login-link  {
   color: rgb(0, 0, 0);
-  margin-top: 80vh;
+  margin-top: 42vh;
   margin-left: 27vh;
   position: absolute;
   font-size: 13px;
   font-family: 'Raleway', sans-serif;  
 }
 .login-link a {
-  color: rgb(240, 121, 235);
+  color: rgb(0, 0, 0);
   font-size: 13px;
   font-family: 'Raleway', sans-serif;  
   margin-left: 1vh;
-  border-bottom: 2px solid rgb(254, 195, 253);
+  border-bottom: 2px solid #F174AC;
+}
+.login-link1  {
+  color: rgb(0, 0, 0);
+  margin-top: 83vh;
+  margin-left: 27vh;
+  position: absolute;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;  
+}
+.login-link1 a {
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;  
+  margin-left: 1vh;
+  border-bottom: 2px solid #F174AC;
 }
 
 p4 {
@@ -432,19 +532,16 @@ h1 {
   margin-left: 145vh;
   float: left;
   font-family: 'Raleway', sans-serif;
-  
 }
 
 .side-nav {
-  height: 140vh;
-  width: 20vh;
-  margin-top: -0.5vh;
-  background-color: rgb(183, 152, 170);
+  height: 131vh;
+  width: 19vh;
+  margin-top: 3vh;
+  margin-left:3vh;
+  background-color: rgb(246, 220, 235);
   position: absolute;
-  border-top-right-radius: 5vh;
-  border-bottom-right-radius: 5vh;
-
-
+  border-radius: 5vh;
 }
 
 .nav a, ul {
@@ -506,15 +603,7 @@ a:hover, a:after {
   margin-top: 5vh;
 }
 
-h3 {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  margin-top: 35vh;
-  margin-left: 25vh;
-  font-family: 'Raleway', sans-serif;  
-  position: absolute;
-  border-bottom: 5px solid rgb(234, 198, 236); 
-}
+
 
 .left {
   height: 10vh;
@@ -608,16 +697,49 @@ border: solid 2px rgb(244, 213, 249);
   position: absolute;
   margin-left: 101vh;
 }
+h3 {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  margin-top: -7vh;
+  margin-left: 71vh;
+  width: 32vh;
+  font-weight: lighter;
+  font-family: 'Raleway', sans-serif;  
+  position: absolute;
+  border-bottom: solid rgb(248, 224, 250) 2px;
+}
+h4 {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  margin-top: 3vh;
+  margin-left: 32vh;
+  width: 12vh;
+  font-weight: lighter;
+  font-family: 'Raleway', sans-serif;  
+  position: absolute;
+  border-bottom: solid #F174AC 2px;
+}
+h5 {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  margin-top: 3vh;
+  margin-left: 32vh;
+  width: 12vh;
+  font-weight: lighter;
+  font-family: 'Raleway', sans-serif;  
+  position: absolute;
+  border-bottom: solid #F174AC 2px;
+}
 
 h14 {
   color: rgb(0, 0, 0);
-  font-size: 20px;
-  margin-top: -13vh;
-  margin-left: 5vh;
-  width: 18vh;
+  font-size: 25px;
+  margin-top: -7vh;
+  margin-left: 78vh;
+  width: 23vh;
   font-family: 'Raleway', sans-serif;  
   position: absolute;
-  border-bottom: 5px solid rgb(234, 198, 236); 
+  border-bottom: solid rgb(248, 224, 250) 2px;
 }
 h15 {
   color: rgb(0, 0, 0);
@@ -719,43 +841,69 @@ h21 {
   color: rgb(24, 24, 24);
   width: 100%;
   border-collapse: collapse;
-  margin-top: 2vh;
-
+  margin-top: 3vh;
 }
 #patient-table, th, td {
   border-bottom: solid 2px rgb(229, 180, 209);
   font-family: 'Raleway', sans-serif;  
   font-size: 10px;
   text-align: left;
-
+  min-width: 150px;
 }
 th, td {
   padding: 6px;
   min-width: 150px;
 }
 
+td {
+  margin-top: 20vh;
+
+}
 
 
 /* PATIENTS */
-.create-appointments {
-  height: 140vh;
-  width: 107vh;
-  margin-left: 23vh;
+.app-appointments {
+  height: 70vh;
+  width: 172vh;
+  margin-left: 25vh;
   position: absolute;
-  background-color: antiquewhite;
   border-radius: 5vh;
-  margin-top: 10vh;
-  padding-top: 16vh;
+  margin-top: 56vh;
+  padding-top: 10vh;
+  box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
+  overflow: scroll;
+}
+.pat-appointments {
+  height: 70vh;
+  width: 172vh;
+  margin-left: 25vh;
+  position: absolute;
+  border-radius: 5vh;
+  margin-top: 56vh;
+  padding-top: 10vh;
+  box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
+  overflow: scroll;
+}
+.doc-appointments {
+  height: 70vh;
+  width: 172vh;
+  margin-left: 25vh;
+  position: absolute;
+  border-radius: 5vh;
+  margin-top: 56vh;
+  padding-top: 10vh;
+  box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
 }
 
 .add-users {
   height: 50vh;
   width: 70vh;
-  background-color: rgb(244, 198, 198);
   position: absolute;
-  margin-left: 132vh;
-  margin-top: 10vh;
+  margin-left: 25vh;
+  margin-top: 3vh;
   border-radius: 5vh;
+  box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
+
 }
 
 .user-name-surname {
@@ -763,11 +911,10 @@ th, td {
   border-style: none;
   height: 3.5vh;
   width: 65vh;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(246, 220, 235);
   position: absolute;
   margin-top: 10vh;
   margin-left: 2vh;
-
 }
 .user-age {
   border-radius: 5vh;
@@ -776,19 +923,17 @@ th, td {
   margin-left: 2vh;
   margin-top:  17vh;
   width: 31vh;
-
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(246, 220, 235);
 }
 .user-gender {
   border-radius: 5vh;
-  border-style: none;
+  border: 1px solid rgb(246, 220, 235);
   height: 3.5vh;
   margin-left: 36vh;
   margin-top:  17vh;
   width: 31vh;
   position: absolute;
-  background-color: rgb(255, 255, 255);
 }
 .user-email {
   border-radius: 5vh;
@@ -798,7 +943,7 @@ th, td {
   margin-top:  24vh;
   width: 31vh;
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(246, 220, 235);
 } 
  .user-password {
   border-radius: 5vh;
@@ -808,7 +953,7 @@ th, td {
   margin-top:  24vh;
   width: 31vh;
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(246, 220, 235);
 }
 .user-number {
   border-radius: 5vh;
@@ -819,7 +964,7 @@ th, td {
   width: 31vh;
 
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(246, 220, 235);
 }
 .user-id {
   border-radius: 5vh;
@@ -829,7 +974,7 @@ th, td {
   margin-top:  31vh;
   width: 31vh;
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(246, 220, 235);
 }
 .user-medicalaid {
   border-radius: 5vh;
@@ -839,7 +984,7 @@ th, td {
   margin-top:  38vh;
   width: 31vh;
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(246, 220, 235);
 } 
 .user-room {
   border-radius: 5vh;
@@ -849,7 +994,7 @@ th, td {
   margin-top:  38vh;
   width: 31vh;
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(246, 220, 235);
 } 
 
  .add-user-button2 {
@@ -1103,79 +1248,6 @@ h12 {
   position: absolute;
 }
 
-h4 {
-  color: black;
-  margin-left: 25vh;
-  margin-top: 42vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  
-}
-
-h5 {
-  color: rgb(0, 0, 0);
-  margin-left: 50vh;
-  margin-top: 42vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-}
-
-
-
-h6 {
-  color: black;
-  margin-left: 75vh;
-  margin-top: 42vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-}
-
-h7 {
-  color: rgb(0, 0, 0);
-  margin-left: 100vh;
-  margin-top: 42vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  font-weight: bolder;
-}
-h8 {
-  color: black;
-  margin-left: 125vh;
-  margin-top: 42vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  font-weight: bolder;
-}
-h9 {
-  color: black;
-  margin-left: 150vh;
-  margin-top: 42vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  font-weight: bolder;
-}
-
-
-h10 {
-  color: black;
-  margin-left: 175vh;
-  margin-top: 42vh;
-  position: absolute;
-  font-family: 'Raleway', sans-serif;  
-  font-size: 15px;
-  font-weight: bolder;
-}
-
-
-
-
-
 .heading {
   background-color:rgb(224, 186, 224);
   width: 40vh;
@@ -1283,11 +1355,3 @@ h13 {
   margin-right: 7vh;
 }
 
-.footer {
-  margin-top: 200vh;
-  height: 10vh;
-  width: 100%;
-  position: absolute;
-  background-color: rgb(247, 213, 232);
-
-}

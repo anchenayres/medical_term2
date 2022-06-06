@@ -52,7 +52,7 @@ const Patients = () => {
     
     return (
     <>
-    <div className="create-appointments">
+    <div className="pat-appointments">
         <h14>Current Patients</h14>
         {patientInfo}
     </div>
@@ -110,12 +110,6 @@ const Patients = () => {
         
     
 
-    <div className="footer">
-        <div className="facebook"></div>
-        <div className="twitter"></div>
-        <div className="instagram"></div>
-    </div>
-    
 
 
 

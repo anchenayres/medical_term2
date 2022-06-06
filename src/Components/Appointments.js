@@ -41,8 +41,8 @@ const Appointments = () => {
 
     return (
     <>
-<div className="create-appointments">
-        <h14>Current Appointments</h14>
+<div className="app-appointments">
+        <h3>Current Appointments</h3>
         {appointmentInfo}
     </div>
 
@@ -65,7 +65,7 @@ const Appointments = () => {
 
 
          <div className="add-users">
-    <h25>Add a Patient</h25>
+    <h25>Add an Appointment</h25>
 
         <input className="user-name-surname" type="text" placeholder="Patient Name and Surname"  />
         <input className="user-age" type="text" placeholder="Patient Age"  />
@@ -79,28 +79,10 @@ const Appointments = () => {
 
         <button type="add-user-button" >Add</button>
     </div>
-    
-
-    <div className="footer">
-        <div className="facebook"></div>
-        <div className="twitter"></div>
-        <div className="instagram"></div>
-    </div>
-    
- 
 
 
-    <div className="headings">
-    <h3>Upcoming Appointments</h3>
 
-    <h4>Patient Name</h4>
-    <h5>Age</h5>
-    <h6>Email</h6>
-    <h7>Number</h7>
-    <h8>Docter</h8>
-    <h9>Room</h9>
-    <h10>Date and Time</h10>
-    </div>
+
 
       
     </>
