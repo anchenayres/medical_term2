@@ -338,6 +338,28 @@ html, p, body {
   font-size: 20px;
   color: white;
 }
+.button3 {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 30vh;
+  margin-top:  45vh;
+  width: 10vh;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 1px 5px 1px #D8BBD7;
+}
+.button4 {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 20vh;
+  margin-top:  43vh;
+  width: 10vh;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 1px 5px 1px #D8BBD7;
+}
 .login-link  {
   color: rgb(0, 0, 0);
   margin-top: 42vh;
@@ -503,7 +525,6 @@ p3 {
   width: 3vh;
   margin-left: 2vh;
   margin-top: 51vh;
-  border-radius: 50%;
   background-image: url("./Images/docter.png");
   position: absolute;
   background-repeat: no-repeat;
@@ -515,11 +536,33 @@ p3 {
   width: 3vh;
   margin-left: 2vh;
   margin-top: 55.5vh;
-  border-radius: 50%;
   background-image: url("./Images/reception.png");
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.delUser {
+  height: 3vh;
+  width: 5vh;
+  border-radius: 8px;
+  border-style: none;
+  background-color: #f9c8de;
+  margin-top: 20vh;
+}
+
+
+
+.delUser2 {
+  height: 3vh;
+  width: 32vh;
+  margin-left: 8vh;
+  border-radius: 8px;
+  border-style: none;
+  background-color: white;
+  box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
+  margin-top: 10vh;
+  position: absolute;
 }
 
 
@@ -539,7 +582,7 @@ h1 {
   width: 19vh;
   margin-top: 3vh;
   margin-left:3vh;
-  background-color: rgb(246, 220, 235);
+  background-color: rgb(153, 126, 143);
   position: absolute;
   border-radius: 5vh;
 }
@@ -557,7 +600,7 @@ a {
   line-height: 5vh;
   text-decoration: none;
   cursor: pointer;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding-top: 5px;
   margin-left: 2vh;
 
@@ -736,7 +779,7 @@ h6 {
   font-family: 'Raleway', sans-serif;  
   font-weight: lighter;
   font-size: 25px;
-  margin-left:7vh;
+  margin-left: 4vh;
   margin-top: 2vh;
   border-bottom: solid rgb(248, 224, 250) 2px;
 }
@@ -746,10 +789,11 @@ h7 {
   font-family: 'Raleway', sans-serif;  
   font-weight: lighter;
   font-size: 25px;
-  margin-left:5vh;
+  margin-left: 3vh;
   margin-top: 2vh;
   border-bottom: solid rgb(248, 224, 250) 2px;
 }
+
 
 h14 {
   color: rgb(0, 0, 0);
@@ -864,7 +908,7 @@ h21 {
   margin-top: 3vh;
 }
 #patient-table, th, td {
-  border-bottom: solid 2px rgb(229, 180, 209);
+  border-bottom: solid 2px #D8BBD7;
   font-family: 'Raleway', sans-serif;  
   font-size: 10px;
   text-align: left;
@@ -992,6 +1036,46 @@ td {
   position: absolute;
   border: 1px solid rgb(246, 220, 235);
 }
+.pat-password {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 8vh;
+  margin-top:  35vh;
+  width: 31vh;
+  position: absolute;
+  border: 1px solid rgb(246, 220, 235);
+}
+.pat-number {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 8vh;
+  margin-top:  30vh;
+  width: 31vh;
+  position: absolute;
+  border: 1px solid rgb(246, 220, 235);
+}
+.pat-email {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 8vh;
+  margin-top:  25vh;
+  width: 31vh;
+  position: absolute;
+  border: 1px solid rgb(246, 220, 235);
+}
+.pat-medicalaid {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 8vh;
+  margin-top:  20vh;
+  width: 31vh;
+  position: absolute;
+  border: 1px solid rgb(246, 220, 235);
+}
 .user-number {
   border-radius: 5vh;
   border-style: none;
@@ -1042,7 +1126,9 @@ td {
   margin-top:  45vh;
   width: 10vh;
   position: absolute;
-  background-color: rgb(248, 224, 250);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px 1px #D8BBD7;
+
 }
 
 button {
@@ -1069,11 +1155,23 @@ h25 {
 .logo {
   height: 15vh;
   width: 15vh;
-  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./Images/cancerlogo-01.png");
   margin-left: 2vh;
   border-radius: 50%;
   position: absolute;
+  margin-top: 2vh;
+}
+
+h8 {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-weight: lighter;
+  font-size: 17px;
   margin-top: 20vh;
+  text-align: center;
 }
 
 p1 {

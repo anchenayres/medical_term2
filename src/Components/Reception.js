@@ -85,7 +85,27 @@ const Reception = () => {
         <button type="add-user-button" >Add</button>
     </div>
 
-    
+    <div class="delete_user">
+            <h6> Delete Receptionist</h6>
+            <form> 
+                <select className="delUser">
+                </select>
+                <button className="button3">Delete</button>
+            </form>
+        </div>
+
+        <div class="update-user">
+            <h7> Update Receptionist</h7>
+            <form action="medical_api/patients.php" method="post"> 
+                <select class="delUser2">
+                </select>
+                <input className="pat-email" type="text" placeholder="Email"  />
+                <input className="pat-password" type="text" placeholder="Password"  />
+                <input className="pat-number" type="text" placeholder="Number"  />
+                <input className="pat-medicalaid" type="text" placeholder="Medical Aid Number"  />
+                <button className="button4">Update</button>
+            </form>
+        </div>    
 
    
 

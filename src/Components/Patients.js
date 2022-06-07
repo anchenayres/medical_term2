@@ -23,9 +23,9 @@ const Patients = () => {
                 <th>Age</th>
                 <th>Gender</th>
                 <th>Email</th>
-                <th>Phone Number</th>
                 <th>ID</th>
                 <th>Medical Aid Number</th>
+                <th>Past Appointments</th>
           </tr>
           <tr>
                 <td>Insert Image</td>
@@ -38,6 +38,7 @@ const Patients = () => {
                 <td>{item.past_appointments}</td>
           </tr>
             </table>
+            
         
            
         )
@@ -80,18 +81,23 @@ const Patients = () => {
     <div class="delete_user">
             <h6> Delete an Existing Patient</h6>
             <form> 
-                <select name="delUser">
+                <select className="delUser">
                 </select>
-                <button className="button3">Delete User</button>
+                <button className="button3">Delete</button>
             </form>
         </div>
 
         <div class="update-user">
             <h7> Update an Existing Patient</h7>
-            <form> 
-                <select name="delUser">
+            <form action="medical_api/patients.php" method="post"> 
+                <select class="delUser2">
+                {nameInfo}
                 </select>
-                <button className="button3">Delete User</button>
+                <input className="pat-email" type="text" placeholder="Email"  />
+                <input className="pat-password" type="text" placeholder="Password"  />
+                <input className="pat-number" type="text" placeholder="Number"  />
+                <input className="pat-medicalaid" type="text" placeholder="Medical Aid Number"  />
+                <button className="button4">Delete</button>
             </form>
         </div>
 
