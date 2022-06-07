@@ -1,12 +1,56 @@
-import React from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import React, {useEffect, useState} from "react";
 
 
 const Reception = () => {
 
+    const [receptionInfo, setReceptionInfo] = useState();
+
+    useEffect (() => {
+
+        axios.post("http://localhost:8888/medical_api/reception.php")
+        .then((res) =>{
+            console.log(res);
+            let Receptionists = res.data.map(item => 
+            
+       
+            <table id="patient-table">
+            <tr>
+                <th>Images</th>
+                <th>Name and Surname</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Rank</th>
+          </tr>
+          <tr>
+                <td>Insert Image</td>
+                <td>{item.name_and_surname}</td>
+                <td>{item.age}</td>
+                <td>{item.gender}</td>
+                <td>{item.phone_number}</td>
+                <td>{item.email}</td>
+                <td>{item.admin}</td>
+          </tr>
+            </table>
+        
+           
+        )
+        setReceptionInfo(Receptionists)
+        });
+
+    });
+
     return (
     <>
+        <div className="pat-appointments">
+        <h14>Current Receptionists</h14>
+        {receptionInfo}
+    </div>
 
-<div className="create-appointments"></div>
+
 
 
         <div className="nav"></div>
@@ -27,20 +71,7 @@ const Reception = () => {
         </div>
     
 
-    <div className="footer">
-        <div className="facebook"></div>
-        <div className="twitter"></div>
-        <div className="instagram"></div>
-    </div>
-    
-    <h3>All Receptionists</h3>
-    <h4>Name</h4>
-    <h5>Age</h5>
-    <h6>Email</h6>
-    <h7>Password</h7>
-    <h8>Number</h8>
-    <h9>Rank</h9>
-    <h10>Edit</h10>
+   
 
 
     </>
