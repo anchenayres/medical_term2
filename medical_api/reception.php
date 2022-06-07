@@ -10,7 +10,7 @@ $data = json_decode($request_body);
 
 $name_surname = $data->activeUser;
 
-    $sql = "SELECT * FROM reception";
+    $sql = "SELECT * FROM receptionists";
 
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);

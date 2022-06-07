@@ -6,6 +6,7 @@ import React, {useEffect, useState} from "react";
 const Patients = () => {
 
     const [patientInfo, setPatientInfo] = useState();
+    const [nameInfo, setNameInfo] = useState();
 
     useEffect (() => {
 
@@ -40,6 +41,7 @@ const Patients = () => {
         
            
         )
+        setNameInfo(Patients)
         setPatientInfo(Patients)
         });
 
@@ -74,6 +76,24 @@ const Patients = () => {
 
         <button type="add-user-button" >Add</button>
     </div>
+
+    <div class="delete_user">
+            <h6> Delete an Existing Patient</h6>
+            <form> 
+                <select name="delUser">
+                </select>
+                <button className="button3">Delete User</button>
+            </form>
+        </div>
+
+        <div class="update-user">
+            <h7> Update an Existing Patient</h7>
+            <form> 
+                <select name="delUser">
+                </select>
+                <button className="button3">Delete User</button>
+            </form>
+        </div>
 
             
         

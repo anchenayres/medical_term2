@@ -535,7 +535,7 @@ h1 {
 }
 
 .side-nav {
-  height: 131vh;
+  height: 133vh;
   width: 19vh;
   margin-top: 3vh;
   margin-left:3vh;
@@ -730,6 +730,26 @@ h5 {
   position: absolute;
   border-bottom: solid #F174AC 2px;
 }
+h6 {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-weight: lighter;
+  font-size: 25px;
+  margin-left:7vh;
+  margin-top: 2vh;
+  border-bottom: solid rgb(248, 224, 250) 2px;
+}
+h7 {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-weight: lighter;
+  font-size: 25px;
+  margin-left:5vh;
+  margin-top: 2vh;
+  border-bottom: solid rgb(248, 224, 250) 2px;
+}
 
 h14 {
   color: rgb(0, 0, 0);
@@ -903,7 +923,24 @@ td {
   margin-top: 3vh;
   border-radius: 5vh;
   box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
-
+}
+.delete_user {
+  height: 50vh;
+  width: 48vh;
+  position: absolute;
+  margin-left: 98vh;
+  margin-top: 3vh;
+  border-radius: 5vh;
+  box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
+}
+.update-user {
+  height: 50vh;
+  width: 48vh;
+  position: absolute;
+  margin-left: 149vh;
+  margin-top: 3vh;
+  border-radius: 5vh;
+  box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
 }
 
 .user-name-surname {

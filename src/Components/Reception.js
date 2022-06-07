@@ -69,6 +69,22 @@ const Reception = () => {
             <li><a href="/Reception">Reception</a></li>
         </ul>
         </div>
+
+        <div className="add-users">
+    <h25>Add a Receptionist</h25>
+
+        <input className="user-name-surname" type="text" placeholder="Name and Surname"  />
+        <input className="user-age" type="text" placeholder="Age"  />
+        <input className="user-gender" type="text" placeholder="Gender"  />
+        <input className="user-email" type="text" placeholder="Email"  />
+        <input className="user-password" type="text" placeholder="Password"  />
+        <input className="user-number" type="text" placeholder="Number"  />
+        <input className="user-id" type="text" placeholder="Admin"  />
+
+
+        <button type="add-user-button" >Add</button>
+    </div>
+
     
 
    
