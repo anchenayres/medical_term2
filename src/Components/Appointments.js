@@ -77,7 +77,7 @@ const Appointments = () => {
         <input className="user-medicalaid" type="text" placeholder="Patient Medical Aid Number"  />
 
 
-        <button type="add-user-button" >Add</button>
+        <button className="add-user-button" >Add</button>
     </div>
 
 

@@ -18,7 +18,7 @@ const Register = () => {
         event.preventDefault();
         console.log(inputs);
 
-        axios.post('https://localhost:8888/api/addUser', inputs)
+        axios.post('https://localhost/api/addUser', inputs)
         .then(function(response){
         console.log(response);
         });
@@ -37,7 +37,7 @@ const Register = () => {
     
     <div className="reg-box">
     <form>   
-    <h5>Sign In</h5>
+    <h5>Sign up</h5>
         <input className="first_last"  type="text" placeholder="Name and Surname" onChange={handleChange} />
         <input className="gender"  type="text" placeholder="Gender" onChange={handleChange} />
         <input className="email"  type="text" placeholder="Email"  onChange={handleChange} />

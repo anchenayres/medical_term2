@@ -124,9 +124,12 @@ const Doctors = () => {
         <div class="delete_user">
             <h6> Delete an Existing Doctor</h6>
             <form> 
-                <select className="delUser">
+            <select ref={name} class="delUser2">
+                {
+                    nameInfo.map(item => <option value={item.name_and_surname} >{item.name_and_surname}</option>)
+                }
                 </select>
-                <button className="button3">Delete</button>
+                <button className="button4">Delete</button>
             </form>
         </div>
 

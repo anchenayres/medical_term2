@@ -16,6 +16,8 @@ $contact = $data->contact;
 $password = $data->password;
 
 $sql = "INSERT INTO users (id, first, last, email, username, contact, password, userCreate) VALUES (NULL, '$first','$last', '$email', '$username', '$contact', '$password', CURRENT_TIMESTAMP);";
+
+
 $result = mysqli_query($conn, $sql);
 
 if(!$result){

@@ -80,7 +80,7 @@ const Reception = () => {
     return (
     <>
         <div className="pat-appointments">
-        <h14>Current Receptionists</h14>
+        <h10>Current Receptionists</h10>
         {receptionInfo}
     </div>
 
@@ -120,16 +120,19 @@ const Reception = () => {
     </div>
 
     <div class="delete_user">
-            <h6> Delete Receptionist</h6>
+            <h9> Delete Receptionist</h9>
             <form> 
-                <select className="delUser">
+            <select ref={name} class="delUser2">
+                {
+                    nameInfo.map(item => <option value={item.name_and_surname} >{item.name_and_surname}</option>)
+                }
                 </select>
-                <button className="button3">Delete</button>
+                <button className="button4">Delete</button>
             </form>
         </div>
 
         <div class="update-user">
-            <h7> Update Receptionist</h7>
+            <h9> Update Receptionist</h9>
             <form action="medical_api/patients.php" method="post"> 
             <select ref={name} class="delUser2">
                 {
@@ -140,7 +143,7 @@ const Reception = () => {
                 <input ref={email} className="pat-email" type="text" placeholder="Email"  />
                 <input ref={number} className="pat-number" type="text" placeholder="Number"  />
                 <input ref={password} className="pat-password" type="text" placeholder="Password"  />
-                <button className="button4" onClick={updatePatient} >Delete</button>
+                <button className="button4" onClick={updatePatient} >Update</button>
             </form>
         </div>    
 

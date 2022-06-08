@@ -744,8 +744,8 @@ h3 {
   color: rgb(0, 0, 0);
   font-size: 25px;
   margin-top: -7vh;
-  margin-left: 71vh;
-  width: 32vh;
+  margin-left: 3vh;
+  width: 33vh;
   font-weight: lighter;
   font-family: 'Raleway', sans-serif;  
   position: absolute;
@@ -793,14 +793,34 @@ h7 {
   margin-top: 2vh;
   border-bottom: solid rgb(248, 224, 250) 2px;
 }
+h9 {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-weight: lighter;
+  font-size: 25px;
+  margin-left: 9vh;
+  margin-top: 2vh;
+  border-bottom: solid rgb(248, 224, 250) 2px;
+}
 
 
 h14 {
   color: rgb(0, 0, 0);
   font-size: 25px;
   margin-top: -7vh;
-  margin-left: 78vh;
-  width: 23vh;
+  margin-left: 3vh;
+  width: 24vh;
+  font-family: 'Raleway', sans-serif;  
+  position: absolute;
+  border-bottom: solid rgb(248, 224, 250) 2px;
+}
+h10 {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  margin-top: -7vh;
+  margin-left: 3vh;
+  width: 32vh;
   font-family: 'Raleway', sans-serif;  
   position: absolute;
   border-bottom: solid rgb(248, 224, 250) 2px;
@@ -1118,7 +1138,19 @@ td {
   border: 1px solid rgb(246, 220, 235);
 } 
 
- .add-user-button2 {
+ .add-user-button {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 36vh;
+  margin-top:  38vh;
+  width: 10vh;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 1px 5px 1px #D8BBD7;
+}
+
+.add-user-button2 {
   border-radius: 5vh;
   border-style: none;
   height: 3.5vh;
@@ -1126,9 +1158,8 @@ td {
   margin-top:  45vh;
   width: 10vh;
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   box-shadow: 0px 1px 5px 1px #D8BBD7;
-
 }
 
 button {

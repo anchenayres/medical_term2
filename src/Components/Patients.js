@@ -108,15 +108,18 @@ const Patients = () => {
         <input className="user-medicalaid" type="text" placeholder="Patient Medical Aid Number"  />
 
 
-        <button type="add-user-button" >Add</button>
+        <button className="add-user-button" >Add</button>
     </div>
 
     <div class="delete_user">
             <h6> Delete an Existing Patient</h6>
             <form> 
-                <select className="delUser">
+            <select ref={name} class="delUser2">
+                {
+                    nameInfo.map(item => <option value={item.name_and_surname} >{item.name_and_surname}</option>)
+                }
                 </select>
-                <button className="button3">Delete</button>
+                <button className="button4">Delete</button>
             </form>
         </div>
 
@@ -131,7 +134,7 @@ const Patients = () => {
                 <input ref={email} className="pat-email" type="text" placeholder="Email"  />
                 <input ref={number} className="pat-number" type="text" placeholder="Number"  />
                 <input ref={password} className="pat-password" type="text" placeholder="Password"  />
-                <button className="button4" onClick={updatePatient} >Delete</button>
+                <button className="button4" onClick={updatePatient} >Update</button>
         </div>
 
             
