@@ -1,10 +1,43 @@
 import axios from "axios";
-import React, {useEffect, useState} from "react";
+import { useNavigate } from "react-router-dom";
+import React, {useEffect, useRef, useState} from "react";
 
 
 const Doctors = () => {
 
     const [doctorInfo, setDoctorInfo] = useState();
+    const [nameInfo, setNameInfo] = useState([]);
+    const [updateInfo, setUpdateInfo] = useState({
+       name: "", medAidNumber: "", email: "", number:"", password:""
+    })
+
+    let name = useRef ();
+    let medAidNumber = useRef();
+    let email = useRef();
+    let number = useRef();
+    let password = useRef();
+
+    const updatePatient = () => {
+        let nameVal = name.current.value
+        console.log(nameVal);
+        let medAidNumberVal = medAidNumber.current.target
+        let emailVal = email.current.target
+        let numberVal = number.current.target
+        let passwordVal = password.current.target
+        setUpdateInfo({...updateInfo,
+        
+        name: nameVal,
+        medAidNumber: medAidNumberVal,
+        email: emailVal,
+        number: numberVal,
+        password: passwordVal
+
+        });
+        axios.post("http://localhost:8888/medical_api/updatePatient.php", updateInfo)
+        .then((res) => {
+
+        })
+    }
 
     useEffect (() => {
 
@@ -37,6 +70,7 @@ const Doctors = () => {
         </table>
            
         )
+        setNameInfo(res.data)
         setDoctorInfo(doctors)
         });
 
@@ -88,7 +122,7 @@ const Doctors = () => {
         </div>
     
         <div class="delete_user">
-            <h6> Delete an Existing Patient</h6>
+            <h6> Delete an Existing Doctor</h6>
             <form> 
                 <select className="delUser">
                 </select>
@@ -97,15 +131,18 @@ const Doctors = () => {
         </div>
 
         <div class="update-user">
-            <h7> Update an Existing Patient</h7>
+            <h7> Update an Existing Doctor</h7>
             <form action="medical_api/patients.php" method="post"> 
-                <select class="delUser2">
+            <select ref={name} class="delUser2">
+                {
+                    nameInfo.map(item => <option value={item.name_and_surname} >{item.name_and_surname}</option>)
+                }
                 </select>
-                <input className="pat-email" type="text" placeholder="Email"  />
-                <input className="pat-password" type="text" placeholder="Password"  />
-                <input className="pat-number" type="text" placeholder="Number"  />
-                <input className="pat-medicalaid" type="text" placeholder="Medical Aid Number"  />
-                <button className="button4">Update</button>
+                <input ref={medAidNumber} className="pat-medicalaid" type="text" placeholder="Room Number"  />
+                <input ref={email} className="pat-email" type="text" placeholder="Email"  />
+                <input ref={number} className="pat-number" type="text" placeholder="Number"  />
+                <input ref={password} className="pat-password" type="text" placeholder="Password"  />
+                <button className="button4" onClick={updatePatient} >Delete</button>
             </form>
         </div>
 
