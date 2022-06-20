@@ -142,7 +142,7 @@ const Doctors = () => {
 
 
         <div class="update-user">
-            <h7> Update an Existing Doctor</h7>
+            <h7>Update an Existing Doctor</h7>
             <form action="medical_api/updatePatient.php" method="post"> 
             <select ref={name} class="delUser2">
                 {
@@ -150,9 +150,9 @@ const Doctors = () => {
                 }
                 </select>
                 <input ref={medAidNumber} className="pat-medicalaid" type="text" placeholder="Room Number"  />
-                <input ref={email} className="pat-email" type="text" placeholder="Email"  />
-                <input ref={number} className="pat-number" type="text" placeholder="Number"  />
-                <input ref={password} className="pat-password" type="text" placeholder="Password"  />
+                <input ref={email} className="pat-email" name="pat-email" type="text" placeholder="Email"  />
+                <input ref={number} className="pat-number" name="pat-number" type="text" placeholder="Number"  />
+                <input ref={password} className="pat-password" name="pat-password" type="text" placeholder="Password"  />
                 <button className="button4" onClick={updatePatient} >Update</button>
             </form>
         </div>

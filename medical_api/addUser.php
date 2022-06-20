@@ -2,8 +2,6 @@
 
 include 'db_connection.php';
 
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Headers: *');
 
 if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] && $_POST['email'] && $_POST['password'] && $_POST['number'] && $_POST['id'] && $_POST['special'] && $_POST['room'])){
     echo "You need to enter in all the data please!";
