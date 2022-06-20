@@ -49,6 +49,12 @@ const Register = () => {
         <div className="login-link1">Already have an account?<a href="/">Login</a></div>
         </div>
     </div>
+
+    <div className="extra-text2">
+        <p6>This is the first step to a heathier <b>YOU</b> and the beginning of your
+            health journey with us!
+        </p6>
+        </div>
     </>
     )
 

@@ -732,8 +732,6 @@ border: solid 2px rgb(244, 213, 249);
   color: rgb(107, 43, 43);
   margin-left: 85vh;
   position: absolute;
-
-
 }
 .doc-room {
   color: rgb(107, 43, 43);
@@ -803,7 +801,37 @@ h9 {
   margin-top: 2vh;
   border-bottom: solid rgb(248, 224, 250) 2px;
 }
-
+.extra-text {
+  font-family: 'Raleway', sans-serif;  
+  font-size: 3vh;
+  margin-top: 15vh;
+  margin-left: 110vh;
+  height: 20vh;
+  width: 60vh;
+  position: absolute;
+}
+p5 {
+  color:rgb(255, 255, 255);
+  font-family: 'Raleway', sans-serif;  
+  margin-top: 15vh;
+  margin-left: 10vh;
+  position: absolute;
+}
+.extra-text2 {
+  font-family: 'Raleway', sans-serif;  
+  font-size: 3vh;
+  margin-top: 15vh;
+  height: 20vh;
+  width: 60vh;
+  position: absolute;
+}
+p6 {
+  color:rgb(255, 255, 255);
+  font-family: 'Raleway', sans-serif;  
+  margin-top: 15vh;
+  margin-left: 10vh;
+  position: absolute;
+}
 
 h14 {
   color: rgb(0, 0, 0);
