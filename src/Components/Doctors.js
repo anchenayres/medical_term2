@@ -60,13 +60,13 @@ const Doctors = () => {
         </tr>
         <tr>
             <td>Insert Image</td>
-            <td>{item.name_and_surname}</td>
+            <td>{item.name}</td>
             <td>{item.age}</td>
             <td>{item.gender}</td>
             <td>{item.email}</td>
-            <td>{item.doctor_id}</td>
-            <td>{item.specialisation}</td>
-            <td>{item.room}</td>
+            <td>{item.docID}</td>
+            <td>{item.docSpecial}</td>
+            <td>{item.docRoom}</td>
         </tr>
         </table>
            
@@ -172,7 +172,7 @@ const Doctors = () => {
             <form> 
             <select ref={name} class="delUser2">
                 {
-                    nameInfo.map(item => <option value={item.name_and_surname} >{item.name_and_surname}</option>)
+                    nameInfo.map(item => <option value={item.name} >{item.name}</option>)
                 }
                 </select>
                 <button className="button4">Delete</button>
@@ -185,7 +185,7 @@ const Doctors = () => {
             <form action="medical_api/updatePatient.php" method="post"> 
             <select ref={name} class="delUser2">
                 {
-                    nameInfo.map(item => <option value={item.name_and_surname} >{item.name_and_surname}</option>)
+                    nameInfo.map(item => <option value={item.name} >{item.name}</option>)
                 }
                 </select>
                 <input ref={medAidNumber} className="pat-medicalaid" type="text" placeholder="Room Number"  />
