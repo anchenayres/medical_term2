@@ -814,8 +814,9 @@ p5 {
   color:rgb(255, 255, 255);
   font-family: 'Raleway', sans-serif;  
   margin-top: 15vh;
-  margin-left: 10vh;
+  margin-left: 20vh;
   position: absolute;
+  text-align: justify;
 }
 .extra-text2 {
   font-family: 'Raleway', sans-serif;  
@@ -829,8 +830,11 @@ p6 {
   color:rgb(255, 255, 255);
   font-family: 'Raleway', sans-serif;  
   margin-top: 15vh;
-  margin-left: 10vh;
+  margin-left: 30vh;
+  width: 40vh;
+
   position: absolute;
+  text-align: justify;
 }
 
 h14 {
@@ -1551,20 +1555,25 @@ h13 {
 
 
 
-#profileimg {
+.profile_img {
   background-color: rgb(212, 193, 193);
   height: 15vh;
   width: 15vh;
-  margin-left: 148vh;
-  margin-top: 16vh;
+  margin-left: 33vh;
+  margin-top: 11.5vh;
   position: absolute;
+  overflow: hidden;
+
   border-radius: 100%;
+}
+.profile_img img {
+  width: 100%;
 }
 
 .imgInput {
   color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: 50vh;
+  margin-top: 18vh;
   position: absolute;
-  margin-left: 166vh;
-  margin-top: 23vh;
 }

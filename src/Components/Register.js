@@ -25,6 +25,8 @@ const Register = () => {
         const [passwordConError, setPasswordConError] = useState();
 
         const [emailAvail, setEmailAvail] = useState();
+        const [userAvail, setUserAvail] = useState();
+
 
         const fullNameVal = (e) => {
             const value = e.target.value;
@@ -90,6 +92,18 @@ const Register = () => {
                 if(!value.match(contCodex)){
                     setContactError("Not a Valid Phone Number");
                 } 
+            }
+
+            const validateUser = () => {
+                axios.post('http://localhost:8888/medical_api/authenticateUser.php', inputs)
+                .then(function(response){
+                console.log(response);
+                if(response.data === "Available"){
+                    setUserAvail();
+                } else {
+                    setUserAvail("Username Is Not Available");
+                }
+                });
             }
         
             const passwordVal = (e) => {
@@ -165,35 +179,36 @@ const Register = () => {
 
     return (
         <div>
-            <form id='ImgOne' encType="multipart/form-data">    
-                <div className='imageArea'>
-                <input name="imageUrl" className='imgInput' type="file" onChange={imageVal} />
-                <div id="profileimg" className='profile_img'></div>  
-                </div>
-
-                <div className="behind2">
                 
-                <div className="reg-box">
-                <form>   
-                <h5>Register</h5>
-                    <input className="first_last"  type="text" placeholder="Name and Surname" onChange={fullNameVal} />
-                    <input className="gender"  type="text" placeholder="Gender" onChange={genderVal} />
-                    <input className="email"  type="text" placeholder="Email"  onChange={emailVal} />
-                    <input className="contact" type="text" placeholder="Contact" onChange={contactVal} />
-                    <input className="password"  type="text" placeholder="Password" onChange={passwordVal} />
-                    <input className="conPass"  type="password" placeholder="Confirm Password" onChange={passwordConVal} />
-                    <button className="button2" onClick={handleSubmit} >Register</button>
-                    </form>
-                    <div className="login-link1">Already have an account?<a href="/">Login</a></div>
-                    </div>
-                </div>
 
-                <div className="extra-text2">
-                    <p6>This is the first step to a heathier <b>YOU</b> and the beginning of your
-                        health journey with us!
-                    </p6>
+                        <div className="behind2">
+                        <div className="reg-box">
+                        <form id='ImgOne' encType="multipart/form-data">    
+                    <div className='imageArea'>
+                        <input name="imageUrl" className='imgInput' type="file" onChange={imageVal} />
+                        <div id="profileimg" className='profile_img'></div>  
                     </div>
-            </form>
+                        <form>   
+                            <h5>Register</h5>
+                            <input className="first_last"  type="text" placeholder="Name and Surname" onChange={fullNameVal} />
+                            <input className="gender"  type="text" placeholder="Gender" onChange={genderVal} />
+                            <input className="email"  type="text" placeholder="Email"  onChange={emailVal} />
+                            <input className="contact" type="text" placeholder="Contact" onChange={contactVal} />
+                            <input className="password"  type="text" placeholder="Password" onChange={passwordVal} />
+                            <input className="conPass"  type="password" placeholder="Confirm Password" onChange={passwordConVal} />
+                            <button className="button2" onClick={handleSubmit} >Register</button>
+                        </form>
+                            <div className="login-link1">Already have an account?<a href="/">Login</a></div>
+                            </form>
+                        </div>
+                        </div>
+
+                            <div className="extra-text2">
+                            <p6>This is the first step to a heathier <b>YOU</b> and the beginning of your health journey with us!
+                            </p6>
+                            
+                            </div>
+                
         </div>
     )
 }

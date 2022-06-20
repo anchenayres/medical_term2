@@ -59,7 +59,7 @@ const Login = () => {
                 <input className="box1" type="username" placeholder="Email" onChange={usernameVal} />
                 <input className="box2" type="password" placeholder="Password" onChange={passwordVal} />
                 <button className="button1" onClick={handleSubmit} >Sign In</button>
-                <div className="login-link">Register for an account<a href="/Register">Sign Up</a></div>
+                <div className="login-link">Register for an account<a href="/Register">Register</a></div>
             </div>
             </div>
                 <div className="extra-text">
