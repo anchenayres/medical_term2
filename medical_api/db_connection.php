@@ -3,9 +3,9 @@
     $dbhost = "localhost";
     $dbusername = "root";
     $dbpassword = "root";
-    $dbname = "development_project";
+    $db = "development_project";
 
-    $conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
+    $conn = new mysqli($dbhost, $dbusername, $dbpassword, $db);
 
     if($mysqli -> connect_error){
         echo 'Failed to connect to Database: ' . $mysqli -> connect_error;

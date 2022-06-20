@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import React, {useEffect, useRef, useState} from "react";
 
 
+
 const Doctors = () => {
 
     const [doctorInfo, setDoctorInfo] = useState();
@@ -85,18 +86,22 @@ const Doctors = () => {
     </div>
 
          <div className="add-users">
-    <h25>Add a Doctor</h25>
-        <input className="user-name-surname" type="text" placeholder="Name and Surname"  />
-        <input className="user-age" type="text" placeholder="Age"  />
-        <input className="user-gender" type="text" placeholder="Gender"  />
-        <input className="user-email" type="text" placeholder="Email"  />
-        <input className="user-password" type="text" placeholder="Password"  />
-        <input className="user-number" type="text" placeholder="Number"  />
-        <input className="user-id" type="text" placeholder="Id"  />
-        <input className="user-medicalaid" type="text" placeholder="Specialisation"  />
-        <input className="user-room" type="text" placeholder="Room Number "  />
-        <button className="add-user-button2" >Add</button>
+         <h25>Add a Doctor</h25>
+         <form action="/medical_api/addUser.php" method="post"> 
+   
+        <input className="user-name-surname" name="name" type="text" placeholder="Name and Surname"  />
+        <input className="user-age" name="age" type="text" placeholder="Age"  />
+        <input className="user-gender" name="gender" type="text" placeholder="Gender"  />
+        <input className="user-email" name="email" type="text" placeholder="Email"  />
+        <input className="user-password" name="password" type="text" placeholder="Password"  />
+        <input className="user-number" name="number" type="text" placeholder="Number"  />
+        <input className="user-id" name="id" type="text" placeholder="Id"  />
+        <input className="user-special" name="special" type="text" placeholder="Specialisation"  />
+        <input className="user-room" name="room" type="text" placeholder="Room Number "  />
+        <button className="add-user-button2" type="submit">Add</button>
+        </form>
     </div>
+
         <ul className="login">
             <li><a href="/Login">Sign In</a></li>
         </ul>
@@ -120,9 +125,11 @@ const Doctors = () => {
             <li><a href="/Reception">Reception</a></li>
         </ul>
         </div>
-    
+
+  
         <div class="delete_user">
             <h6> Delete an Existing Doctor</h6>
+            
             <form> 
             <select ref={name} class="delUser2">
                 {
@@ -133,9 +140,10 @@ const Doctors = () => {
             </form>
         </div>
 
+
         <div class="update-user">
             <h7> Update an Existing Doctor</h7>
-            <form action="medical_api/patients.php" method="post"> 
+            <form action="medical_api/updatePatient.php" method="post"> 
             <select ref={name} class="delUser2">
                 {
                     nameInfo.map(item => <option value={item.name_and_surname} >{item.name_and_surname}</option>)
@@ -145,7 +153,7 @@ const Doctors = () => {
                 <input ref={email} className="pat-email" type="text" placeholder="Email"  />
                 <input ref={number} className="pat-number" type="text" placeholder="Number"  />
                 <input ref={password} className="pat-password" type="text" placeholder="Password"  />
-                <button className="button4" onClick={updatePatient} >Delete</button>
+                <button className="button4" onClick={updatePatient} >Update</button>
             </form>
         </div>
 
