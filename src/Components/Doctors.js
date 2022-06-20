@@ -77,6 +77,47 @@ const Doctors = () => {
 
     });
 
+    let docName = useRef();
+    let docAge = useRef();
+    let docGender = useRef();
+    let docEmail = useRef();
+    let docPassword = useRef();
+    let docNumber = useRef();
+    let docId = useRef();
+    let docSpecial = useRef();
+    let docRoom = useRef();
+
+    const getDoctorsInfo = () => {
+        let name = docName.current.value;
+        let age = docAge.current.value;
+        let gender = docGender.current.value;
+        let email = docEmail.current.value;
+        let pass = docPassword.current.value;
+        let num = docNumber.current.value;
+        let id = docId.current.value;
+        let special = docSpecial.current.value;
+        let room = docRoom.current.value;
+
+        let inputs = {
+            name: name,
+            age: +age,
+            gender: gender,
+            email: email,
+            pass: pass,
+            num: num,
+            doc_id: id,
+            special: special,
+            room: room
+        }
+
+        console.log(inputs);
+
+        axios.post('http://localhost/medical_api/addUser.php', inputs)
+        .then( ( res ) => {         
+            console.log(res)       
+        });
+    }
+
     return (
     <>
 
@@ -87,19 +128,17 @@ const Doctors = () => {
 
          <div className="add-users">
          <h25>Add a Doctor</h25>
-         <form action="/medical_api/addUser.php" method="post"> 
    
-        <input className="user-name-surname" name="name" type="text" placeholder="Name and Surname"  />
-        <input className="user-age" name="age" type="text" placeholder="Age"  />
-        <input className="user-gender" name="gender" type="text" placeholder="Gender"  />
-        <input className="user-email" name="email" type="text" placeholder="Email"  />
-        <input className="user-password" name="password" type="text" placeholder="Password"  />
-        <input className="user-number" name="number" type="text" placeholder="Number"  />
-        <input className="user-id" name="id" type="text" placeholder="Id"  />
-        <input className="user-special" name="special" type="text" placeholder="Specialisation"  />
-        <input className="user-room" name="room" type="text" placeholder="Room Number "  />
-        <button className="add-user-button2" type="submit">Add</button>
-        </form>
+        <input ref={docName} className="user-name-surname" name="name" type="text" placeholder="Name and Surname"  />
+        <input ref={docAge} className="user-age" name="age" type="text" placeholder="Age"  />
+        <input ref={docGender} className="user-gender" name="gender" type="text" placeholder="Gender"  />
+        <input ref={docEmail} className="user-email" name="email" type="text" placeholder="Email"  />
+        <input ref={docPassword} className="user-password" name="password" type="text" placeholder="Password"  />
+        <input ref={docNumber} className="user-number" name="number" type="text" placeholder="Number"  />
+        <input ref={docId} className="user-id" name="id" type="text" placeholder="Id"  />
+        <input ref={docSpecial} className="user-special" name="special" type="text" placeholder="Specialisation"  />
+        <input ref={docRoom} className="user-room" name="room" type="text" placeholder="Room Number "  />
+        <button onClick={getDoctorsInfo} className="add-user-button2" type="submit">Add</button>
     </div>
 
         <ul className="login">
