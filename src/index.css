@@ -70,7 +70,7 @@ html, p, body {
   width: 65vh;
   border: solid 2px #F174AC;
   position: absolute;
-  margin-top: 20vh;
+  margin-top: 30vh;
   margin-left: 7vh;
 }
 .gender {
@@ -80,7 +80,7 @@ html, p, body {
   width: 20vh;
   border: solid 2px #F174AC;
   position: absolute;
-  margin-top: 30vh;
+  margin-top: 40vh;
   margin-left: 7vh;
 }
 .email {
@@ -90,7 +90,7 @@ html, p, body {
   width: 42vh;
   border: solid 2px #F174AC;
   position: absolute;
-  margin-top: 30vh;
+  margin-top: 40vh;
   margin-left: 30vh;
 } 
  .contact {
@@ -100,7 +100,7 @@ html, p, body {
   width: 20vh;
   border: solid 2px #F174AC;
   position: absolute;
-  margin-top: 40vh;
+  margin-top: 50vh;
   margin-left: 7vh;
 }
 .password {
@@ -110,7 +110,7 @@ html, p, body {
   width: 42vh;
   border: solid 2px #F174AC;
   position: absolute;
-  margin-top: 40vh;
+  margin-top: 50vh;
   margin-left: 30vh;
 }
 .conPass {
@@ -120,7 +120,7 @@ html, p, body {
   width: 65vh;
   border: solid 2px #F174AC;
   position: absolute;
-  margin-top: 50vh;
+  margin-top: 60vh;
   margin-left: 7vh;
 }
 .box2 {
@@ -328,7 +328,7 @@ html, p, body {
   width: 15vh;
   background-color: #F174AC;
   margin-left: 33vh;
-  margin-top: 60vh;
+  margin-top: 75vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
@@ -764,8 +764,8 @@ h5 {
   color: rgb(0, 0, 0);
   font-size: 30px;
   margin-top: 3vh;
-  margin-left: 32vh;
-  width: 12vh;
+  margin-left: 33vh;
+  width: 15vh;
   font-weight: lighter;
   font-family: 'Raleway', sans-serif;  
   position: absolute;
@@ -1549,3 +1549,22 @@ h13 {
   margin-right: 7vh;
 }
 
+
+
+#profileimg {
+  background-color: rgb(212, 193, 193);
+  height: 15vh;
+  width: 15vh;
+  margin-left: 148vh;
+  margin-top: 16vh;
+  position: absolute;
+  border-radius: 100%;
+}
+
+.imgInput {
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  margin-left: 166vh;
+  margin-top: 23vh;
+}
