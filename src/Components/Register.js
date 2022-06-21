@@ -64,12 +64,12 @@ const Register = () => {
                     setEmailError();
                 } 
                 if(!value.match(mailcodex)){
-                    setEmailError("Email is not a valid format");
+                    setEmailError("* Email is not a valid format");
                 }    
             }
 
             const validateEmail = () => {
-                axios.post('http://localhost:8888/api/authenticateEmail.php', inputs)
+                axios.post('http://localhost:8888/medical_api/authenticateEmail.php', inputs)
                 .then(function(response){
                  console.log(response);
                  if(response.data === "Available"){
@@ -90,7 +90,7 @@ const Register = () => {
                 if(inputs.contact != ''){setContactError();} 
         
                 if(!value.match(contCodex)){
-                    setContactError("Not a Valid Phone Number");
+                    setContactError("* Not a Valid Phone Number");
                 } 
             }
 
@@ -113,7 +113,7 @@ const Register = () => {
                 if(inputs.password != ''){setPasswordError();} 
         
                 if(!value.match(passCodex)){
-                    setPasswordError("Password must include stuff");
+                    setPasswordError("* Password must include capital letters and symbols");
                 } 
             }
 
@@ -121,7 +121,7 @@ const Register = () => {
                 const value = e.target.value;
                 setInputs({...inputs, passwordCon: value});
                 if(inputs.password === value){setPasswordConError()}else{
-                    setPasswordConError("Your Passwords Dont Match");
+                    setPasswordConError("* Your Passwords Do Not Match");
                 }  
             }
 
@@ -130,33 +130,34 @@ const Register = () => {
                 console.log(inputs);
         
                 if(inputs.fullName === ''){
+                    setFullNameError();
                 } else {
-                    setFullNameError("Please Enter your full name");
-                }
+                    setFullNameError("Please enter your full name and surname");
+                } 
         
                 if(inputs.gender === ''){
                 } else {
-                    setGenderError("You aren't Seal... ");
+                    setGenderError("Please add your gender");
                 }
         
                 if(inputs.email === ''){
                 } else {
-                    setEmailError();
+                    setEmailError("Please enter your email address");
                 }
                 
                 if(inputs.contact === ''){
                 } else {
-                    setContactError();
+                    setContactError("please enter your number");
                 }
         
                 if(inputs.password === ''){
                 } else {
-                    setPasswordError();
+                    setPasswordError("Please enter you password");
                 }
         
                 if(inputs.passwordCon === ''){
                 } else {
-                    setPasswordConError();
+                    setPasswordConError("Please re-enter your password");
                 }
         
                 let result = Object.values(inputs).some(o => o === '');
@@ -190,12 +191,38 @@ const Register = () => {
                     </div>
                         <form>   
                             <h5>Register</h5>
-                            <input className="first_last"  type="text" placeholder="Name and Surname" onChange={fullNameVal} />
+                       
+                            <div className='names'>
+                            <input className="first_last" type="text" placeholder="Name and Surname" onChange={fullNameVal} />
+                            {fullNameError}
+                            </div>
+                          
+                            <div className='genders'>
                             <input className="gender"  type="text" placeholder="Gender" onChange={genderVal} />
+                            {genderError}
+                            </div>
+
+                            <div className='emails'>
                             <input className="email"  type="text" placeholder="Email"  onChange={emailVal} />
+                            {emailError}
+                            {emailAvail}    
+                            </div>
+
+                            <div className='contacts'>
                             <input className="contact" type="text" placeholder="Contact" onChange={contactVal} />
+                            {contactError}
+                            </div>
+
+                            <div className='passwords'>
                             <input className="password"  type="text" placeholder="Password" onChange={passwordVal} />
+                            {passwordError}
+                            </div>
+
+                            <div className='samepasswords'>
                             <input className="conPass"  type="password" placeholder="Confirm Password" onChange={passwordConVal} />
+                            {passwordConError}
+                            </div>
+
                             <button className="button2" onClick={handleSubmit} >Register</button>
                         </form>
                             <div className="login-link1">Already have an account?<a href="/">Login</a></div>

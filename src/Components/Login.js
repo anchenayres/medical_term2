@@ -16,6 +16,9 @@ const Login = () => {
             image: '',
         });
 
+        const [emailError, setEmailError] = useState();
+        const [passwordError, setPasswordError] = useState();
+
         const usernameVal = (e) => {
             const value = e.target.value;
             setInputs({...inputs, email: value});
@@ -62,6 +65,7 @@ const Login = () => {
                 <div className="login-link">Register for an account<a href="/Register">Register</a></div>
             </div>
             </div>
+
                 <div className="extra-text">
                 <p5>Welcome to the <b>Breast Cancer Clinic</b> where all your possible needs
                     are cared for. Sign in to continue your journey with us!</p5>
