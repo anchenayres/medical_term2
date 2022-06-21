@@ -1101,6 +1101,16 @@ td {
   position: absolute;
   border: 1px solid rgb(246, 220, 235);
 }
+.user-medicalaid {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left:2vh;
+  margin-top:  38vh;
+  width: 31vh;
+  position: absolute;
+  border: 1px solid rgb(246, 220, 235);
+}
 .user-special {
   border-radius: 5vh;
   border-style: none;
