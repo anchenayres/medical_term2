@@ -70,59 +70,10 @@ html, p, body {
   width: 65vh;
   border: solid 2px #F174AC;
   position: absolute;
-  margin-top: 20vh;
-  margin-left: 7vh;
-}
-.gender {
-  border-radius: 5vh;
-  border-style: none;
-  height: 3.5vh;
-  width: 20vh;
-  border: solid 2px #F174AC;
-  position: absolute;
   margin-top: 30vh;
   margin-left: 7vh;
 }
-.email {
-  border-radius: 5vh;
-  border-style: none;
-  height: 3.5vh;
-  width: 42vh;
-  border: solid 2px #F174AC;
-  position: absolute;
-  margin-top: 30vh;
-  margin-left: 30vh;
-} 
- .contact {
-  border-radius: 5vh;
-  border-style: none;
-  height: 3.5vh;
-  width: 20vh;
-  border: solid 2px #F174AC;
-  position: absolute;
-  margin-top: 40vh;
-  margin-left: 7vh;
-}
-.password {
-  border-radius: 5vh;
-  border-style: none;
-  height: 3.5vh;
-  width: 42vh;
-  border: solid 2px #F174AC;
-  position: absolute;
-  margin-top: 40vh;
-  margin-left: 30vh;
-}
-.conPass {
-  border-radius: 5vh;
-  border-style: none;
-  height: 3.5vh;
-  width: 65vh;
-  border: solid 2px #F174AC;
-  position: absolute;
-  margin-top: 50vh;
-  margin-left: 7vh;
-}
+
 .box2 {
   height: 5vh;
   width: 65vh;
@@ -322,13 +273,14 @@ html, p, body {
   font-family: 'Raleway', sans-serif;  
   font-size: 20px;
   color: white;
+
 }
 .button2 {
   height: 5vh;
   width: 15vh;
   background-color: #F174AC;
   margin-left: 33vh;
-  margin-top: 60vh;
+  margin-top: 75vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
@@ -732,8 +684,6 @@ border: solid 2px rgb(244, 213, 249);
   color: rgb(107, 43, 43);
   margin-left: 85vh;
   position: absolute;
-
-
 }
 .doc-room {
   color: rgb(107, 43, 43);
@@ -766,8 +716,8 @@ h5 {
   color: rgb(0, 0, 0);
   font-size: 30px;
   margin-top: 3vh;
-  margin-left: 32vh;
-  width: 12vh;
+  margin-left: 33vh;
+  width: 15vh;
   font-weight: lighter;
   font-family: 'Raleway', sans-serif;  
   position: absolute;
@@ -803,7 +753,41 @@ h9 {
   margin-top: 2vh;
   border-bottom: solid rgb(248, 224, 250) 2px;
 }
+.extra-text {
+  font-family: 'Raleway', sans-serif;  
+  font-size: 3vh;
+  margin-top: 15vh;
+  margin-left: 110vh;
+  height: 20vh;
+  width: 60vh;
+  position: absolute;
+}
+p5 {
+  color:rgb(255, 255, 255);
+  font-family: 'Raleway', sans-serif;  
+  margin-top: 15vh;
+  margin-left: 20vh;
+  position: absolute;
+  text-align: justify;
+}
+.extra-text2 {
+  font-family: 'Raleway', sans-serif;  
+  font-size: 3vh;
+  margin-top: 15vh;
+  height: 20vh;
+  width: 60vh;
+  position: absolute;
+}
+p6 {
+  color:rgb(255, 255, 255);
+  font-family: 'Raleway', sans-serif;  
+  margin-top: 15vh;
+  margin-left: 30vh;
+  width: 40vh;
 
+  position: absolute;
+  text-align: justify;
+}
 
 h14 {
   color: rgb(0, 0, 0);
@@ -1118,6 +1102,16 @@ td {
   border: 1px solid rgb(246, 220, 235);
 }
 .user-medicalaid {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left:2vh;
+  margin-top:  38vh;
+  width: 31vh;
+  position: absolute;
+  border: 1px solid rgb(246, 220, 235);
+}
+.user-special {
   border-radius: 5vh;
   border-style: none;
   height: 3.5vh;
@@ -1520,4 +1514,131 @@ h13 {
   display: inline-block;
   margin-right: 7vh;
 }
+
+
+
+.profile_img {
+  background-color: rgb(212, 193, 193);
+  height: 15vh;
+  width: 15vh;
+  margin-left: 33vh;
+  margin-top: 11.5vh;
+  position: absolute;
+  overflow: hidden;
+
+  border-radius: 100%;
+}
+.profile_img img {
+  width: 100%;
+}
+
+.imgInput {
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: 50vh;
+  margin-top: 18vh;
+  position: absolute;
+}
+
+/* VALIDATION */
+.names{
+  position: absolute;
+}
+
+.email {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 42vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: -6vh;
+  margin-left: -0.2vh;
+} 
+
+.emails{
+  position: absolute;
+  position: absolute;
+  margin-top: 46vh;
+  margin-left: 30vh;
+  font-size: 12px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
+  color: rgb(248, 1, 1);
+ 
+}
+
+.gender {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 20vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: 40vh;
+  margin-left: 7vh;
+}
+
+.gender{
+  position: absolute;
+}
+
+.password {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 42vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: -6vh;
+}
+
+.passwords{
+  position: absolute;
+  margin-top: 56vh;
+  margin-left: 30vh;
+  font-size: 12px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
+  color: rgb(248, 1, 1);
+
+}
+
+.conPass {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 65vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: -6vh;
+  margin-left: 0.1vh;
+}
+
+.samepasswords{
+  position: absolute;
+  margin-top: 66vh;
+  margin-left: 7vh;
+  font-size: 12px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
+  color: rgb(248, 1, 1);
+}
+
+.contact {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  width: 20vh;
+  border: solid 2px #F174AC;
+  position: absolute;
+  margin-top: -6vh;
+}
+
+.contacts{
+  position: absolute;
+  margin-top: 56vh;
+  margin-left: 7vh;
+  font-size: 12px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
+  color: rgb(248, 1, 1);
+}
+
 
