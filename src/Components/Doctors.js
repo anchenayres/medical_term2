@@ -112,7 +112,7 @@ const Doctors = () => {
 
         console.log(inputs);
 
-        axios.post('http://localhost/medical_api/addUser.php', inputs)
+        axios.post('http://localhost/medicalApi/addUser.php', inputs)
         .then( ( res ) => {         
             console.log(res)       
         });

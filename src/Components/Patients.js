@@ -37,7 +37,7 @@ const Patients = () => {
         password: passwordVal
 
         });
-        axios.post("http://localhost:8888/medical_api/updatePatient.php", updateInfo)
+        axios.post("http://localhost:8888/medicalApi/updatePatient.php", updateInfo)
         .then((res) => {
 
         })
@@ -47,7 +47,7 @@ const Patients = () => {
 
     useEffect (() => {
 
-        axios.post("http://localhost:8888/medical_api/patients.php")
+        axios.post("http://localhost:8888/medicalApi/patients.php")
         .then((res) =>{
             console.log(res);
             let Patients = res.data.map(item => 
