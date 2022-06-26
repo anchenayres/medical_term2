@@ -912,26 +912,24 @@ label {
   border-collapse: collapse;
   margin-left: 2vh;
   padding-top: 2vh;
-
 }
-
 .patient-table{
-  border-bottom: solid 2px #D8BBD7;
-  border-top: solid 2px #D8BBD7;
-  border-left: solid 2px #D8BBD7;
-  border-right: solid 2px #D8BBD7;
+  background-color: #faeefa;
   margin-top: 2vh;
-
+  float: left;
   border-radius: 5vh;
   width: 40vh;
+  margin-right: 1vh;
+  margin-left: 1vh;
+  margin-top: 1vh;
+  border-collapse: collapse;
 }
 .result {
   display: inline-block;
   margin-bottom: 0.5rem;
-  color: rgb(169, 184, 62);
+  color: rgb(152, 152, 149);
   font-family: 'Raleway', sans-serif;  
-
-
+  margin-left: 1vh;
 }
 
 /* .patient-table {
