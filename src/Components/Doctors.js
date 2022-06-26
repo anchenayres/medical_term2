@@ -47,29 +47,16 @@ const Doctors = () => {
             console.log(res);
             let doctors = res.data.map(item => 
 
-        <table id="patient-table">
-        <tr>
-            <th>Images</th>
-            <th>Name and Surname</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Email</th>
-            <th>Doctor Id</th>
-            <th>Specialisation</th>
-            <th>Room Number</th>
-        </tr>
-        <tr>
-            <td>Insert Image</td>
-            <td>{item.name}</td>
-            <td>{item.age}</td>
-            <td>{item.gender}</td>
-            <td>{item.email}</td>
-            <td>{item.docID}</td>
-            <td>{item.docSpecial}</td>
-            <td>{item.docRoom}</td>
-        </tr>
-        </table>
-           
+        <div className="patient-table">
+            <label>Name and Surname:</label><span className="result">{item.name}</span><br></br>
+            <label>Age:</label><span className="result">{item.age}</span><br></br>
+            <label>Gender:</label><span className="result">{item.gender}</span><br></br>
+            <label>Email:</label><span className="result">{item.email}</span><br></br>
+            <label>Doctor Id:</label><span className="result">{item.docID}</span><br></br>
+            <label>Specialisation:</label><span className="result">{item.docSpecial}</span><br></br>
+            <label>Room Number:</label><span className="result">{item.docRoom}</span><br></br>
+            <label>Insert Image:</label><span className="result"></span><br></br><br></br>
+        </div>
         )
         setNameInfo(res.data)
         setDoctorInfo(doctors)

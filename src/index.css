@@ -905,28 +905,62 @@ h21 {
 
 /* END DOCTORS*/
 
-#patient-table {
-  color: rgb(24, 24, 24);
-  width: 100%;
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-family: 'Raleway', sans-serif;  
+  border-collapse: collapse;
+  margin-left: 2vh;
+  padding-top: 2vh;
+
+}
+
+.patient-table{
+  border-bottom: solid 2px #D8BBD7;
+  border-top: solid 2px #D8BBD7;
+  border-left: solid 2px #D8BBD7;
+  border-right: solid 2px #D8BBD7;
+  margin-top: 2vh;
+
+  border-radius: 5vh;
+  width: 40vh;
+}
+.result {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: rgb(169, 184, 62);
+  font-family: 'Raleway', sans-serif;  
+
+
+}
+
+/* .patient-table {
+  color: rgb(175, 176, 72);
+  background-color: #ffdffe;
   border-collapse: collapse;
   margin-top: 3vh;
+  width: 10vh;
+  display: grid;
+  place-items: center;
 }
-#patient-table, th, td {
+.patient-table, th, td {
   border-bottom: solid 2px #D8BBD7;
   font-family: 'Raleway', sans-serif;  
   font-size: 10px;
   text-align: left;
   min-width: 150px;
+  width: 10vh;
 }
 th, td {
   padding: 6px;
   min-width: 150px;
+  
 }
 
 td {
   margin-top: 20vh;
 
-}
+} */
 
 
 /* PATIENTS */
