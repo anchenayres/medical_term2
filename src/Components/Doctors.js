@@ -48,14 +48,23 @@ const Doctors = () => {
             let doctors = res.data.map(item => 
 
         <div className="patient-table">
-            <label><img src="src/images/email.png"></img></label><span className="result">{item.name}</span><br></br>
-            <label>Age:</label><span className="result">{item.age}</span><br></br>
+
+        <div className="patient-name">
+        <label>Insert Image:</label><span className="result"></span><br></br><br></br>
+        <label>Name:</label><span className="result">{item.name}</span><br></br>
+        </div>
+
+        <div className="patient-info">
             <label>Gender:</label><span className="result">{item.gender}</span><br></br>
-            <label><img src="src/images/email.png"></img></label><span className="result">{item.email}</span><br></br>
-            <label>Doctor Id:</label><span className="result">{item.docID}</span><br></br>
+            <label>Age:</label><span className="result">{item.age}</span><br></br>
+            <label>Room Number:</label><span className="result">{item.docRoom}</span><br></br>        
+        </div>
+
+        <div className="contact-info">
+            <label><div className="email-image"></div></label><span className="result">{item.email}</span><br></br>
+            <label>Doctor Id:</label><span className="result">{item.docNumber}</span><br></br>
             <label>Specialisation:</label><span className="result">{item.docSpecial}</span><br></br>
-            <label>Room Number:</label><span className="result">{item.docRoom}</span><br></br>
-            <label>Insert Image:</label><span className="result"></span><br></br><br></br>
+        </div>
         </div>
         )
         setNameInfo(res.data)
