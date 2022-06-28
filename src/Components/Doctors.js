@@ -8,6 +8,8 @@ const Doctors = () => {
 
     const [doctorInfo, setDoctorInfo] = useState();
     const [nameInfo, setNameInfo] = useState([]);
+    const [ doctorSelectedName, setDoctorSelectedName ] = useState('');
+    const [ clickCounter, setClickCounter ] = useState(0);
     const [updateInfo, setUpdateInfo] = useState({
        name: "", medAidNumber: "", email: "", number:"", password:""
     })
@@ -68,7 +70,7 @@ const Doctors = () => {
         setDoctorInfo(doctors)
         });
 
-    });
+    }, []);
 
     let docName = useRef();
     let docAge = useRef();
@@ -105,10 +107,24 @@ const Doctors = () => {
 
         console.log(inputs);
 
-        axios.post('http://localhost/medicalApi/addUser.php', inputs)
+        axios.post('http://localhost/medicalApi/addDoctor.php', inputs)
         .then( ( res ) => {         
             console.log(res)       
         });
+
+        
+    }
+    const [ deleteClickCount, setDeleteClickCount ] = useState(0);
+        const deleteProfile = () => {
+        setDeleteClickCount(deleteClickCount + 1);
+        if( deleteClickCount == 1 ) {
+            setDeleteClickCount(0);
+
+            axios.post('http://localhost/medicalApi/deleteDoctor.php', {name: doctorSelectedName})
+            .then((res) => {
+                console.log(res);
+            })
+        }
     }
 
     return (
@@ -121,7 +137,6 @@ const Doctors = () => {
 
          <div className="add-users">
          <h25>Add a Doctor</h25>
-   
         <input ref={docName} className="user-name-surname" name="name" type="text" placeholder="Name and Surname"  />
         <input ref={docAge} className="user-age" name="age" type="text" placeholder="Age"  />
         <input ref={docGender} className="user-gender" name="gender" type="text" placeholder="Gender"  />
@@ -168,7 +183,7 @@ const Doctors = () => {
                     nameInfo.map(item => <option value={item.name} >{item.name}</option>)
                 }
                 </select>
-                <button className="button4">Delete</button>
+                <button className="button4" onClick={deleteProfile} >Delete</button>
             </form>
         </div>
 
@@ -178,7 +193,7 @@ const Doctors = () => {
             <form action="medical_api/updatePatient.php" method="post"> 
             <select ref={name} class="delUser2">
                 {
-                    nameInfo.map(item => <option value={item.name} >{item.name}</option>)
+                    nameInfo.map(item => <option value={item.name}>{item.name}</option>)
                 }
                 </select>
                 <input ref={medAidNumber} className="pat-medicalaid" type="text" placeholder="Room Number"  />
