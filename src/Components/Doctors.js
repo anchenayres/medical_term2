@@ -48,10 +48,10 @@ const Doctors = () => {
             let doctors = res.data.map(item => 
 
         <div className="patient-table">
-            <label>Name and Surname:</label><span className="result">{item.name}</span><br></br>
+            <label><img src="src/images/email.png"></img></label><span className="result">{item.name}</span><br></br>
             <label>Age:</label><span className="result">{item.age}</span><br></br>
             <label>Gender:</label><span className="result">{item.gender}</span><br></br>
-            <label>Email:</label><span className="result">{item.email}</span><br></br>
+            <label><img src="src/images/email.png"></img></label><span className="result">{item.email}</span><br></br>
             <label>Doctor Id:</label><span className="result">{item.docID}</span><br></br>
             <label>Specialisation:</label><span className="result">{item.docSpecial}</span><br></br>
             <label>Room Number:</label><span className="result">{item.docRoom}</span><br></br>
