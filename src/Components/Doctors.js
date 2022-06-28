@@ -49,21 +49,18 @@ const Doctors = () => {
 
         <div className="patient-table">
 
+        <div className="patient-image"></div>
         <div className="patient-name">
-        <label>Insert Image:</label><span className="result"></span><br></br><br></br>
-        <label>Name:</label><span className="result">{item.name}</span><br></br>
+        <label></label><span className="result2">{item.name}</span><br></br>
+        <label></label><span className="result2">{item.gender}</span><br></br>
+        <label></label><span className="result2">{item.age}</span><br></br>
         </div>
 
-        <div className="patient-info">
-            <label>Gender:</label><span className="result">{item.gender}</span><br></br>
-            <label>Age:</label><span className="result">{item.age}</span><br></br>
-            <label>Room Number:</label><span className="result">{item.docRoom}</span><br></br>        
-        </div>
-
-        <div className="contact-info">
-            <label><div className="email-image"></div></label><span className="result">{item.email}</span><br></br>
-            <label>Doctor Id:</label><span className="result">{item.docNumber}</span><br></br>
-            <label>Specialisation:</label><span className="result">{item.docSpecial}</span><br></br>
+        <div className="contact-info2">
+            <label><div className="email-image"></div></label><span className="result3">{item.email}</span><br></br>
+            <label><div className="number-image"></div></label><span className="result3">{item.number}</span><br></br>
+            <label><div className="room-image"></div></label><span className="result3">{item.docRoom}</span><br></br>        
+            <label><div className="occ-image"></div></label><span className="result3">{item.docSpecial}</span><br></br>
         </div>
         </div>
         )

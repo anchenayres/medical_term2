@@ -9,12 +9,17 @@ $request_body = file_get_contents('php://input');
 $data = json_decode($request_body);
 
 $first = $data->first;
-$last = $data->last;
+$age = $data->age;
+$gender = $data->gender;
 $email = $data->email;
-$username = $data->username;
-$contact = $data->contact;
 $password = $data->password;
+$contact = $data->contact;
+$doctID = $data->doctID;
+$doctSpecial = $data->$doctSpecial;
+$doctRoom = $data->doctRoom;
 
+
+$sql = "INSERT INTO doctors (id, name, age, gender, email, pass, number, docID, docSpecial, docRoom) VALUES (NULL, '$first','$age','$gender','$email','$password','$contact','$doctID','$doctSpecial','$doctRoom');";
 $sql = "INSERT INTO users (id, first, last, email, username, contact, password, userCreate) VALUES (NULL, '$first','$last', '$email', '$username', '$contact', '$password', CURRENT_TIMESTAMP);";
 $result = mysqli_query($conn, $sql);
 
