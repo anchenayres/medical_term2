@@ -22,18 +22,14 @@ $data = json_decode($request_body);
     $special = $data->special;
     $room = $data->room;
 
-    $sql = "SELECT * FROM doctors";
-
-    if($resultChecker > 0){0
-        echo "false";
-    } else{
-        $sql = "INSERT INTO `doctors`(`id`, `name`, `age`, `gender`, `email`, `pass`, `number`, `docID`, `docSpecial`, `docRoom`) 
-        VALUES (NULL,'$name','$age','$gender', '$email','$password','$number','$id','$special','$room');";
+    $sql = "INSERT INTO doctors(id, name, age, gender, email, pass, number, docID, docSpecial, docRoom) 
+    VALUES (NULL,'$name','$age','$gender', '$email','$password','$number','$id','$special','$room');";
+    $result = mysqli_query($conn, $sql);
 
         if(!$result){
-            echo ("Error Description: " . mysqli_error($connection));
+            echo ("Error Description: " . mysqli_error($conn));
         } else {
             echo ("Doctor has been added to the database");
         }
-    }
+    
 ?>

@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import React, {useEffect, useRef, useState} from "react";
-
-
+ 
 
 const Doctors = () => {
 
@@ -38,6 +37,7 @@ const Doctors = () => {
         });
         axios.post("http://localhost:8888/medicalApi/updatePatient.php", updateInfo)
         .then((res) => {
+        console.log("🚀 ~ file: Doctors.js ~ line 41 ~ .then ~ res", res)
 
         })
     }
@@ -108,7 +108,7 @@ const Doctors = () => {
         console.log(inputs);
 
         axios.post('http://localhost:8888/medicalApi/addDoctor.php', inputs)
-        .then( ( res ) => {         
+        .then(( res ) => {         
             console.log(res)       
         });
 

@@ -8,7 +8,6 @@ header('Access-Control-Allow-Headers: *');
 $request_body = file_get_contents('php://input');
 $data = json_decode($request_body);
 
-$name_surname = $data->activeUser;
 
     $sql = "SELECT * FROM doctors";
 
