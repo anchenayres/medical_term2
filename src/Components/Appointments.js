@@ -1,37 +1,57 @@
 import axios from "axios";
 import React, {useEffect, useState} from "react";
 
-
 const Appointments = () => {
 
     const [appointmentInfo, setAppointmentInfo] = useState();
 
     useEffect (() => {
 
-        axios.post("http://localhost:8888/med/appointments.php")
+        axios.post("http://localhost:8888/medicalApi/appointments.php")
         .then((res) =>{
             console.log(res);
             let appointments = res.data.map(item => 
 
-        <table id="patient-table">
-        <tr>
-            <th>Room</th>
-            <th>Doctor</th>
-            <th>Patient</th>
-            <th>Patient Id</th>
-            <th>Time</th>
-        </tr>
-        <tr>
-            <td>{item.room}</td>
-            <td>{item.doctor}</td>
-            <td>{item.patient}</td>
-            <td>{item.patient_id}</td>
-            <td>{item.time}</td>
-        </tr>
-        </table>
-           
+        <div className="patient-table">
+
+        <div className="patient-image"></div>
+        <div className="patient-name">
+        <label></label><span className="result2">{item.doctor}</span><br></br>
+        </div>
+
+        <div className="contact-info2">
+            <label><div className="email-image"></div></label><span className="result3">{item.patient}</span><br></br>
+            <label><div className="number-image"></div></label><span className="result3">{item.room}</span><br></br>
+            <label><div className="room-image"></div></label><span className="result3">{item.time}</span><br></br>        
+        </div>
+        </div>
         )
-        setAppointmentInfo(appointments)
+        setAppointmentInfo(appointments) 
+
+        // axios.post("http://localhost:8888/med/appointments.php")
+        // .then((res) =>{
+        //     console.log(res);
+        //     let appointments = res.data.map(item => 
+
+        // <table id="patient-table">
+        // <tr>
+        //     <th>Room</th>
+        //     <th>Doctor</th>
+        //     <th>Patient</th>
+        //     <th>Patient Id</th>
+        //     <th>Time</th>
+        // </tr>
+        // <tr>
+        //     <td>{item.room}</td>
+        //     <td>{item.doctor}</td>
+        //     <td>{item.patient}</td>
+        //     <td>{item.patient_id}</td>
+        //     <td>{item.time}</td>
+        // </tr>
+        // </table>
+           
+        // )
+        // setAppointmentInfo(appointments)
         });
 
 
@@ -41,6 +61,7 @@ const Appointments = () => {
 
     return (
     <>
+
 <div className="app-appointments">
         <h3>Current Appointments</h3>
         {appointmentInfo}

@@ -50,6 +50,27 @@ const Login = () => {
                 }
 
             });
+            
+           
+
+            var doc = document.getElementById("textbox");
+
+doc.addEventListener("keyup", testCapsLock);
+doc.addEventListener("keydown", testCapsLock);
+
+function testCapsLock(event) {
+    if(event.code === "CapsLock"){
+        let isCapsLockOn = event.getModifierState("CapsLock");
+        if(isCapsLockOn) {
+            console.log("Caps Lock turned on");
+        } else {
+            console.log("Caps Lock turned off");
+        }
+    }
+}
+
+
+
     }
 
     return (
@@ -60,7 +81,7 @@ const Login = () => {
             <div className="login-heading">
             <h4>Sign In</h4>
                 <input className="box1" type="username" placeholder="Email" onChange={usernameVal} />
-                <input className="box2" type="password" placeholder="Password" onChange={passwordVal} />
+                <input className="box2"  type="password" placeholder="Password" onChange={passwordVal} />
                 <button className="button1" onClick={handleSubmit} >Sign In</button>
                 <div className="login-link">Register for an account<a href="/Register">Register</a></div>
             </div>

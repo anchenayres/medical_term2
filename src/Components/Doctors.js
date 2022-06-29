@@ -22,6 +22,7 @@ const Doctors = () => {
             .then((res) => {
                 console.log(res);
                 let doctors = res.data.map(item =>
+                    
                     <div className="patient-table">
                         <div className="patient-image"></div>
                         <div className="patient-name">
