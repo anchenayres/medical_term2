@@ -45,37 +45,65 @@ const Reception = () => {
         axios.post("http://localhost:8888/medicalApi/reception.php")
         .then((res) =>{
             console.log(res);
-            let Receptionists = res.data.map(item => 
-            
-       
-            <table id="patient-table">
-            <tr>
-                <th>Images</th>
-                <th>Name and Surname</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Phone Number</th>
-                <th>Email</th>
-                <th>Rank</th>
-          </tr>
-          <tr>
-                <td>Insert Image</td>
-                <td>{item.name_and_surname}</td>
-                <td>{item.age}</td>
-                <td>{item.gender}</td>
-                <td>{item.phone_number}</td>
-                <td>{item.email}</td>
-                <td>{item.admin}</td>
-          </tr>
-            </table>
-        
-           
+            let reception = res.data.map(item => 
+
+        <div className="patient-table">
+
+        <div className="patient-image"></div>
+        <div className="patient-name">
+        <label></label><span className="result2">{item.receptionName}</span><br></br>
+        <label></label><span className="result2">{item.receptionGender}</span><br></br>
+        <label></label><span className="result2">{item.receptionAge}</span><br></br>
+        </div>
+
+        <div className="contact-info2">
+            <label><div className="email-image"></div></label><span className="result3">{item.receptionEmail}</span><br></br>
+            <label><div className="number-image"></div></label><span className="result3">{item.receptionNumber}</span><br></br>
+            <label><div className="recep-image"></div></label><span className="result3">{item.receptionStatus}</span><br></br>
+        </div>
+        </div>
         )
         setNameInfo(res.data)
-        setReceptionInfo(Receptionists)
+        setReceptionInfo(reception)
         });
 
-    });
+    }, []);
+
+    // useEffect (() => {
+
+    //     axios.post("http://localhost:8888/medicalApi/Reception.php")
+    //     .then((res) =>{
+    //         console.log(res);
+    //         let Receptionists = res.data.map(item => 
+            
+       
+    //         <table id="patient-table">
+    //         <tr>
+    //             <th>Images</th>
+    //             <th>Name and Surname</th>
+    //             <th>Age</th>
+    //             <th>Gender</th>
+    //             <th>Phone Number</th>
+    //             <th>Email</th>
+    //             <th>Rank</th>
+    //       </tr>
+    //       <tr>
+    //             <td>Insert Image</td>
+    //             <td>{item.receptionName}</td>
+    //             <td>{item.receptionAge}</td>
+    //             <td>{item.receptionGender}</td>
+    //             <td>{item.receptionNumber}</td>
+    //             <td>{item.receptionEmail}</td>
+    //             <td>{item.receptionStatus}</td>
+    //       </tr>
+    //         </table>
+        
+           
+    //     )
+    //     setNameInfo(res.data)
+    //     setReceptionInfo(Receptionists)
+    //     });
+
 
     return (
     <>
@@ -133,7 +161,7 @@ const Reception = () => {
 
         <div class="update-user">
             <h9> Update Receptionist</h9>
-            <form action="medical_api/patients.php" method="post"> 
+            <form action="medicalApi/patients.php" method="post"> 
             <select ref={name} class="delUser2">
                 {
                     nameInfo.map(item => <option value={item.name_and_surname} >{item.name_and_surname}</option>)

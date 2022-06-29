@@ -13,7 +13,7 @@
 
     $id = $data->id;
 
-    $sql = "DELETE FROM doctors WHERE name ='$name';";
+    $sql = "DELETE FROM doctors WHERE id='$id';";
     $result = mysqli_query($conn, $sql);
 
     if(!$result){

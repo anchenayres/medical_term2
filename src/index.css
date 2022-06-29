@@ -499,7 +499,7 @@ p3 {
   width: 3vh;
   margin-left: 2vh;
   margin-top: 55.5vh;
-  background-image: url("./Images/reception.png");
+  background-image: url("./Images/reception2.png");
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
@@ -625,7 +625,6 @@ a:hover, a:after {
 .pat-image {
   height: 6vh;
   width: 6vh;
-  background-image: url("./Images/add_user.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
@@ -904,7 +903,6 @@ h21 {
 .doc-image {
   height: 6vh;
   width: 6vh;
-  background-image: url("./Images/add_user.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
@@ -963,6 +961,16 @@ label {
   height: 2vh;
   width: 2vh;
   background-image: url("./Images/occupation.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  margin-top: -0.5vh;
+}
+
+.recep-image {
+  height: 2vh;
+  width: 2vh;
+  background-image: url("./Images/reception.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -1348,7 +1356,6 @@ p3 {
 }
 
 .pat-remove {
-  background-image: url("./Images/remove.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 5vh;
@@ -1498,7 +1505,6 @@ h2 {
 }
 
 .right-arrow {
-  background-image: url("./Images/right-arrow.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 5vh;

@@ -50,38 +50,65 @@ const Patients = () => {
         axios.post("http://localhost:8888/medicalApi/patients.php")
         .then((res) =>{
             console.log(res);
-            let Patients = res.data.map(item => 
+            let patients = res.data.map(item => 
+
+        <div className="patient-table">
+
+        <div className="patient-image"></div>
+        <div className="patient-name">
+        <label></label><span className="result2">{item.patientName}</span><br></br>
+        <label></label><span className="result2">{item.gender}</span><br></br>
+        <label></label><span className="result2">{item.age}</span><br></br>
+        </div>
+
+        <div className="contact-info2">
+            <label><div className="email-image"></div></label><span className="result3">{item.email}</span><br></br>
+            <label><div className="number-image"></div></label><span className="result3">{item.patientNumber}</span><br></br>
+            <label><div className="room-image"></div></label><span className="result3">{item.patientID}</span><br></br>        
+            <label><div className="occ-image"></div></label><span className="result3">{item.patientAppointment}</span><br></br>
+        </div>
+        </div>
+        )
+        setNameInfo(res.data)
+        setPatientInfo(patients)        
+    
+    });
+
+        // axios.post("http://localhost:8888/medicalApi/patients.php")
+        // .then((res) =>{
+        //     console.log(res);
+        //     let Patients = res.data.map(item => 
             
        
-            <table id="patient-table">
-            <tr>
-                <th>Images</th>
-                <th>Name and Surname</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Email</th>
-                <th>ID</th>
-                <th>Medical Aid Number</th>
-                <th>Past Appointments</th>
-          </tr>
-          <tr>
-                <td>Insert Image</td>
-                <td>{item.name_and_surname}</td>
-                <td>{item.age}</td>
-                <td>{item.gender}</td>
-                <td>{item.email}</td>
-                <td>{item.patient_id}</td>
-                <td>{item.medical_aid_number}</td>
-                <td>{item.past_appointments}</td>
-          </tr>
-            </table>
+        //     <table id="patient-table">
+        //     <tr>
+        //         <th>Images</th>
+        //         <th>Name and Surname</th>
+        //         <th>Age</th>
+        //         <th>Gender</th>
+        //         <th>Email</th>
+        //         <th>ID</th>
+        //         <th>Medical Aid Number</th>
+        //         <th>Past Appointments</th>
+        //   </tr>
+        //   <tr>
+        //         <td>Insert Image</td>
+        //         <td>{item.name_and_surname}</td>
+        //         <td>{item.age}</td>
+        //         <td>{item.gender}</td>
+        //         <td>{item.email}</td>
+        //         <td>{item.patient_id}</td>
+        //         <td>{item.medical_aid_number}</td>
+        //         <td>{item.past_appointments}</td>
+        //   </tr>
+        //     </table>
             
         
            
-        )
-        setNameInfo(res.data)
-        setPatientInfo(Patients)
-        });
+        // )
+        // setNameInfo(res.data)
+        // setPatientInfo(Patients)
+        // });
 
     },[]);
 
