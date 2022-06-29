@@ -107,7 +107,7 @@ const Doctors = () => {
 
         console.log(inputs);
 
-        axios.post('http://localhost/medicalApi/addDoctor.php', inputs)
+        axios.post('http://localhost:8888/medicalApi/addDoctor.php', inputs)
         .then( ( res ) => {         
             console.log(res)       
         });
@@ -139,7 +139,14 @@ const Doctors = () => {
          <h25>Add a Doctor</h25>
         <input ref={docName} className="user-name-surname" name="name" type="text" placeholder="Name and Surname"  />
         <input ref={docAge} className="user-age" name="age" type="text" placeholder="Age"  />
-        <input ref={docGender} className="user-gender" name="gender" type="text" placeholder="Gender"  />
+
+        <select ref={docGender} className="gender-button" name="gender">
+            <option>Select Gender</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+        </select>
+
         <input ref={docEmail} className="user-email" name="email" type="text" placeholder="Email"  />
         <input ref={docPassword} className="user-password" name="password" type="text" placeholder="Password"  />
         <input ref={docNumber} className="user-number" name="number" type="text" placeholder="Number"  />
