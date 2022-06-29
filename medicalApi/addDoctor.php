@@ -29,7 +29,7 @@ $data = json_decode($request_body);
         if(!$result){
             echo ("Error Description: " . mysqli_error($conn));
         } else {
-            echo ("Doctor has been added to the database");
+            echo ("Doctor has been successfuly added to the database!");
         }
     
 ?>
