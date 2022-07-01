@@ -92,8 +92,9 @@ const Patients = () => {
     const getUpdateDetails = () => {
         let id = uId.current.value;
 
-        axios.post("http://localhost:8888/medicalApi/getPatientDetails.php", id)
+        axios.post("http://localhost:8888/medicalApi/getPatientDetails.php", {id: id})
             .then((res) => {
+                console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
                 setUpdatePatientInfo(res.data[0]);
                 console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
             })

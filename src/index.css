@@ -1079,7 +1079,8 @@ td {
   overflow: scroll;
 }
 .doc-appointments {
-  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
   width: 172vh;
   margin-left: 25vh;
   position: absolute;
