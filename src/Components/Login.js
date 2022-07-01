@@ -30,7 +30,13 @@ const Login = () => {
             setInputs({...inputs, password: value});
             //here you will validate not empty
             //CHECK CAPS LOCK IS ON! extra marks
+
+
+
+
+            
         }
+        
         
        
 
@@ -38,7 +44,7 @@ const Login = () => {
             e.preventDefault();
             console.log(inputs);                        //DELETE THIS IN FINAL PROJECT!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-            axios.post('http://localhost:8888/medical_api/userLogin.php', inputs)
+            axios.post('http://localhost:8888/medicalApi/userLogin.php', inputs)
             .then(function(response) {
                 console.log(response);
 
@@ -50,24 +56,7 @@ const Login = () => {
                 }
 
             });
-            
-           
 
-            var doc = document.getElementById("textbox");
-
-doc.addEventListener("keyup", testCapsLock);
-doc.addEventListener("keydown", testCapsLock);
-
-function testCapsLock(event) {
-    if(event.code === "CapsLock"){
-        let isCapsLockOn = event.getModifierState("CapsLock");
-        if(isCapsLockOn) {
-            console.log("Caps Lock turned on");
-        } else {
-            console.log("Caps Lock turned off");
-        }
-    }
-}
 
 
 

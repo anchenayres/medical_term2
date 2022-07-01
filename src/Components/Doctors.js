@@ -7,22 +7,13 @@ const Doctors = () => {
 
     const [doctorInfo, setDoctorInfo] = useState();
     const [nameInfo, setNameInfo] = useState([]);
-    const [doctorSelectedName, setDoctorSelectedName] = useState('');
-    const [clickCounter, setClickCounter] = useState(0);
-    const [updateInfo, setUpdateInfo] = useState({
-        name: "", medAidNumber: "", email: "", number: "", password: ""
-    })
-
-
-
     const [rerender, setRerender] = useState(false);
     useEffect(() => {
         setRerender(false);
         axios.post("http://localhost:8888/medicalApi/readUserPosts.php")
             .then((res) => {
-                console.log(res);
                 let doctors = res.data.map(item =>
-                    
+
                     <div className="patient-table">
                         <div className="patient-image"></div>
                         <div className="patient-name">
@@ -80,7 +71,7 @@ const Doctors = () => {
 
         axios.post('http://localhost:8888/medicalApi/addDoctor.php', inputs)
             .then((res) => {
-                console.log(res)
+                // console.log(res)
             });
         setRerender(true);
     }
@@ -92,23 +83,21 @@ const Doctors = () => {
 
         axios.post('http://localhost:8888/medicalApi/deleteDoctor.php', { id: id })
             .then((res) => {
-                console.log(res);
-            }) 
+            })
         setRerender(true);
     }
 
-    
+
     let updateId = useRef();
     const [doctorDetails, setDoctorsDetails] = useState([]);
-    const [ updateID, setUpdateID ] = useState();
+    const [updateID, setUpdateID] = useState();
     const updateDoctor = () => {
         let id = updateId.current.value;
         setUpdateID(id);
         axios.post('http://localhost:8888/medicalApi/getDoctorDetails.php', { id: id })
-        .then((res) => {
-            console.log(res.data);
-            setDoctorsDetails([res.data[0].docRoom, res.data[0].email, res.data[0].number, res.data[0].pass])
-        }) 
+            .then((res) => {
+                setDoctorsDetails([res.data[0].docRoom, res.data[0].email, res.data[0].number, res.data[0].pass])
+            })
     }
 
     let roomNum = useRef();
@@ -132,10 +121,9 @@ const Doctors = () => {
         }
 
         axios.post('http://localhost:8888/medicalApi/updateDoctor.php', details)
-        .then((res) => {
-            console.log(res.data);
-            setDoctorsDetails([res.data[0].docRoom, res.data[0].email, res.data[0].number, res.data[0].pass])
-        }) 
+            .then((res) => {
+                setDoctorsDetails([res.data[0].docRoom, res.data[0].email, res.data[0].number, res.data[0].pass])
+            })
         setRerender(true);
     }
 
@@ -219,37 +207,37 @@ const Doctors = () => {
                         }
                     </select>
                     <input
-                        ref={roomNum} 
-                        className="pat-medicalaid" 
-                        type="text" 
-                        placeholder="Room Number" 
+                        ref={roomNum}
+                        className="pat-medicalaid"
+                        type="text"
+                        placeholder="Room Number"
                         defaultValue={doctorDetails[0]}
                     />
                     <input
-                        ref={email} 
-                        className="pat-email" 
-                        name="pat-email" 
-                        type="text" 
-                        placeholder="Email" 
+                        ref={email}
+                        className="pat-email"
+                        name="pat-email"
+                        type="text"
+                        placeholder="Email"
                         defaultValue={doctorDetails[1]}
                     />
                     <input
-                        ref={number} 
-                        className="pat-number" 
-                        name="pat-number" 
-                        type="text" 
-                        placeholder="Number" 
+                        ref={number}
+                        className="pat-number"
+                        name="pat-number"
+                        type="text"
+                        placeholder="Number"
                         defaultValue={doctorDetails[2]}
                     />
                     <input
-                        ref={password} 
-                        className="pat-password" 
-                        name="pat-password" 
-                        type="text" 
+                        ref={password}
+                        className="pat-password"
+                        name="pat-password"
+                        type="text"
                         placeholder="Password"
-                        defaultValue={doctorDetails[3]} 
+                        defaultValue={doctorDetails[3]}
                     />
-                    <button className="button4"  onClick={(e) => updateDetails(e)}  >Update</button>
+                    <button className="button4" onClick={(e) => updateDetails(e)}  >Update</button>
                 </form>
             </div>
         </>

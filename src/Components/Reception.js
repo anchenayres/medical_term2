@@ -5,114 +5,132 @@ import React, {useEffect, useRef, useState} from "react";
 
 const Reception = () => {
 
-    const [receptionInfo, setReceptionInfo] = useState();
-    const [patientInfo, setPatientInfo] = useState([]);
-    const [nameInfo, setNameInfo] = useState([]);
-    const [updateInfo, setUpdateInfo] = useState({
-       name: "", medAidNumber: "", email: "", number:"", password:""
-    })
+    const [ rerender, setRerender ] = useState(false);
+    const [allRecepInfo, setAllRecepInfo] = useState([]);
+    const [recepCards, setRecepCards] = useState();
+    useEffect(() => {
+        setRerender(false);
+        axios.post("http://localhost:8888/medicalApi/readReceptionist.php")
+            .then((res) => {
+                let receps = res.data.map(item =>
+                    <div className="patient-table">
+                        <div className="patient-image"></div>
+                        <div className="patient-name">
+                            <label></label><span className="result2">{item.receptionName}</span><br></br>
+                            <label></label><span className="result2">{item.receptionGender}</span><br></br>
+                            <label></label><span className="result2">{item.receptionAge}</span><br></br>
+                        </div>
+                        <div className="contact-info2">
+                            <label><div className="email-image"></div></label><span className="result3">{item.receptionEmail}</span><br></br>
+                            <label><div className="number-image"></div></label><span className="result3">{item.receptionNumber}</span><br></br>
+                            <label><div className="room-image"></div></label><span className="result3">{item.receptionStatus}</span><br></br>
+                            <label><div className="occ-image"></div></label><span className="result3">{item.patientAppointment}</span><br></br>
+                        </div>
+                    </div>
+                )
+                setRecepCards(receps)
+                setAllRecepInfo(res.data);
+            })
+    }, [rerender])
 
-    let name = useRef ();
-    let medAidNumber = useRef();
-    let email = useRef();
-    let number = useRef();
-    let password = useRef();
+    // a refers to add
+    let aName = useRef();
+    let aAge = useRef();
+    let aGender = useRef();
+    let aEmail = useRef();
+    let aPassword = useRef();
+    let aNumber = useRef();
+    let aAdmin = useRef();
 
-    const updatePatient = () => {
-        let nameVal = name.current.value
-        console.log(nameVal);
-        let medAidNumberVal = medAidNumber.current.target
-        let emailVal = email.current.target
-        let numberVal = number.current.target
-        let passwordVal = password.current.target
-        setUpdateInfo({...updateInfo,
-        
-        name: nameVal,
-        medAidNumber: medAidNumberVal,
-        email: emailVal,
-        number: numberVal,
-        password: passwordVal
+    const addReceptionist = () => {
+        let name = aName.current.value;
+        let age = aAge.current.value;
+        let gender = aGender.current.value;
+        let email = aEmail.current.value;
+        let password = aPassword.current.value;
+        let number = aNumber.current.value;
+        let admin = aAdmin.current.value;
 
-        });
-        axios.post("http://localhost:8888/medicalApi/updatePatient.php", updateInfo)
+        let details = {
+            name: name,
+            age: age,
+            gender: gender,
+            email: email,
+            password: password,
+            number: number,
+            admin: admin
+        }
+
+        axios.post("http://localhost:8888/medicalApi/addReception.php", details)
         .then((res) => {
+        console.log("🚀 ~ file: Reception.js ~ line 66 ~ .then ~ res", res)
 
         })
+        setRerender(true);
     }
 
-    useEffect (() => {
+    // d refers to delete
+    let dId = useRef();
 
-        axios.post("http://localhost:8888/medicalApi/reception.php")
-        .then((res) =>{
-            console.log(res);
-            let reception = res.data.map(item => 
+    const deleteReceptionist = () => {
+        let id = dId.current.value;
 
-        <div className="patient-table">
+        axios.post("http://localhost:8888/medicalApi/deleteReceptionist.php", id)
+            .then((res) => {
+                console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
+            })
+        setRerender(true);
+    }
 
-        <div className="patient-image"></div>
-        <div className="patient-name">
-        <label></label><span className="result2">{item.receptionName}</span><br></br>
-        <label></label><span className="result2">{item.receptionGender}</span><br></br>
-        <label></label><span className="result2">{item.receptionAge}</span><br></br>
-        </div>
+    // u refers to update
+    let uId = useRef();
+    const [updateRecepInfo, setUpdateRecepInfo] = useState([]);
 
-        <div className="contact-info2">
-            <label><div className="email-image"></div></label><span className="result3">{item.receptionEmail}</span><br></br>
-            <label><div className="number-image"></div></label><span className="result3">{item.receptionNumber}</span><br></br>
-            <label><div className="recep-image"></div></label><span className="result3">{item.receptionStatus}</span><br></br>
-        </div>
-        </div>
-        )
-        setNameInfo(res.data)
-        setReceptionInfo(reception)
-        });
+    const getUpdateDetails = () => {
+        let id = uId.current.value;
 
-    }, []);
+        axios.post("http://localhost:8888/medicalApi/getReceptionistDetails.php", id)
+            .then((res) => {
+                setUpdateRecepInfo(res.data[0]);
+                console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
+            })
+        setRerender(true);
 
-    // useEffect (() => {
+    }
 
-    //     axios.post("http://localhost:8888/medicalApi/Reception.php")
-    //     .then((res) =>{
-    //         console.log(res);
-    //         let Receptionists = res.data.map(item => 
-            
-       
-    //         <table id="patient-table">
-    //         <tr>
-    //             <th>Images</th>
-    //             <th>Name and Surname</th>
-    //             <th>Age</th>
-    //             <th>Gender</th>
-    //             <th>Phone Number</th>
-    //             <th>Email</th>
-    //             <th>Rank</th>
-    //       </tr>
-    //       <tr>
-    //             <td>Insert Image</td>
-    //             <td>{item.receptionName}</td>
-    //             <td>{item.receptionAge}</td>
-    //             <td>{item.receptionGender}</td>
-    //             <td>{item.receptionNumber}</td>
-    //             <td>{item.receptionEmail}</td>
-    //             <td>{item.receptionStatus}</td>
-    //       </tr>
-    //         </table>
-        
-           
-    //     )
-    //     setNameInfo(res.data)
-    //     setReceptionInfo(Receptionists)
-    //     });
+    let uRank = useRef();
+    let uEmail = useRef();
+    let uNumber = useRef();
+    let uPassword = useRef();
 
+    const updateReceptionist = () => {
+        let id = uId.current.value;
+        let rank = uRank.current.value;
+        let email = uEmail.current.value;
+        let number = uNumber.current.value;
+        let password = uPassword.current.value;
+
+        let details = {
+            rank: rank,
+            email: email,
+            number: number,
+            password: password,
+            id: id
+        }
+
+        axios.post("http://localhost:8888/medicalApi/updateReceptionist.php", details)
+            .then((res) => {
+                console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
+            })
+        setRerender(true);
+    }
 
     return (
     <>
         <div className="pat-appointments">
         <h10>Current Receptionists</h10>
-        {receptionInfo}
+        {recepCards}
     </div>
-
-
 
 
         <div className="nav"></div>
@@ -135,44 +153,42 @@ const Reception = () => {
         <div className="add-users">
     <h25>Add a Receptionist</h25>
 
-        <input className="user-name-surname" type="text" placeholder="Name and Surname"  />
-        <input className="user-age" type="text" placeholder="Age"  />
-        <input className="user-gender" type="text" placeholder="Gender"  />
-        <input className="user-email" type="text" placeholder="Email"  />
-        <input className="user-password" type="text" placeholder="Password"  />
-        <input className="user-number" type="text" placeholder="Number"  />
-        <input className="user-id" type="text" placeholder="Admin"  />
+        <input ref={aName} className="user-name-surname" type="text" placeholder="Name and Surname"  />
+        <input ref={aAge} className="user-age" type="text" placeholder="Age"  />
+        <input ref={aGender} className="user-gender" type="text" placeholder="Gender"  />
+        <input ref={aEmail} className="user-email" type="text" placeholder="Email"  />
+        <input ref={aPassword} className="user-password" type="text" placeholder="Password"  />
+        <input ref={aNumber} className="user-number" type="text" placeholder="Number"  />
+        <input ref={aAdmin} className="user-id" type="text" placeholder="Admin"  />
 
 
-        <button type="add-user-button" >Add</button>
+        <button type="add-user-button" onClick={addReceptionist}>Add</button>
     </div>
 
     <div class="delete_user">
             <h9> Delete Receptionist</h9>
-            <form> 
-            <select ref={name} class="delUser2">
+            <select ref={dId} class="delUser2">
+                <option>Please select a receptionist</option>
                 {
-                    nameInfo.map(item => <option value={item.name_and_surname} >{item.name_and_surname}</option>)
+                    allRecepInfo.map(item => <option value={item.id} >{item.receptionName}</option>)
                 }
                 </select>
-                <button className="button4">Delete</button>
-            </form>
+                <button className="button4" onClick={deleteReceptionist}>Delete</button>
         </div>
 
         <div class="update-user">
             <h9> Update Receptionist</h9>
-            <form action="medicalApi/patients.php" method="post"> 
-            <select ref={name} class="delUser2">
+            <select ref={uId}  onChange={getUpdateDetails} class="delUser2">
+            <option>Please select a receptionist</option>
                 {
-                    nameInfo.map(item => <option value={item.name_and_surname} >{item.name_and_surname}</option>)
+                    allRecepInfo.map(item => <option value={item.id} >{item.receptionName}</option>)
                 }
                 </select>
-                <input ref={medAidNumber} className="pat-medicalaid" type="text" placeholder="Rank"  />
-                <input ref={email} className="pat-email" type="text" placeholder="Email"  />
-                <input ref={number} className="pat-number" type="text" placeholder="Number"  />
-                <input ref={password} className="pat-password" type="text" placeholder="Password"  />
-                <button className="button4" onClick={updatePatient} >Update</button>
-            </form>
+                <input ref={uRank} defaultValue={updateRecepInfo.receptionStatus}  className="pat-medicalaid" type="text" placeholder="Rank"  />
+                <input ref={uEmail} defaultValue={updateRecepInfo.receptionEmail} className="pat-email" type="text" placeholder="Email"  />
+                <input ref={uNumber} defaultValue={updateRecepInfo.receptionNumber} className="pat-number" type="text" placeholder="Number"  />
+                <input ref={uPassword} defaultValue={updateRecepInfo.receptionPassword} className="pat-password" type="text" placeholder="Password"  />
+                <button className="button4" onClick={updateReceptionist} >Update</button>
         </div>    
 
    

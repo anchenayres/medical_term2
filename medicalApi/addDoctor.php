@@ -1,7 +1,7 @@
 <?php
-// if ($_medicalApi['REQUEST_METHOD'] != 'POST') {
-//     exit;
-// }
+    if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+        exit;
+    }
 
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: *');
