@@ -69,9 +69,11 @@ const Doctors = () => {
             room: room
         }
 
+        console.log(inputs)
+
         axios.post('http://localhost:8888/medicalApi/addDoctor.php', inputs)
             .then((res) => {
-                // console.log(res)
+                console.log(res)
             });
         setRerender(true);
     }

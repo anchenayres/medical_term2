@@ -24,12 +24,13 @@ $data = json_decode($request_body);
 
     $sql = "INSERT INTO doctors(id, name, age, gender, email, pass, number, docID, docSpecial, docRoom) 
     VALUES (NULL,'$name','$age','$gender', '$email','$password','$number','$id','$special','$room');";
-    $result = mysqli_query($conn, $sql);
+    echo $sql;
+    // $result = mysqli_query($conn, $sql);
 
-        if(!$result){
-            echo ("Error Description: " . mysqli_error($conn));
-        } else {
-            echo ("Doctor has been successfuly added to the database!");
-        }
+    //     if(!$result){
+    //         echo ("Error Description: " . mysqli_error($conn));
+    //     } else {
+    //         echo ("Doctor has been successfuly added to the database!");
+    //     }
     
 ?>
