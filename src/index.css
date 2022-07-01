@@ -73,7 +73,26 @@ html, p, body {
   margin-top: 30vh;
   margin-left: 7vh;
 }
+.logout {
+  list-style: none;  
+}
 
+.logout a:hover, a:after {
+  color: rgb(171, 59, 171);  
+}
+
+.logout a, ul{
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  margin-top: -1vh;
+  margin-left: 10vh;
+  font-size: 11px;
+  position: absolute;
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
 .box2 {
   height: 5vh;
   width: 65vh;
@@ -305,14 +324,48 @@ html, p, body {
   border-radius: 5vh;
   border-style: none;
   height: 3.5vh;
-  margin-left: 20vh;
-  margin-top:  43vh;
+  margin-left: 19vh;
+  margin-top:  19vh;
   width: 10vh;
   position: absolute;
   background-color: white;
   box-shadow: 0px 1px 5px 1px #D8BBD7;
 }
 
+.button6 {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 19vh;
+  margin-top:  45vh;
+  width: 10vh;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 1px 5px 1px #D8BBD7;
+}
+
+.add-user-button {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 36vh;
+  margin-top:  38vh;
+  width: 10vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px 1px #D8BBD7;
+}
+.button5 {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 36vh;
+  margin-top:  38vh;
+  width: 10vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px 1px #D8BBD7;
+}
 .gender-button {
   border-radius: 5vh;
   border-style: none;
@@ -540,6 +593,16 @@ h1 {
   font-family: 'Raleway', sans-serif;
 }
 
+/* .top-nav {
+  width: 172vh;
+  height: 10vh;
+  background-color: rgb(153, 126, 143);
+  border-radius: 3vh;
+  margin-top: 2vh;
+  margin-left: 25vh;
+  position: absolute;
+} */
+
 .side-nav {
   height: 133vh;
   width: 19vh;
@@ -565,8 +628,7 @@ a {
   cursor: pointer;
   color: rgb(255, 255, 255);
   padding-top: 5px;
-  margin-left: 2vh;
-
+  margin-left: -9vh;
 }
 
 a:hover, a:after {
@@ -763,6 +825,8 @@ h9 {
   margin-top: 2vh;
   border-bottom: solid rgb(248, 224, 250) 2px;
 }
+
+
 .extra-text {
   font-family: 'Raleway', sans-serif;  
   font-size: 3vh;
@@ -1080,7 +1144,9 @@ td {
 }
 .doc-appointments {
   display: flex;
+  overflow: scroll;
   flex-wrap: wrap;
+  height: 70vh;
   width: 172vh;
   margin-left: 25vh;
   position: absolute;
@@ -1100,11 +1166,11 @@ td {
   box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
 }
 .delete_user {
-  height: 50vh;
+  height: 24vh;
   width: 48vh;
   position: absolute;
   margin-left: 98vh;
-  margin-top: 3vh;
+  margin-top: 29vh;
   border-radius: 5vh;
   box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
 }
@@ -1116,6 +1182,32 @@ td {
   margin-top: 3vh;
   border-radius: 5vh;
   box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
+}
+.user-profile {
+  height: 24vh;
+  width: 48vh;
+  position: absolute;
+  margin-left: 98vh;
+  margin-top: 3vh;
+  border-radius: 5vh;
+  box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
+}
+
+.user-image {
+  height: 10vh;
+  width:10vh;
+  border-radius: 100%;
+  background-color: #D8BBD7;
+  margin-top: 7vh;
+  margin-left: 8vh;
+}
+
+h18 {
+  color: black;
+  font-family: 'Raleway', sans-serif;  
+  margin-left: 20vh;
+  margin-top: -7vh;
+  position: absolute;
 }
 
 .user-name-surname {
@@ -1259,17 +1351,7 @@ td {
   border: 1px solid rgb(246, 220, 235);
 } 
 
- .add-user-button {
-  border-radius: 5vh;
-  border-style: none;
-  height: 3.5vh;
-  margin-left: 36vh;
-  margin-top:  38vh;
-  width: 10vh;
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 1px 5px 1px #D8BBD7;
-}
+
 
 .add-user-button2 {
   border-radius: 5vh;
@@ -1325,6 +1407,7 @@ h8 {
   margin-top: 20vh;
   text-align: center;
 }
+
 
 p1 {
   color: rgb(0, 0, 0);

@@ -69,6 +69,8 @@ const Appointments = () => {
 
         <div className="nav"></div>
         <div className="side-nav">
+        <h8>The Breast Cancer Clinic</h8>
+
         <div className="logo"></div>
 
 

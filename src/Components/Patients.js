@@ -139,7 +139,15 @@ const Patients = () => {
             <div className="add-users">
                 <h25>Add a Patient</h25>
                 <input ref={aName} className="user-name-surname" name="user-name-surname" type="text" placeholder="Patient Name and Surname" />
-                <input ref={aGender} className="user-gender" name="user-gender" type="text" placeholder="Patient Gender" />
+                
+                <select ref={aGender} className="user-gender" name="user-gender">
+                <option>Select Gender</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Other</option>
+                </select>
+
+
                 <input ref={aEmail} className="user-email" name="user-email" type="text" placeholder="Patient Email" />
                 <input ref={aPassword} className="user-password" name="user-password" type="text" placeholder="Patient Password" />
                 <input ref={aAge} className="user-age" name="user-age" type="text" placeholder="Patient Age" />
@@ -148,6 +156,7 @@ const Patients = () => {
                 <input ref={aAidNumber} className="user-medicalaid" name="user-medicalaid" type="text" placeholder="Patient Medical Aid Number" />
                 <button className="add-user-button" onClick={addPatient}>Add</button>
             </div>
+
 
             <div className="delete_user">
                 <h6> Delete an Existing Patient</h6>
@@ -158,6 +167,14 @@ const Patients = () => {
                     }
                 </select>
                 <button className="button4" onClick={deletePatient}>Delete</button>
+            </div>
+
+            <div className="user-profile">
+                <div className="user-image"></div>
+                <h18>Riley Walker | Head Recpetionist </h18>
+                <div className="logout">
+                <li><a href="/">Log Out</a></li>
+                </div>
             </div>
 
             <div className="update-user">
@@ -172,7 +189,7 @@ const Patients = () => {
                 <input ref={uEmail} defaultValue={updatePatientInfo.email} className="pat-email" name="pat-email" type="text" placeholder="Email" />
                 <input ref={uNumber} defaultValue={updatePatientInfo.patientNumber} className="pat-number" name="pat-number" type="text" placeholder="Number" />
                 <input ref={uPassword} defaultValue={updatePatientInfo.password} className="pat-password" name="pat-password" type="text" placeholder="Password" />
-                <button className="button4" onClick={updatePatient}>Update</button>
+                <button className="button6" onClick={updatePatient}>Update</button>
             </div>
 
             <div className="search-bar">
@@ -186,6 +203,8 @@ const Patients = () => {
             </ul>
 
             <div className="side-nav">
+            <h8>The Breast Cancer Clinic</h8>
+
                 <div className="logo"></div>
                 <div className="planner-img"></div>
                 <div className="patients-img"></div>

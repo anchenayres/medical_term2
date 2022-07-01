@@ -127,6 +127,10 @@ const Reception = () => {
 
     return (
     <>
+    {/* <div className="top-nav">
+
+    </div> */}
+    
         <div className="pat-appointments">
         <h10>Current Receptionists</h10>
         {recepCards}
@@ -134,9 +138,10 @@ const Reception = () => {
 
 
         <div className="nav"></div>
-        <div className="side-nav">
-        <div className="logo"></div>
 
+        <div className="side-nav">
+        <h8>The Breast Cancer Clinic</h8>
+        <div className="logo"></div>
 
                 <div className="planner-img"></div>
                 <div className="patients-img"></div>
@@ -148,6 +153,8 @@ const Reception = () => {
             <li><a href="/Doctors">Doctors</a></li>
             <li><a href="/Reception">Reception</a></li>
         </ul>
+        
+
         </div>
 
         <div className="add-users">
@@ -155,14 +162,26 @@ const Reception = () => {
 
         <input ref={aName} className="user-name-surname" type="text" placeholder="Name and Surname"  />
         <input ref={aAge} className="user-age" type="text" placeholder="Age"  />
-        <input ref={aGender} className="user-gender" type="text" placeholder="Gender"  />
+
+        <select ref={aGender} className="user-gender" name="Gender">
+            <option>Select Gender</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+        </select>
+
         <input ref={aEmail} className="user-email" type="text" placeholder="Email"  />
         <input ref={aPassword} className="user-password" type="text" placeholder="Password"  />
         <input ref={aNumber} className="user-number" type="text" placeholder="Number"  />
-        <input ref={aAdmin} className="user-id" type="text" placeholder="Admin"  />
+        <select ref={aAdmin} className="user-id" type="text" name="admin">
+            <option>Admin</option>
+            <option>General</option>
+
+        </select>
 
 
-        <button type="add-user-button" onClick={addReceptionist}>Add</button>
+        <button type="add-user-button" className="button5" onClick={addReceptionist}>Add</button>
+        
     </div>
 
     <div class="delete_user">
@@ -174,6 +193,14 @@ const Reception = () => {
                 }
                 </select>
                 <button className="button4" onClick={deleteReceptionist}>Delete</button>
+        </div>
+
+        <div className="user-profile">
+            <div className="user-image"></div>
+            <h18>Riley Walker | Head Recpetionist </h18>
+            <div className="logout">
+            <li><a href="/">Log Out</a></li>
+            </div>
         </div>
 
         <div class="update-user">
@@ -188,10 +215,9 @@ const Reception = () => {
                 <input ref={uEmail} defaultValue={updateRecepInfo.receptionEmail} className="pat-email" type="text" placeholder="Email"  />
                 <input ref={uNumber} defaultValue={updateRecepInfo.receptionNumber} className="pat-number" type="text" placeholder="Number"  />
                 <input ref={uPassword} defaultValue={updateRecepInfo.receptionPassword} className="pat-password" type="text" placeholder="Password"  />
-                <button className="button4" onClick={updateReceptionist} >Update</button>
+                <button className="button6" onClick={updateReceptionist} >Update</button>
         </div>    
 
-   
 
 
     </>

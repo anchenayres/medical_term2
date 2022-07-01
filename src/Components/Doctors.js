@@ -198,6 +198,13 @@ const Doctors = () => {
                 </form>
             </div>
 
+            <div className="user-profile">
+                <div className="user-image"></div>
+                <h18>Riley Walker | Head Recpetionist </h18>
+                <div className="logout">
+                <li><a href="/">Log Out</a></li>
+                </div>
+            </div>
 
             <div class="update-user">
                 <h7>Update an Existing Doctor</h7>
@@ -239,7 +246,7 @@ const Doctors = () => {
                         placeholder="Password"
                         defaultValue={doctorDetails[3]}
                     />
-                    <button className="button4" onClick={(e) => updateDetails(e)}  >Update</button>
+                    <button className="button6" onClick={(e) => updateDetails(e)}  >Update</button>
                 </form>
             </div>
         </>
