@@ -31,11 +31,24 @@ const Login = () => {
             //here you will validate not empty
             //CHECK CAPS LOCK IS ON! extra marks
 
-
-
-
-            
         }
+
+        //IMAGES
+        const imageVal = (e) => {
+            var file = e.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function() {
+                console.log(reader.result);
+                let imgFile = reader.result;
+
+                setInputs({...inputs, image: imgFile});
+
+                var image = new Image();
+                image.src = reader.result;
+                document.getElementById('profileimg').appendChild(image);
+        }
+        reader.readAsDataURL(file);
+    }
         
         
        
@@ -65,9 +78,16 @@ const Login = () => {
     return (
     <>        
     
-   
+    
             <div className="behind">
+            
             <div className="login-heading">
+            <form id='ImgOne' encType="multipart/form-data">    
+                    <div className='imageArea'>
+                        <input name="imageUrl" className='imgInput' type="file" onChange={imageVal} />
+                        <div id="profileimg" className='profile_img'></div>  
+                    </div>
+                    </form>
             <h4>Sign In</h4>
                 <input className="box1" type="username" placeholder="Email" onChange={usernameVal} />
                 <input className="box2"  type="password" placeholder="Password" onChange={passwordVal} />

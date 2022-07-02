@@ -193,37 +193,37 @@ const Register = () => {
                             <h5>Register</h5>
                        
                             <div className='names'>
-                            <input className="first_last" type="text" placeholder="Name and Surname" onChange={fullNameVal} />
+                            <input className="first_last" name="first_last" type="text" placeholder="Name and Surname" onChange={fullNameVal} />
                             {fullNameError}
                             </div>
                           
                             <div className='genders'>
-                            <input className="gender"  type="text" placeholder="Gender" onChange={genderVal} />
+                            <input className="gender" name="gender" type="text" placeholder="Gender" onChange={genderVal} />
                             {genderError}
                             </div>
 
                             <div className='emails'>
-                            <input className="email"  type="text" placeholder="Email"  onChange={emailVal} />
+                            <input className="email" name="email"  type="text" placeholder="Email"  onChange={emailVal} />
                             {emailError}
                             {emailAvail}    
                             </div>
 
                             <div className='contacts'>
-                            <input className="contact" type="text" placeholder="Contact" onChange={contactVal} />
+                            <input className="contact" name="contact" type="text" placeholder="Contact" onChange={contactVal} />
                             {contactError}
                             </div>
 
                             <div className='passwords'>
-                            <input className="password"  type="text" placeholder="Password" onChange={passwordVal} />
+                            <input className="password" name="password" type="text" placeholder="Password" onChange={passwordVal} />
                             {passwordError}
                             </div>
 
                             <div className='samepasswords'>
-                            <input className="conPass"  type="password" placeholder="Confirm Password" onChange={passwordConVal} />
+                            <input className="conPass" name="conPass" type="password" placeholder="Confirm Password" onChange={passwordConVal} />
                             {passwordConError}
                             </div>
 
-                            <button className="button2" onClick={handleSubmit} >Register</button>
+                            <button className="button2" name="button2" onClick={handleSubmit} >Register</button>
                         </form>
                             <div className="login-link1">Already have an account?<a href="/">Login</a></div>
                             </form>
