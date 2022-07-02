@@ -10,21 +10,22 @@ $data = json_decode($request_body);
 
 $email = $data->email;
 $password = $data->password;
+echo $email;
 
-$encryptedPassword = md5($password);
+// $encryptedPassword = md5($password);
 
-if($email === "" && $password === ""){
-    echo "Err";
-} else {
-    $sql = "SELECT * FROM receptionists WHERE email = '$email' AND password = '$encryptedPassword';";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
+// if($email === "" && $password === ""){
+//     echo "Err";
+// } else {
+//     $sql = "SELECT * FROM receptionists WHERE receptionEmail = '$email' AND receptionPassword = '$password';";
+//     $result = mysqli_query($conn, $sql);
+//     $resultCheck = mysqli_num_rows($result);
 
-    if($resultCheck > 0){
-        echo 'true';
-    } else {
-        echo 'false';
-    }
-}
+//     if($resultCheck > 0){
+//         echo 'true';
+//     } else {
+//         echo 'false';
+//     }
+// }
 
 ?>

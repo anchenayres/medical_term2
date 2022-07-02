@@ -4,11 +4,26 @@ import { useNavigate } from "react-router-dom";
 
 
 
-
 const Appointments = () => {
 
     const [appointmentInfo, setAppointmentInfo] = useState();
     const [rerender, setRerender] = useState(false);
+
+    const [ allPatients, setAllPatients ] = useState([]);
+    const [ allDoctors, setAllDoctors ] = useState([]);
+    useEffect(() => {
+        axios.post('http://localhost:8888/medicalApi/readPatient.php')
+        .then((res) => {
+            setAllPatients(res.data);
+            console.log(res)
+        })
+
+        axios.post('http://localhost:8888/medicalApi/readUserPosts.php')
+        .then((res) => {
+            setAllDoctors(res.data);
+            console.log(res)
+        })
+    }, [])
 
 
 
@@ -47,7 +62,6 @@ const Appointments = () => {
 
     const addAppointment = () => {
         let patient = aPatient.current.value;
-        let id = aId.current.value;
         let doctor = aDoctor.current.value;
         let room = aRoom.current.value;
         let date = aDate.current.value;
@@ -57,7 +71,6 @@ const Appointments = () => {
             room: room,
             doctor: doctor,
             patient: patient,
-            id: id,
             date: date,
             time: time,
         }
@@ -68,20 +81,6 @@ const Appointments = () => {
         });
         setRerender(true);
     }
-
-    //delete an Appointment
-    // let dId = useRef();
-
-    // const deleteAppointment = () => {
-    //     let id = dId.current.value;
-    //     axios.post("http://localhost:8888/medicalApi/deleteAppointment.php", id)
-    //         .then((res) => {
-    //             console.log(res);
-    //         })
-    //     setRerender(true);
-    // }
-
-
 
 
     return (
@@ -114,12 +113,26 @@ const Appointments = () => {
             <div className="add-users">
         <h25>Add an Appointment</h25>
 
-            <input ref={aPatient} className="user-name-surname" name="user-name-surname" type="text" placeholder="Patient Name and Surname"  />
-            <input ref={aId} className="user-id" name="user-id" type="text" placeholder="Patient Id"  />
-            <input ref={aDoctor} className="user-gender" name="user-gender" type="text" placeholder="Doctor"  />
+            <select ref={aPatient} className='user-name-surname'>
+                <option>Please select a patient</option>
+                {
+                    allPatients.map((item) => 
+                        <option value={item.patientName}>{item.patientName}</option>
+                    )
+                }
+            </select>
+
+            <select ref={aDoctor} className='user-gender'>
+                <option>Please select a doctor</option>
+                {
+                    allDoctors.map(item =>
+                        <option value={item.name}>{item.name}</option>    
+                    )
+                }
+            </select>
             <input ref={aRoom} className="user-age" name="user-age" type="text" placeholder="Doctor Room"  />
-            <input ref={aDate} className="user-email" name="user-email" type="text" placeholder="Date"  />
-            <input ref={aTime} className="user-password" name="user-password" type="text" placeholder="Time"  />
+            <input ref={aDate} className="user-email" name="user-email" type="date" placeholder="Date"  />
+            <input ref={aTime} className="user-password" name="user-password" type="time" placeholder="Time"  />
             <button className="add-user-button" onClick={addAppointment}>Add</button>
         </div>
 

@@ -67,7 +67,7 @@ const Patients = () => {
 
         axios.post("http://localhost:8888/medicalApi/addPatient.php", details)
             .then((res) => {
-
+                console.log(res)
             })
         setRerender(true);
     }
@@ -92,6 +92,7 @@ const Patients = () => {
 
     const getUpdateDetails = () => {
         let id = uId.current.value;
+        console.log(id)
 
         axios.post("http://localhost:8888/medicalApi/getPatientDetails.php", {id: id})
             .then((res) => {
