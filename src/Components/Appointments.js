@@ -1,11 +1,26 @@
+import { render } from "@testing-library/react";
 import axios from "axios";
 import React, {useEffect, useState} from "react";
+//calendar import
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
+
 
 const Appointments = () => {
+    
+    
 
     const [appointmentInfo, setAppointmentInfo] = useState();
+    //calendar
+    //end calendar
+
+
+
+
 
     useEffect (() => {
+        
 
         axios.post("http://localhost:8888/medicalApi/appointments.php")
         .then((res) =>{
@@ -53,6 +68,7 @@ const Appointments = () => {
         // )
         // setAppointmentInfo(appointments)
         });
+        
 
 
     },);
@@ -61,6 +77,7 @@ const Appointments = () => {
 
     return (
     <>
+
 
 <div className="app-appointments">
         <h3>Current Appointments</h3>
