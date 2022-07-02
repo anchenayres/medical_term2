@@ -7,6 +7,7 @@ const Doctors = () => {
     const [doctorInfo, setDoctorInfo] = useState();
     const [nameInfo, setNameInfo] = useState([]);
     const [rerender, setRerender] = useState(false);
+    
     useEffect(() => {
         setRerender(false);
         axios.post("http://localhost:8888/medicalApi/readUserPosts.php")
@@ -77,6 +78,7 @@ const Doctors = () => {
         setRerender(true);
     }
 
+    //delete a doctor
     let deleteId = useRef();
     const deleteDoctor = (e) => {
         e.preventDefault();

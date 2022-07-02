@@ -8,7 +8,7 @@ header('Access-Control-Allow-Headers: *');
 $request_body = file_get_contents('php://input');
 $data = json_decode($request_body);
 
-$patient = $data->activeUser;
+$username = $data->activeUser;
 
     $sql = "SELECT * FROM appointments";
 
