@@ -1,7 +1,7 @@
 <?php 
-    // if ($_SERVER['REQUEST_METHOD'] != 'POST') {
-    //     exit;
-    // }
+    if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+        exit;
+    }
 
     include 'db_connection.php';
 

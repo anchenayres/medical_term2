@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Doctors = () => {
@@ -86,6 +88,7 @@ const Doctors = () => {
 
         axios.post('http://localhost:8888/medicalApi/deleteDoctor.php', { id: id })
             .then((res) => {
+
             })
         setRerender(true);
     }
