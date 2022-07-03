@@ -23,14 +23,15 @@ const Appointments = () => {
             setAllDoctors(res.data);
             console.log(res)
         })
-    }, [])
+    }, [rerender])
 
 
-
+    const [ allAppointments, setAllApppointments ] = useState([]);
     useEffect (() => {
         setRerender(false);
         axios.post("http://localhost:8888/medicalApi/appointments.php")
             .then((res) =>{
+                setAllApppointments( res.data );
                 console.log(res);
                 let appointments = res.data.map(item => 
 
@@ -38,24 +39,36 @@ const Appointments = () => {
 
                 <div className="patient-image"></div>
                 <div className="patient-name">
-                <label></label><span className="result2">{item.doctor}</span><br></br>
+                <label></label><span className="result2">Dr. {item.doctor}</span><br></br>
                 </div>
 
                 <div className="contact-info2">
                     <label><div className="email-image"></div></label><span className="result3">{item.patient}</span><br></br>
                     <label><div className="room-image"></div></label><span className="result3">{item.room}</span><br></br>
-                    <label><div className="room-image"></div></label><span className="result3">{item.date}</span><br></br>
-                    <label><div className="room-image"></div></label><span className="result3">{item.time}</span><br></br>        
+                    <label><div className="no-image">Date:</div></label><span className="result3">{item.appDate}</span><br></br>
+                    <label><div className="no-image">Time:</div></label><span className="result3">{item.time}</span><br></br>        
                 </div>
                 </div>
                 )
                 setAppointmentInfo(appointments) 
             });
     }, [rerender]);
+
+    // delete appointment
+     let dId = useRef();
+
+     const deleteAppointment = () => {
+         let id = dId.current.value;
+ 
+         axios.post("http://localhost:8888/medicalApi/deleteAppointment.php", id)
+             .then((res) => {
+             })
+         setRerender(true);
+ 
+     }
     
     //adding a patient
     let aPatient = useRef();
-    let aId = useRef();
     let aDoctor = useRef();
     let aRoom = useRef();
     let aDate = useRef();
@@ -145,16 +158,16 @@ const Appointments = () => {
                 </div>
             </div>
         
-            {/* <div className="delete_user">
-                <h6> Delete an Existing App</h6>
+            <div className="delete_user">
+                <h6> Delete an Existing Appointment</h6>
                 <select ref={dId} className="delUser2">
                     <option>Please Select a Patient</option>
                     {
-                        appointmentInfo.map((item) => <option value={item.id}>{item.patient}</option>)
+                        allAppointments.map((item) => <option value={item.id}>{item.patient}</option>)
                     }
                 </select>
                 <button className="button4" onClick={deleteAppointment}>Delete</button>
-            </div> */}
+            </div>
         
         </>
     )
