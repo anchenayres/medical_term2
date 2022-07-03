@@ -36,6 +36,7 @@ html, p, body {
   border-top-left-radius: 10vh;
   background-color: rgb(252, 251, 252);
   box-shadow: 0px 5px 10px 5px rgb(252, 215, 248);
+  padding: 20px;
 }
 
 .reg-box {
@@ -282,7 +283,7 @@ html, p, body {
   height: 5vh;
   width: 15vh;
   background-color: #F174AC;
-  margin-left: -43vh;
+  margin-left: 10vh;
   margin-top: 75vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
@@ -1142,6 +1143,16 @@ label {
   margin-top: 10vh;
 }
 
+.caps-error {
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
+  color: rgb(248, 1, 1);
+  margin-top: 48vh;
+  margin-left: -65vh;
+  position: absolute;
+  font-size: 12px;
+
+}
+
 .result4 {
   color: rgb(3, 3, 3);
   font-size: 12px;
@@ -1925,4 +1936,35 @@ h13 {
   font-family:Verdana, Geneva, Tahoma, sans-serif; 
   color: rgb(248, 1, 1);
 }
+
+.password-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.password-container img {
+  width: 20px;
+}
+
+.password-container input {
+  margin: 0;
+  margin-top: 25px;
+  position: unset;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.login-heading .box1 {
+  margin-left: 0;
+}
+
+img {
+  margin-top: 3vh;
+  margin-left: -5vh;
+}
+
 

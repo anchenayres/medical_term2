@@ -2,6 +2,10 @@ import React, { useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import showPwdImg from '../Images/showpwd.svg';
+import hidePwdImg from '../Images/hidepwd.svg';
+
+
 
 
 const Login = () => {
@@ -9,50 +13,32 @@ const Login = () => {
     
     const [capsError, setCapsError] = useState();
 
-
-    // var doc = document.getElementById("textbox");
-
-    // doc.addEventListener("keyup", testCapsLock);
-    // doc.addEventListener("keydown", testCapsLock);
-
-    // function testCapsLock(event) {
-    //     if(event.code === "CapsLock"){
-    //         let isCapsLockOn = event.getModifierState("CapsLock");
-    //         if(isCapsLockOn) {
-    //             console.log("Caps Lock turned on");
-    //         } else {
-    //             console.log("Caps Lock turned off");
-    //         }
-    //     }
-    // }
-
-    // END OF CAPS LOCK
-
-        // const [emailError, setEmailError] = useState();
-        // const [passwordError, setPasswordError] = useState();
-        // const [username, setUsername] = useState();
-        // const [passwordError, setPasswordError] = useState();
+    //show and hide password
 
 
-
-        //IMAGES
-
-        // const [ imageUrl, setImageUrl ] = useState('');
-
-        // const imageVal = (e) => {
-        //     var file = e.target.files[0];
-        //     var reader = new FileReader();
-        //     reader.onload = function() {
-        //         console.log(reader.result);
-        //         let imgFile = reader.result;
-        //         setImageUrl(imgFile);
-        // }
-        // reader.readAsDataURL(file);
-        //}
-        
-    // const [ username, setUsername ] = useState('');
+  
 
     
+
+
+
+
+        // CAPS LOCK 
+        function testCapsLock(event) {
+            if(event.code === "CapsLock"){
+                let isCapsLockOn = event.getModifierState("CapsLock");
+                if(isCapsLockOn) {
+                    console.log("Caps Lock turned on");
+                    setCapsError('* Caps Lock turned on');
+                } else {
+                    console.log("Caps Lock turned off");
+                    setCapsError('');
+
+                }
+            }
+        }
+        document.addEventListener("keydown", testCapsLock);
+        document.addEventListener("keyup", testCapsLock); 
     
 
        
@@ -72,25 +58,6 @@ const Login = () => {
             axios.post('http://localhost:8888/medicalApi/userLogin.php', inputs)
             .then(function(response) {
                 console.log(response.data[0].receptionStatus);
-
-                // CAPS LOCK 
-                // var doc = document.getElementById("textbox");
-                function testCapsLock(event) {
-                    if(event.code === "CapsLock"){
-                        let isCapsLockOn = event.getModifierState("CapsLock");
-                        if(isCapsLockOn) {
-                            console.log("Caps Lock turned on");
-                            setCapsError('Caps Lock turned on');
-                        } else {
-                            console.log("Caps Lock turned off");
-                            setCapsError('');
-
-                        }
-                    }
-                }
-                document.addEventListener("keydown", testCapsLock);
-                document.addEventListener("keyup", testCapsLock); 
-                    
 
                 if(response.data !== false){
                     sessionStorage.setItem('activeUser', name.current.value);
@@ -116,6 +83,8 @@ const Login = () => {
             });
     }
 
+    const [isRevealPwd, setIsRevealPwd] = useState(false);
+
     return (
     <>        
             <div className="behind">
@@ -124,8 +93,16 @@ const Login = () => {
 
             <h4>Sign In</h4>
                 <input ref={name} className="box1" type="username" placeholder="Email"  />
-                <input ref={password} className="box2"  type="password" placeholder="Password"  />
-                {capsError}
+                <div className='password-container'>
+                    <input ref={password} className="box2"  type={isRevealPwd ? 'text' : 'password'} placeholder="Password"  />
+
+                    <img
+                        src={isRevealPwd ? hidePwdImg : showPwdImg}
+                        alt='Icon'
+                        onClick={() => setIsRevealPwd(prevState => !prevState)}
+                    />
+                </div>
+                <label className="caps-error">{capsError}</label>
                 <button className="button1" onClick={handleSubmit} >Sign In</button>
                 <div className="login-link">Register for an account<a href="/Register">Register</a></div>
             </div>
