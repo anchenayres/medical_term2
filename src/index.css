@@ -356,6 +356,17 @@ html, p, body {
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 5px 1px #D8BBD7;
 }
+.add-user-button3 {
+  border-radius: 5vh;
+  border-style: none;
+  height: 3.5vh;
+  margin-left: 30vh;
+  margin-top:  38vh;
+  width: 10vh;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px 1px #D8BBD7;
+}
 .button5 {
   border-radius: 5vh;
   border-style: none;
@@ -589,7 +600,7 @@ p3 {
   border-style: none;
   background-color: white;
   box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
-  margin-top: 13vh;
+  margin-top: 10vh;
   position: absolute;
 }
 
@@ -812,6 +823,16 @@ h6 {
   font-family: 'Raleway', sans-serif;  
   font-weight: lighter;
   font-size: 25px;
+  margin-left: 4vh;
+  margin-top: 2vh;
+  border-bottom: solid rgb(248, 224, 250) 2px;
+}
+h30 {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-family: 'Raleway', sans-serif;  
+  font-weight: lighter;
+  font-size: 20px;
   margin-left: 4vh;
   margin-top: 2vh;
   border-bottom: solid rgb(248, 224, 250) 2px;

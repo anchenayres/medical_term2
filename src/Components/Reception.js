@@ -5,6 +5,13 @@ import React, {useEffect, useRef, useState} from "react";
 
 const Reception = () => {
 
+    const [ username, setUsername ] = useState('');
+
+    useEffect(() => {
+        let loggedUserName = sessionStorage.getItem('activeUser');
+        setUsername(loggedUserName);
+    }, [])
+
     const [ rerender, setRerender ] = useState(false);
     const [allRecepInfo, setAllRecepInfo] = useState([]);
     const [recepCards, setRecepCards] = useState();
@@ -75,7 +82,7 @@ const Reception = () => {
     const deleteReceptionist = () => {
         let id = dId.current.value;
 
-        axios.post("http://localhost:8888/medicalApi/deleteReceptionist.php", id)
+        axios.post("http://localhost:8888/medicalApi/deleteReceptionist.php", {id: id})
             .then((res) => {
                 console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
             })
@@ -89,7 +96,7 @@ const Reception = () => {
     const getUpdateDetails = () => {
         let id = uId.current.value;
 
-        axios.post("http://localhost:8888/medicalApi/getReceptionistDetails.php", id)
+        axios.post("http://localhost:8888/medicalApi/getReceptionistDetails.php", {id: id})
             .then((res) => {
                 setUpdateRecepInfo(res.data[0]);
                 console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
@@ -132,7 +139,7 @@ const Reception = () => {
     </div> */}
     
         <div className="pat-appointments">
-        <h10>Current Receptionists</h10>
+        <h10>{username}</h10>
         {recepCards}
     </div>
 
@@ -180,7 +187,7 @@ const Reception = () => {
         </select>
 
 
-        <button type="add-user-button" className="button5" onClick={addReceptionist}>Add</button>
+        <button type="add-user-button" className="add-user-button3" onClick={addReceptionist}>Add</button>
         
     </div>
 
@@ -197,7 +204,9 @@ const Reception = () => {
 
         <div className="user-profile">
             <div className="user-image"></div>
+
             <h18>Riley Walker | Head Recpetionist </h18>
+
             <div className="logout">
             <li><a href="/">Log Out</a></li>
             </div>

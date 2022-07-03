@@ -197,7 +197,7 @@ const Appointments = () => {
             <input ref={aRoom} className="user-age" name="user-age" type="text" placeholder="Doctor Room"  />
             <input ref={aDate} className="user-email" name="user-email" type="date" placeholder="Date"  />
             <input ref={aTime} className="user-password" name="user-password" type="time" placeholder="Time"  />
-            <button className="add-user-button" onClick={addAppointment}>Add</button>
+            <button className="add-user-button3" onClick={addAppointment}>Add</button>
         </div>
 
         <div className="user-profile">
@@ -209,7 +209,7 @@ const Appointments = () => {
             </div>
         
             <div className="delete_user">
-                <h11> Delete an Existing Appointment</h11>
+                <h30>Delete an Existing Appointment</h30>
                 <select ref={dId} className="delUser3">
                     <option>Please Select a Patient</option>
                     {
