@@ -332,6 +332,7 @@ html, p, body {
   box-shadow: 0px 1px 5px 1px #D8BBD7;
 }
 
+
 .button6 {
   border-radius: 5vh;
   border-style: none;
@@ -580,7 +581,17 @@ p3 {
   margin-top: 10vh;
   position: absolute;
 }
-
+.delUser3 {
+  height: 3vh;
+  width: 32vh;
+  margin-left: 8vh;
+  border-radius: 8px;
+  border-style: none;
+  background-color: white;
+  box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
+  margin-top: 13vh;
+  position: absolute;
+}
 
 h1 {
   color: rgb(0, 0, 0);
@@ -1201,6 +1212,7 @@ td {
   border-radius: 5vh;
   box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
 }
+
 .update-user {
   height: 50vh;
   width: 48vh;

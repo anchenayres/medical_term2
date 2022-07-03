@@ -66,6 +66,56 @@ const Appointments = () => {
          setRerender(true);
  
      }
+
+         // u refers to update
+    // let uId = useRef();
+    // const [updateAppInfo, setUpdateAppInfo] = useState([]);
+
+    // const getUpdateDetails = () => {
+    //     let id = uId.current.value;
+    //     console.log(id)
+
+    //     axios.post("http://localhost:8888/medicalApi/getPatientDetails.php", {id: id})
+    //         .then((res) => {
+    //             console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
+    //             setUpdatePatientInfo(res.data[0]);
+    //             console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
+    //         })
+    //     setRerender(true);
+
+    // }
+
+     //update an appointment
+    // let uRoom = useRef();
+    // let uDoctor = useRef();
+    // let uPatient = useRef();
+    // let uDate = useRef();
+    // let uTime = useRef();
+
+    // const updateAppointment = () => {
+    //     let id = uId.current.value;
+    //     let roomNum = uRoom.current.value;
+    //     let doct = uDoctor.current.value;
+    //     let pat = uPatient.current.value;
+    //     let dateVal = uDate.current.value;
+    //     let timeVal = uTime.current.value;
+
+
+    //     let details = {
+    //         id: id,
+    //         roomNum: roomNum,
+    //         doct: doct,
+    //         pat: pat,
+    //         dateVal: dateVal,
+    //         timeVal: timeVal
+    //     }
+
+    //     axios.post("http://localhost:8888/medicalApi/updateAppointment.php", details)
+    //         .then((res) => {
+    //             console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
+    //         })
+    //     setRerender(true);
+    // }
     
     //adding a patient
     let aPatient = useRef();
@@ -159,8 +209,8 @@ const Appointments = () => {
             </div>
         
             <div className="delete_user">
-                <h6> Delete an Existing Appointment</h6>
-                <select ref={dId} className="delUser2">
+                <h11> Delete an Existing Appointment</h11>
+                <select ref={dId} className="delUser3">
                     <option>Please Select a Patient</option>
                     {
                         allAppointments.map((item) => <option value={item.id}>{item.patient}</option>)
@@ -168,6 +218,23 @@ const Appointments = () => {
                 </select>
                 <button className="button4" onClick={deleteAppointment}>Delete</button>
             </div>
+
+            {/* <div className="update-user">
+                <h7> Update an Existing Patient</h7>
+                <select ref={uId} onChange={getUpdateDetails} className="delUser2">
+                    <option>Please Select a Patient</option>
+                    {
+                        allPatientsInfo.map(item => <option value={item.id} >{item.patientName}</option>)
+                    }
+                </select>
+                <input ref={uRoom} defaultValue={updatePatientInfo.patientMedical} className="pat-medicalaid" name="pat-medicalaid" type="text" placeholder="Medical Aid Number" />
+                <input ref={uDoctor} defaultValue={updatePatientInfo.email} className="pat-email" name="pat-email" type="text" placeholder="Email" />
+                <input ref={uPatient} defaultValue={updatePatientInfo.patientNumber} className="pat-number" name="pat-number" type="text" placeholder="Number" />
+                <input ref={uDate} defaultValue={updatePatientInfo.password} className="pat-password" name="pat-password" type="text" placeholder="Password" />
+                <input ref={uTime} defaultValue={updatePatientInfo.password} className="pat-password" name="pat-password" type="text" placeholder="Password" />
+
+                <button className="button6" onClick={updatePatient}>Update</button>
+            </div> */}
         
         </>
     )
