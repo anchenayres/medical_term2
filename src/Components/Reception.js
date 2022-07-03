@@ -5,12 +5,16 @@ import React, {useEffect, useRef, useState} from "react";
 
 const Reception = () => {
 
+    //name of loged in user 
     const [ username, setUsername ] = useState('');
 
     useEffect(() => {
         let loggedUserName = sessionStorage.getItem('activeUser');
         setUsername(loggedUserName);
+        
     }, [])
+
+
 
     const [ rerender, setRerender ] = useState(false);
     const [allRecepInfo, setAllRecepInfo] = useState([]);
@@ -28,10 +32,9 @@ const Reception = () => {
                             <label></label><span className="result2">{item.receptionAge}</span><br></br>
                         </div>
                         <div className="contact-info2">
-                            <label><div className="email-image"></div></label><span className="result3">{item.receptionEmail}</span><br></br>
-                            <label><div className="number-image"></div></label><span className="result3">{item.receptionNumber}</span><br></br>
-                            <label><div className="room-image"></div></label><span className="result3">{item.receptionStatus}</span><br></br>
-                            <label><div className="occ-image"></div></label><span className="result3">{item.patientAppointment}</span><br></br>
+                            <label><div className="no-image">Email:</div></label><span className="result4">{item.receptionEmail}</span><br></br>
+                            <label><div className="no-image">Number:</div></label><span className="result4">{item.receptionNumber}</span><br></br>
+                            <label><div className="no-image">Status:</div></label><span className="result4">{item.receptionStatus}</span><br></br>
                         </div>
                     </div>
                 )
@@ -139,7 +142,7 @@ const Reception = () => {
     </div> */}
     
         <div className="pat-appointments">
-        <h10>{username}</h10>
+        <h10>Current Receptionists</h10>
         {recepCards}
     </div>
 
@@ -205,7 +208,7 @@ const Reception = () => {
         <div className="user-profile">
             <div className="user-image"></div>
 
-            <h18>Riley Walker | Head Recpetionist </h18>
+            <h18>Welcome back {username} |</h18>
 
             <div className="logout">
             <li><a href="/">Log Out</a></li>

@@ -1058,6 +1058,8 @@ label {
   width: 3vh;
   position: absolute;
   margin-top: -0.5vh;
+  font-size: 13px;
+  color:rgb(190, 154, 185);
 }
 
 .id-image {
@@ -1137,6 +1139,21 @@ label {
   font-size: 12px;
   font-family: 'Quicksand', sans-serif;  
   margin-left: 6vh;
+  margin-top: 10vh;
+}
+
+.result4 {
+  color: rgb(3, 3, 3);
+  font-size: 12px;
+  font-family: 'Quicksand', sans-serif;  
+  margin-left: 8vh;
+  margin-top: 10vh;
+}
+.result5 {
+  color: rgb(3, 3, 3);
+  font-size: 12px;
+  font-family: 'Quicksand', sans-serif;  
+  margin-left: 10vh;
   margin-top: 10vh;
 }
 

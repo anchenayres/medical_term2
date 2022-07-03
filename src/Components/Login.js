@@ -14,8 +14,8 @@ const Login = () => {
 
         // const [emailError, setEmailError] = useState();
         // const [passwordError, setPasswordError] = useState();
-        const [username, setUsername] = useState();
-        const [passwordError, setPasswordError] = useState();
+        // const [username, setUsername] = useState();
+        // const [passwordError, setPasswordError] = useState();
 
 
 
@@ -40,12 +40,12 @@ const Login = () => {
     
 
        
-        let email = useRef();
+        let name = useRef();
         let password = useRef();
 
         const handleSubmit = (e) => {
             let inputs = {
-                email: email.current.value,
+                name: name.current.value,
                 password: password.current.value,
             }
 
@@ -55,15 +55,16 @@ const Login = () => {
 
             axios.post('http://localhost:8888/medicalApi/userLogin.php', inputs)
             .then(function(response) {
-                console.log(response);
+                console.log(response.data);
                 
 
                 if(response.data === true){
-                    sessionStorage.setItem('activeUser', email.current.value);
+                    sessionStorage.setItem('activeUser', name.current.value);
                     navigate("reception");
                 }else {
                     console.log("Not Working!");
                 }
+
 
                 // useEffect(() => {
                 //     let loggedUserName = sessionStorage.getItem('userName');
@@ -87,7 +88,7 @@ const Login = () => {
             <div className="login-heading">
 
             <h4>Sign In</h4>
-                <input ref={email} className="box1" type="username" placeholder="Email"  />
+                <input ref={name} className="box1" type="username" placeholder="Email"  />
                 <input ref={password} className="box2"  type="password" placeholder="Password"  />
                 <button className="button1" onClick={handleSubmit} >Sign In</button>
                 <div className="login-link">Register for an account<a href="/Register">Register</a></div>

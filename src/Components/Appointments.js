@@ -6,6 +6,13 @@ import { useNavigate } from "react-router-dom";
 
 const Appointments = () => {
 
+    const [ username, setUsername ] = useState('');
+
+    useEffect(() => {
+        let loggedUserName = sessionStorage.getItem('activeUser');
+        setUsername(loggedUserName);
+    }, [])
+
     const [appointmentInfo, setAppointmentInfo] = useState();
     const [rerender, setRerender] = useState(false);
 
@@ -43,8 +50,8 @@ const Appointments = () => {
                 </div>
 
                 <div className="contact-info2">
-                    <label><div className="email-image"></div></label><span className="result3">{item.patient}</span><br></br>
-                    <label><div className="room-image"></div></label><span className="result3">{item.room}</span><br></br>
+                    <label><div className="no-image">Patient:</div></label><span className="result3">{item.patient}</span><br></br>
+                    <label><div className="no-image">Room:</div></label><span className="result3">{item.room}</span><br></br>
                     <label><div className="no-image">Date:</div></label><span className="result3">{item.appDate}</span><br></br>
                     <label><div className="no-image">Time:</div></label><span className="result3">{item.time}</span><br></br>        
                 </div>
@@ -202,7 +209,7 @@ const Appointments = () => {
 
         <div className="user-profile">
                 <div className="user-image"></div>
-                <h18>Riley Walker | Head Recpetionist </h18>
+                <h18>Welcome back {username} |</h18>
                 <div className="logout">
                 <li><a href="/">Log Out</a></li>
                 </div>

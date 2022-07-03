@@ -6,6 +6,13 @@ import { useNavigate } from "react-router-dom";
 
 const Patients = () => {
 
+    const [ username, setUsername ] = useState('');
+
+    useEffect(() => {
+        let loggedUserName = sessionStorage.getItem('activeUser');
+        setUsername(loggedUserName);
+    }, [])
+
     const [ rerender, setRerender ] = useState(false);
     const [allPatientsInfo, setAllPatientsInfo] = useState([]);
     const [patientCards, setPatientCards] = useState();
@@ -22,10 +29,9 @@ const Patients = () => {
                             <label></label><span className="result2">{item.age}</span><br></br>
                         </div>
                         <div className="contact-info2">
-                            <label><div className="email-image"></div></label><span className="result3">{item.email}</span><br></br>
-                            <label><div className="number-image"></div></label><span className="result3">{item.patientNumber}</span><br></br>
-                            <label><div className="id-image"></div></label><span className="result3">{item.patientID}</span><br></br>
-                            <label><div className="patApp-image"></div></label><span className="result3">{item.patientAppointments}</span><br></br>
+                            <label><div className="no-image">Email:</div></label><span className="result4">{item.email}</span><br></br>
+                            <label><div className="no-image">Number:</div></label><span className="result4">{item.patientNumber}</span><br></br>
+                            <label><div className="no-image">ID:</div></label><span className="result4">{item.patientID}</span><br></br>
                         </div>
                     </div>
                 )
@@ -173,7 +179,7 @@ const Patients = () => {
 
             <div className="user-profile">
                 <div className="user-image"></div>
-                <h18>Riley Walker | Head Recpetionist </h18>
+                <h18>Welcome back {username} |</h18>
                 <div className="logout">
                 <li><a href="/">Log Out</a></li>
                 </div>
