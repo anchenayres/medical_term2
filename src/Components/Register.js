@@ -1,21 +1,11 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 
 const Register = () => {
 
     const navigate = useNavigate();
-
-        const [inputs, setInputs] = useState({
-            fullName: '',
-            gender: '', 
-            email: '',
-            contact: '',
-            password: '',
-            passwordCon: '',
-            image: '',
-        });
 
         const [fullNameError, setFullNameError] = useState();
         const [genderError, setGenderError] = useState();
@@ -27,22 +17,15 @@ const Register = () => {
         const [emailAvail, setEmailAvail] = useState();
         const [userAvail, setUserAvail] = useState();
 
-
-        const fullNameVal = (e) => {
-            const value = e.target.value;
-            setInputs({...inputs, fullName: value});
-            if(inputs.first !== ''){setFullNameError();} 
-        }
-
         //IMAGES
+        const [ imageUrl, setImageUrl ] = useState('');
         const imageVal = (e) => {
                 var file = e.target.files[0];
                 var reader = new FileReader();
                 reader.onload = function() {
                     console.log(reader.result);
                     let imgFile = reader.result;
-
-                    setInputs({...inputs, image: imgFile});
+                    setImageUrl(imgFile);
 
                     var image = new Image();
                     image.src = reader.result;
@@ -50,114 +33,74 @@ const Register = () => {
             }
             reader.readAsDataURL(file);
         }
-            const genderVal = (e) => {
-                const value = e.target.value;
-                setInputs({...inputs, gender: value});
-                if(inputs.last !== ''){setGenderError();} 
-            }
 
-            const emailVal = (e) => {
-                const mailcodex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                const value = e.target.value;
-                setInputs({...inputs, email: value});
-                if(inputs.email !== ''){
-                    setEmailError();
-                } 
-                if(!value.match(mailcodex)){
-                    setEmailError("* Email is not a valid format");
-                }    
-            }
-
-            const validateEmail = () => {
-                axios.post('http://localhost:8888/medical_api/authenticateEmail.php', inputs)
-                .then(function(response){
-                 console.log(response);
-                 if(response.data === "Available"){
-                    setEmailAvail();
-                 } else if(response.data === "Not Available") {
-                    setEmailAvail("Email Is Not Available");
-                 } else if(response.data === "") {
-                    setEmailAvail();
-                    setEmailError();
-                 }
-                });
-            }
-
-            const contactVal = (e) => {
-                const contCodex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-                const value = e.target.value;
-                setInputs({...inputs, contact: value});
-                if(inputs.contact != ''){setContactError();} 
-        
-                if(!value.match(contCodex)){
-                    setContactError("* Not a Valid Phone Number");
-                } 
-            }
-
-            const validateUser = () => {
-                axios.post('http://localhost:8888/medical_api/authenticateUser.php', inputs)
-                .then(function(response){
-                console.log(response);
-                if(response.data === "Available"){
-                    setUserAvail();
-                } else {
-                    setUserAvail("Username Is Not Available");
-                }
-                });
-            }
-        
-            const passwordVal = (e) => {
-                const passCodex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(\W|_)).{5,}$/ ;
-                const value = e.target.value;
-                setInputs({...inputs, password: value});
-                if(inputs.password != ''){setPasswordError();} 
-        
-                if(!value.match(passCodex)){
-                    setPasswordError("* Password must include capital letters and symbols");
-                } 
-            }
-
-            const passwordConVal = (e) => {
-                const value = e.target.value;
-                setInputs({...inputs, passwordCon: value});
-                if(inputs.password === value){setPasswordConError()}else{
-                    setPasswordConError("* Your Passwords Do Not Match");
-                }  
-            }
-
+            let rName = useRef();
+            let rGender = useRef();
+            let rEmail = useRef();
+            let rContact = useRef();
+            let rPassword = useRef();
+            let rConfirmPassword = useRef();
             const handleSubmit = (e) => {
                 e.preventDefault();
-                console.log(inputs);
-        
-                if(inputs.fullName === ''){
-                    setFullNameError();
+
+                let name = rName.current.value;
+                if(name === ''){
+                    setFullNameError('Please enter your full name and surname');
                 } else {
-                    setFullNameError("Please enter your full name and surname");
+                    setFullNameError("");
                 } 
         
-                if(inputs.gender === ''){
+                let gender = rGender.current.value;
+                if(gender === ''){
+                    setGenderError('Please add your gender');
                 } else {
-                    setGenderError("Please add your gender");
+                    setGenderError("");
                 }
         
-                if(inputs.email === ''){
+                let email = rEmail.current.value;
+                const mailcodex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if(email === ''){
+                    setEmailError('Please enter your email address')
+                } else if( !email.match(mailcodex) ) {
+                    setEmailError('Email is not a valid format');
                 } else {
-                    setEmailError("Please enter your email address");
+                    setEmailError("");
                 }
                 
-                if(inputs.contact === ''){
+                let contact = rContact.current.value;
+                const contCodex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+                if(contact === '') {
+                    setContactError('Please enter your number');
+                } else if(!contact.match(contCodex)) {
+                    setContactError('Not a Valid Phone Number');
                 } else {
-                    setContactError("please enter your number");
+                    setContactError("");
                 }
         
-                if(inputs.password === ''){
+                let password = rPassword.current.value;
+                const passCodex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(\W|_)).{5,}$/ ;
+                if(password === ''){
+                    setPasswordError('Please enter your password');
+                } else if(!password.match(passCodex)) {
+                    setPasswordError('nommer, n spesiale karakter, uppercase, lowercase. > 5-6Password must include capital letters and symbols')
                 } else {
-                    setPasswordError("Please enter you password");
+                    setPasswordError("");
                 }
         
-                if(inputs.passwordCon === ''){
+                let confirmPassword = rConfirmPassword.current.value;
+                if( confirmPassword !== password){
+                    setPasswordConError('Password does not match');
                 } else {
-                    setPasswordConError("Please re-enter your password");
+                    setPasswordConError("");
+                }
+
+                let inputs = {
+                    name: name,
+                    gender: gender,
+                    email: email,
+                    contact: contact,
+                    password: password,
+                    img: imageUrl
                 }
         
                 let result = Object.values(inputs).some(o => o === '');
@@ -165,23 +108,20 @@ const Register = () => {
                 if(result){
                     console.log('Not working');
                 } else {
-                    axios.post('http://localhost:8888/medical_api/addUser.php', inputs)
-                    .then(function(response){
-                     console.log(response);
+                    axios.post('http://localhost:8888/medicalApi/addUser.php', inputs)
+                    .then((res) => {
+                     console.log(res);
         
-                     if(response.status === 200){
-                         //navigate("/login");
-                         console.log("Working Fine");
-                     }
-        
-                    });
+                    if(res.status === 200){
+                        //navigate("/login");
+                        console.log("Working Fine");
+                    }
+                });
         } 
     }    
 
     return (
         <div>
-                
-
                         <div className="behind2">
                         <div className="reg-box">
                         <form id='ImgOne' encType="multipart/form-data">    
@@ -193,33 +133,33 @@ const Register = () => {
                             <h5>Register</h5>
                        
                             <div className='names'>
-                            <input className="first_last" name="first_last" type="text" placeholder="Name and Surname" onChange={fullNameVal} />
+                            <input ref={rName} className="first_last" name="first_last" type="text" placeholder="Name and Surname"  />
                             {fullNameError}
                             </div>
                           
                             <div className='genders'>
-                            <input className="gender" name="gender" type="text" placeholder="Gender" onChange={genderVal} />
+                            <input ref={rGender} className="gender" name="gender" type="text" placeholder="Gender"  />
                             {genderError}
                             </div>
 
                             <div className='emails'>
-                            <input className="email" name="email"  type="text" placeholder="Email"  onChange={emailVal} />
+                            <input ref={rEmail} className="email" name="email"  type="text" placeholder="Email"   />
                             {emailError}
                             {emailAvail}    
                             </div>
 
                             <div className='contacts'>
-                            <input className="contact" name="contact" type="text" placeholder="Contact" onChange={contactVal} />
+                            <input ref={rContact} className="contact" name="contact" type="text" placeholder="Contact" />
                             {contactError}
                             </div>
 
                             <div className='passwords'>
-                            <input className="password" name="password" type="text" placeholder="Password" onChange={passwordVal} />
+                            <input ref={rPassword} className="password" name="password" type="text" placeholder="Password"  />
                             {passwordError}
                             </div>
 
                             <div className='samepasswords'>
-                            <input className="conPass" name="conPass" type="password" placeholder="Confirm Password" onChange={passwordConVal} />
+                            <input ref={rConfirmPassword} className="conPass" name="conPass" type="password" placeholder="Confirm Password" />
                             {passwordConError}
                             </div>
 

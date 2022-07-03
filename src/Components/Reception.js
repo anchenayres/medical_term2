@@ -14,7 +14,7 @@ const Reception = () => {
             .then((res) => {
                 let receps = res.data.map(item =>
                     <div className="patient-table">
-                        <div className="patient-image"></div>
+                        <div className="patient-image"><img src={'https://localhost:8888/medicalApi/' + item.receptionImage}/></div>
                         <div className="patient-name">
                             <label></label><span className="result2">{item.receptionName}</span><br></br>
                             <label></label><span className="result2">{item.receptionGender}</span><br></br>
