@@ -82,7 +82,7 @@ const Register = () => {
                 if(password === ''){
                     setPasswordError('Please enter your password');
                 } else if(!password.match(passCodex)) {
-                    setPasswordError('nommer, n spesiale karakter, uppercase, lowercase. > 5-6Password must include capital letters and symbols')
+                    setPasswordError(' must be > 6 characters and include capital letters and symbols')
                 } else {
                     setPasswordError("");
                 }
