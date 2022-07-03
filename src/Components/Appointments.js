@@ -43,7 +43,8 @@ const Appointments = () => {
 
                 <div className="contact-info2">
                     <label><div className="email-image"></div></label><span className="result3">{item.patient}</span><br></br>
-                    <label><div className="number-image"></div></label><span className="result3">{item.room}</span><br></br>
+                    <label><div className="room-image"></div></label><span className="result3">{item.room}</span><br></br>
+                    <label><div className="room-image"></div></label><span className="result3">{item.date}</span><br></br>
                     <label><div className="room-image"></div></label><span className="result3">{item.time}</span><br></br>        
                 </div>
                 </div>

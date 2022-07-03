@@ -69,12 +69,7 @@ const Login = () => {
             <div className="behind">
             
             <div className="login-heading">
-            <form id='ImgOne' encType="multipart/form-data">    
-                    <div className='imageArea'>
-                        <input name="imageUrl" className='imgInput' type="file" onChange={imageVal} />
-                        <div id="profileimg" className='profile_img'></div>  
-                    </div>
-                    </form>
+
             <h4>Sign In</h4>
                 <input ref={email} className="box1" type="username" placeholder="Email"  />
                 <input ref={password} className="box2"  type="password" placeholder="Password"  />

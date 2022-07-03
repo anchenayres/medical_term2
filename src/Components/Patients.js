@@ -24,8 +24,8 @@ const Patients = () => {
                         <div className="contact-info2">
                             <label><div className="email-image"></div></label><span className="result3">{item.email}</span><br></br>
                             <label><div className="number-image"></div></label><span className="result3">{item.patientNumber}</span><br></br>
-                            <label><div className="room-image"></div></label><span className="result3">{item.patientID}</span><br></br>
-                            <label><div className="occ-image"></div></label><span className="result3">{item.patientAppointments}</span><br></br>
+                            <label><div className="id-image"></div></label><span className="result3">{item.patientID}</span><br></br>
+                            <label><div className="patApp-image"></div></label><span className="result3">{item.patientAppointments}</span><br></br>
                         </div>
                     </div>
                 )

@@ -991,7 +991,7 @@ label {
   margin-top: 2vh;
   float: left;
   border-radius: 5vh;
-  width: 30vh;
+  width: 35vh;
   height: 30vh;
   position: center;
   margin-right: 1vh;
@@ -1003,8 +1003,8 @@ label {
 }
 
 .email-image {
-  height: 2vh;
-  width: 2vh;
+  height: 3vh;
+  width: 3vh;
   background-image: url("./Images/email.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1013,8 +1013,8 @@ label {
 }
 
 .room-image {
-  height: 2vh;
-  width: 2vh;
+  height: 3vh;
+  width: 3vh;
   background-image: url("./Images/room.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1022,9 +1022,19 @@ label {
   margin-top: -0.5vh;
 }
 
+.id-image {
+  height: 3vh;
+  width: 3vh;
+  background-image: url("./Images/id.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  margin-top: -0.5vh;
+}
+
 .occ-image {
-  height: 2vh;
-  width: 2vh;
+  height: 3vh;
+  width: 3vh;
   background-image: url("./Images/occupation.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1032,9 +1042,19 @@ label {
   margin-top: -0.5vh;
 }
 
+.patApp-image {
+  height: 3vh;
+  width: 3vh;
+  background-image: url("./Images/patApp.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  margin-top: -0.5vh;
+}
+
 .recep-image {
-  height: 2vh;
-  width: 2vh;
+  height: 3vh;
+  width: 3vh;
   background-image: url("./Images/reception.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1043,8 +1063,8 @@ label {
 }
 
 .number-image {
-  height: 2vh;
-  width: 2vh;
+  height: 3vh;
+  width: 3vh;
   background-image: url("./Images/number.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1059,8 +1079,8 @@ label {
 
 .result2{
   color: rgb(172, 42, 42);
-  color: rgb(152, 152, 149);
-  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
   font-family: 'Raleway', sans-serif;  
   margin-top: 2vh;
 }
@@ -1075,11 +1095,11 @@ label {
 }
 
 .result3 {
-  color: rgb(152, 152, 149);
-  font-size: 10px;
-  font-family: 'Raleway', sans-serif;  
-  margin-left: 5vh;
-  margin-bottom: 2vh;
+  color: rgb(3, 3, 3);
+  font-size: 12px;
+  font-family: 'Quicksand', sans-serif;  
+  margin-left: 6vh;
+  margin-top: 10vh;
 }
 
 .patient-image {
