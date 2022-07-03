@@ -6,11 +6,14 @@ import { useNavigate } from 'react-router-dom'
 
 const Doctors = () => {
 
+    //name of loged in user 
     const [ username, setUsername ] = useState('');
-
+    const [ userRank, setUserRank ] = useState('');
     useEffect(() => {
         let loggedUserName = sessionStorage.getItem('activeUser');
+        let rank = sessionStorage.getItem('rank');
         setUsername(loggedUserName);
+        setUserRank(rank);
     }, [])
 
     const [doctorInfo, setDoctorInfo] = useState();
@@ -211,7 +214,8 @@ const Doctors = () => {
 
             <div className="user-profile">
                 <div className="user-image"></div>
-                <h18>Welcome back {username} |</h18>
+                <h18>Welcome back {username} | {userRank == 'Head' ? 'Head Receptionist' : 'General Receptionist'}</h18>
+
                 <div className="logout">
                 <li><a href="/">Log Out</a></li>
                 </div>

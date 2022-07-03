@@ -6,12 +6,16 @@ import { useNavigate } from "react-router-dom";
 
 const Appointments = () => {
 
+    //name of loged in user 
     const [ username, setUsername ] = useState('');
-
+    const [ userRank, setUserRank ] = useState('');
     useEffect(() => {
         let loggedUserName = sessionStorage.getItem('activeUser');
+        let rank = sessionStorage.getItem('rank');
         setUsername(loggedUserName);
+        setUserRank(rank);
     }, [])
+
 
     const [appointmentInfo, setAppointmentInfo] = useState();
     const [rerender, setRerender] = useState(false);
@@ -22,13 +26,13 @@ const Appointments = () => {
         axios.post('http://localhost:8888/medicalApi/readPatient.php')
         .then((res) => {
             setAllPatients(res.data);
-            console.log(res)
+
         })
 
         axios.post('http://localhost:8888/medicalApi/readUserPosts.php')
         .then((res) => {
             setAllDoctors(res.data);
-            console.log(res)
+
         })
     }, [rerender])
 
@@ -39,7 +43,7 @@ const Appointments = () => {
         axios.post("http://localhost:8888/medicalApi/appointments.php")
             .then((res) =>{
                 setAllApppointments( res.data );
-                console.log(res);
+
                 let appointments = res.data.map(item => 
 
                 <div className="patient-table">
@@ -74,55 +78,54 @@ const Appointments = () => {
  
      }
 
-         // u refers to update
-    // let uId = useRef();
-    // const [updateAppInfo, setUpdateAppInfo] = useState([]);
+    // u refers to update
+    let uId = useRef();
+    const [updateAppInfo, setUpdateAppInfo] = useState([]);
 
-    // const getUpdateDetails = () => {
-    //     let id = uId.current.value;
-    //     console.log(id)
+    const getUpdateDetails = () => {
+        let id = uId.current.value;
+        console.log(id)
 
-    //     axios.post("http://localhost:8888/medicalApi/getPatientDetails.php", {id: id})
-    //         .then((res) => {
-    //             console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
-    //             setUpdatePatientInfo(res.data[0]);
-    //             console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
-    //         })
-    //     setRerender(true);
+        axios.post("http://localhost:8888/medicalApi/getAppointmentDetails.php", {id: id})
+            .then((res) => {
 
-    // }
+                setUpdateAppInfo(res.data[0]);
 
-     //update an appointment
-    // let uRoom = useRef();
-    // let uDoctor = useRef();
-    // let uPatient = useRef();
-    // let uDate = useRef();
-    // let uTime = useRef();
+            })
+        setRerender(true);
 
-    // const updateAppointment = () => {
-    //     let id = uId.current.value;
-    //     let roomNum = uRoom.current.value;
-    //     let doct = uDoctor.current.value;
-    //     let pat = uPatient.current.value;
-    //     let dateVal = uDate.current.value;
-    //     let timeVal = uTime.current.value;
+    }
+
+    //update an appointment
+    let uDate = useRef();
+    let uTime = useRef();
+    let uDoctor = useRef();
+    let uRoom = useRef();
+
+    const updateAppointment = () => {
+        let id = uId.current.value;
+        let date = uDate.current.value;
+        let time = uTime.current.value;
+        let doctor = uDoctor.current.value;
+        let room = uRoom.current.value;
 
 
-    //     let details = {
-    //         id: id,
-    //         roomNum: roomNum,
-    //         doct: doct,
-    //         pat: pat,
-    //         dateVal: dateVal,
-    //         timeVal: timeVal
-    //     }
+        let details = {
+            id: id,
+            date: date,
+            time: time,
+            doctor: doctor,
+            room: room
+        }
 
-    //     axios.post("http://localhost:8888/medicalApi/updateAppointment.php", details)
-    //         .then((res) => {
-    //             console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
-    //         })
-    //     setRerender(true);
-    // }
+
+
+        axios.post("http://localhost:8888/medicalApi/updateAppointment.php", details)
+            .then((res) => {
+                console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
+            })
+        setRerender(true);
+    }
     
     //adding a patient
     let aPatient = useRef();
@@ -209,7 +212,8 @@ const Appointments = () => {
 
         <div className="user-profile">
                 <div className="user-image"></div>
-                <h18>Welcome back {username} |</h18>
+                <h18>Welcome back {username} | {userRank == 'Head' ? 'Head Receptionist' : 'General Receptionist'}</h18>
+
                 <div className="logout">
                 <li><a href="/">Log Out</a></li>
                 </div>
@@ -226,22 +230,21 @@ const Appointments = () => {
                 <button className="button4" onClick={deleteAppointment}>Delete</button>
             </div>
 
-            {/* <div className="update-user">
+            <div className="update-user">
                 <h7> Update an Existing Patient</h7>
                 <select ref={uId} onChange={getUpdateDetails} className="delUser2">
-                    <option>Please Select a Patient</option>
+                     <option>Please Select a Patient</option>
                     {
-                        allPatientsInfo.map(item => <option value={item.id} >{item.patientName}</option>)
-                    }
+                        allAppointments.map(item => <option value={item.id} >{item.patient}</option>)
+                    } 
                 </select>
-                <input ref={uRoom} defaultValue={updatePatientInfo.patientMedical} className="pat-medicalaid" name="pat-medicalaid" type="text" placeholder="Medical Aid Number" />
-                <input ref={uDoctor} defaultValue={updatePatientInfo.email} className="pat-email" name="pat-email" type="text" placeholder="Email" />
-                <input ref={uPatient} defaultValue={updatePatientInfo.patientNumber} className="pat-number" name="pat-number" type="text" placeholder="Number" />
-                <input ref={uDate} defaultValue={updatePatientInfo.password} className="pat-password" name="pat-password" type="text" placeholder="Password" />
-                <input ref={uTime} defaultValue={updatePatientInfo.password} className="pat-password" name="pat-password" type="text" placeholder="Password" />
+                <input ref={uDate} defaultValue={updateAppInfo.appDate} className="pat-medicalaid" name="pat-medicalaid" type="date" placeholder="Date" />
+                <input ref={uTime} defaultValue={updateAppInfo.time} className="pat-email" name="pat-email" type="time" placeholder="Time" />
+                <input ref={uDoctor} defaultValue={updateAppInfo.doctor} className="pat-number" name="pat-number" type="text" placeholder="Doctor" />
+                <input ref={uRoom} defaultValue={updateAppInfo.room} className="pat-password" name="pat-password" type="text" placeholder="Room" />
 
-                <button className="button6" onClick={updatePatient}>Update</button>
-            </div> */}
+                <button className="button6" onClick={updateAppointment}>Update</button>
+            </div> 
         
         </>
     )

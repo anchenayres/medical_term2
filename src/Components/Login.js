@@ -7,10 +7,26 @@ import { useState } from "react";
 const Login = () => {
 
     
+    const [capsError, setCapsError] = useState();
 
-    const navigate = useNavigate();
 
+    // var doc = document.getElementById("textbox");
 
+    // doc.addEventListener("keyup", testCapsLock);
+    // doc.addEventListener("keydown", testCapsLock);
+
+    // function testCapsLock(event) {
+    //     if(event.code === "CapsLock"){
+    //         let isCapsLockOn = event.getModifierState("CapsLock");
+    //         if(isCapsLockOn) {
+    //             console.log("Caps Lock turned on");
+    //         } else {
+    //             console.log("Caps Lock turned off");
+    //         }
+    //     }
+    // }
+
+    // END OF CAPS LOCK
 
         // const [emailError, setEmailError] = useState();
         // const [passwordError, setPasswordError] = useState();
@@ -55,12 +71,31 @@ const Login = () => {
 
             axios.post('http://localhost:8888/medicalApi/userLogin.php', inputs)
             .then(function(response) {
-                console.log(response.data);
-                
+                console.log(response.data[0].receptionStatus);
 
-                if(response.data === true){
+                // CAPS LOCK 
+                // var doc = document.getElementById("textbox");
+                function testCapsLock(event) {
+                    if(event.code === "CapsLock"){
+                        let isCapsLockOn = event.getModifierState("CapsLock");
+                        if(isCapsLockOn) {
+                            console.log("Caps Lock turned on");
+                            setCapsError('Caps Lock turned on');
+                        } else {
+                            console.log("Caps Lock turned off");
+                            setCapsError('');
+
+                        }
+                    }
+                }
+                document.addEventListener("keydown", testCapsLock);
+                document.addEventListener("keyup", testCapsLock); 
+                    
+
+                if(response.data !== false){
                     sessionStorage.setItem('activeUser', name.current.value);
-                    navigate("reception");
+                    sessionStorage.setItem('rank', response.data[0].receptionStatus);
+                    //navigate("reception");
                 }else {
                     console.log("Not Working!");
                 }
@@ -90,6 +125,7 @@ const Login = () => {
             <h4>Sign In</h4>
                 <input ref={name} className="box1" type="username" placeholder="Email"  />
                 <input ref={password} className="box2"  type="password" placeholder="Password"  />
+                {capsError}
                 <button className="button1" onClick={handleSubmit} >Sign In</button>
                 <div className="login-link">Register for an account<a href="/Register">Register</a></div>
             </div>
@@ -99,6 +135,7 @@ const Login = () => {
                 <p5>Welcome to the <b>Breast Cancer Clinic</b> where all your possible needs
                     are cared for. Sign in to continue your journey with us!</p5>
                 </div>
+                
 
 
         </>

@@ -6,12 +6,17 @@ import { useNavigate } from "react-router-dom";
 
 const Patients = () => {
 
-    const [ username, setUsername ] = useState('');
+        //name of loged in user 
+        const [ username, setUsername ] = useState('');
+        const [ userRank, setUserRank ] = useState('');
+        useEffect(() => {
+            let loggedUserName = sessionStorage.getItem('activeUser');
+            let rank = sessionStorage.getItem('rank');
+            setUsername(loggedUserName);
+            setUserRank(rank);
+        }, [])
 
-    useEffect(() => {
-        let loggedUserName = sessionStorage.getItem('activeUser');
-        setUsername(loggedUserName);
-    }, [])
+
 
     const [ rerender, setRerender ] = useState(false);
     const [allPatientsInfo, setAllPatientsInfo] = useState([]);
@@ -179,7 +184,8 @@ const Patients = () => {
 
             <div className="user-profile">
                 <div className="user-image"></div>
-                <h18>Welcome back {username} |</h18>
+                <h18>Welcome back {username} | {userRank == 'Head' ? 'Head Receptionist' : 'General Receptionist'}</h18>
+
                 <div className="logout">
                 <li><a href="/">Log Out</a></li>
                 </div>
