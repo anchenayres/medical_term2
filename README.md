@@ -3,7 +3,7 @@
 <!-- Repository Information & Links-->
 <br />
 
-![GitHub repo size](https://img.shields.io/https:/github/repo-size/anchenayres/medical_term2.git)
+![GitHub repo size](https://img.shields.io/github/repo-size/anchenayres/medical_term2.git)
 ![GitHub watchers](https://img.shields.io/github/watchers/anchenayres/21100284_project_term_1)
 ![GitHub language count](https://img.shields.io/github/languages/count/anchenayres/21100284_project_term_1)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/anchenayres/21100284_project_term_1)
@@ -19,7 +19,7 @@
     <img src="/src/Images/cancerlogo.png" width="250" height="200" border-radius="50%">
   </a>
   
-  <h3 align="center">The Big Bang</h3>
+  <h3 align="center">The Breast Cancer Medical Clinic</h3>
 
   <p align="center">
     A react project using the Solar System Api to demonstrate data visualization using charts js  <br>
@@ -74,7 +74,6 @@ The world we live in today is a world of big data and people have trouble findin
 
 * [React](https://reactjs.org/)
 * [Axios](https://api.le-systeme-solaire.net/rest/bodies/)
-* [Charts.js](https://www.npmjs.com/package/chart.js-v2)
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
@@ -92,12 +91,12 @@ Ensure that you have the latest version of [NPM](https://www.npmjs.com/) install
 Here are a couple of ways to clone this repo:
 
 1. GitHub Desktop </br>
-Enter `https://github.com/anchenayres/21100284_project_term_1.git` into the URL field and press the `Clone` button.
+Enter `https://github.com/anchenayres/medical_term2.git` into the URL field and press the `Clone` button.
 
 2. Clone Repository </br>
 Run the following in the command-line to clone the project:
    ```sh
-   git clone https://github.com/anchenayres/21100284_project_term_1.git
+   git clone https://github.com/anchenayres/medical_term2.git
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
@@ -115,7 +114,7 @@ Run the following in the command-line to install all the required dependencies:
 ## Features and Functionality
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
-![image2](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype1.png)
+![image2](https://github.com/anchenayres/medical_term2/blob/main/src/Images/mockup1.png)
 
 ### All The Latest Solar System Data! 
 
