@@ -54,7 +54,7 @@ html, p, body {
 .box1 {
   height: 5vh;
   width: 65vh;
-  margin-left: 7vh;
+  margin-left: 5vh;
   margin-top: 35vh;
   border-bottom-right-radius: 10vh;
   border-top-right-radius: 10vh;
@@ -253,7 +253,7 @@ html, p, body {
   height: 5vh;
   width: 15vh;
   background-color: #F174AC;
-  margin-left: -35vh;
+  margin-left: -40vh;
   margin-top: 75vh;
   position: absolute;
   border-bottom-right-radius: 10vh;
@@ -1967,6 +1967,7 @@ h13 {
 .password-container {
   position: absolute;
   display: flex;
+  margin-left: 5vh;
   align-items: center;
   justify-content: space-between;
 }
@@ -1985,9 +1986,6 @@ h13 {
   box-sizing: border-box;
 }
 
-.login-heading .box1 {
-  margin-left: 0;
-}
 
 img {
   margin-top: 3vh;

@@ -78,7 +78,7 @@ const Login = () => {
             <div className="login-heading">
 
             <h4>Sign In</h4>
-                <input ref={name} className="box1" type="username" placeholder="Email"  />
+                <input ref={name} className="box1" type="username" placeholder="Name and Surname"  />
                 <div className='password-container'>
                     <input ref={password} className="box2"  type={isRevealPwd ? 'text' : 'password'} placeholder="Password"  />
 

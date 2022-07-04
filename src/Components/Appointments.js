@@ -250,7 +250,7 @@ const Appointments = () => {
             </div>
 
             <div className="update-user">
-                <h7> Update an Existing Patient</h7>
+                <h7> Update an Existing Appointment</h7>
                 <select ref={uId} onChange={getUpdateDetails} className="delUser2">
                      <option>Please Select a Patient</option>
                     {
