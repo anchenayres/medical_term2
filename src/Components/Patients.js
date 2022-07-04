@@ -1,12 +1,21 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
+import { createRenderer } from "react-dom/test-utils";
 import { useNavigate } from "react-router-dom";
 
 
 
 const Patients = () => {
+    
+    const navigate = useNavigate();
 
-        //name of loged in user 
+        //logout
+        const logout = () => {
+            sessionStorage.clear();
+            navigate('/');
+        }    
+
+        //name of logged in user 
         const [ username, setUsername ] = useState('');
         const [ userRank, setUserRank ] = useState('');
         useEffect(() => {
@@ -14,20 +23,35 @@ const Patients = () => {
             let rank = sessionStorage.getItem('rank');
             setUsername(loggedUserName);
             setUserRank(rank);
+            
+            if( loggedUserName == '' || loggedUserName == ' ' || loggedUserName == undefined || loggedUserName == null ) {
+                navigate('/')
+            } else {
+
+            }
         }, [])
+
+        // useEffect(() => {
+        //     let loggedUser =  sessionStorage.getItem('loggedOnUser');
+        //     if( loggedUser === '' || loggedUser === ' ' || loggedUser === undefined || loggedUser == null ) {
+        //     navigate('/')
+        //     } 
+        // }
 
 
 
     const [ rerender, setRerender ] = useState(false);
     const [allPatientsInfo, setAllPatientsInfo] = useState([]);
     const [patientCards, setPatientCards] = useState();
+    const [renderImage, setRenderImage] = useState();
+
     useEffect(() => {
         setRerender(false);
         axios.post("http://localhost:8888/medicalApi/readPatient.php")
             .then((res) => {
                 let patients = res.data.map(item =>
                     <div className="patient-table">
-                        <div className="patient-image"></div>
+                        <div className="patient-image"><img src={renderImage} className="dash-img"></img></div>
                         <div className="patient-name">
                             <label></label><span className="result2">{item.patientName}</span><br></br>
                             <label></label><span className="result2">{item.gender}</span><br></br>
@@ -80,6 +104,8 @@ const Patients = () => {
             .then((res) => {
                 console.log(res)
             })
+            alert(aName.current.value + " has been successfully added")
+
         setRerender(true);
     }
 
@@ -93,6 +119,8 @@ const Patients = () => {
             .then((res) => {
                 console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
             })
+            alert(aName.current.value + " has been successfully deleted")
+
         setRerender(true);
 
     }
@@ -139,6 +167,8 @@ const Patients = () => {
             .then((res) => {
                 console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
             })
+            alert(aName.current.value + " has been successfully updated")
+
         setRerender(true);
     }
 
@@ -186,9 +216,7 @@ const Patients = () => {
                 <div className="user-image"></div>
                 <h18>Welcome back {username} | {userRank == 'Head' ? 'Head Receptionist' : 'General Receptionist'}</h18>
 
-                <div className="logout">
-                <li><a href="/">Log Out</a></li>
-                </div>
+                <div className="logout" onClick={logout}><div className="logout-button">Log out</div></div>
             </div>
 
             <div className="update-user">

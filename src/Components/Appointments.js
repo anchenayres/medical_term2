@@ -6,14 +6,29 @@ import { useNavigate } from "react-router-dom";
 
 const Appointments = () => {
 
-    //name of loged in user 
-    const [ username, setUsername ] = useState('');
+    const navigate = useNavigate();
+
     const [ userRank, setUserRank ] = useState('');
+    const [ username, setUsername ] = useState('');
+
+    //logout
+    const logout = () => {
+        sessionStorage.clear();
+        navigate('/');
+    }
+    
+    //name of logged in user 
     useEffect(() => {
         let loggedUserName = sessionStorage.getItem('activeUser');
         let rank = sessionStorage.getItem('rank');
         setUsername(loggedUserName);
         setUserRank(rank);
+        
+        if( loggedUserName == '' || loggedUserName == ' ' || loggedUserName == undefined || loggedUserName == null ) {
+            navigate('/')
+        } else {
+
+        }
     }, [])
 
 
@@ -74,6 +89,8 @@ const Appointments = () => {
          axios.post("http://localhost:8888/medicalApi/deleteAppointment.php", id)
              .then((res) => {
              })
+             alert(aPatient.current.value + " has been successfully deleted")
+
          setRerender(true);
  
      }
@@ -124,6 +141,8 @@ const Appointments = () => {
             .then((res) => {
                 console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
             })
+            alert(aPatient.current.value + " has been successfully updated")
+
         setRerender(true);
     }
     
@@ -153,6 +172,8 @@ const Appointments = () => {
         .then((res) => {
             console.log(res)
         });
+        alert(aPatient.current.value + " has been successfully added")
+
         setRerender(true);
     }
 
@@ -214,9 +235,7 @@ const Appointments = () => {
                 <div className="user-image"></div>
                 <h18>Welcome back {username} | {userRank == 'Head' ? 'Head Receptionist' : 'General Receptionist'}</h18>
 
-                <div className="logout">
-                <li><a href="/">Log Out</a></li>
-                </div>
+                <div className="logout" onClick={logout}><div className="logout-button">Log out</div></div>
             </div>
         
             <div className="delete_user">

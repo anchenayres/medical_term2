@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import showPwdImg from '../Images/showpwd.svg';
 import hidePwdImg from '../Images/hidepwd.svg';
 
@@ -9,19 +9,21 @@ import hidePwdImg from '../Images/hidepwd.svg';
 
 
 const Login = () => {
-    const navigate = useNavigate();
+
+    const navigate = useNavigate();    
+    //name of logged in user 
+    useEffect(() => {
+        let loggedUserName = sessionStorage.getItem('activeUser');
+        
+        if( loggedUserName == '' || loggedUserName == ' ' || loggedUserName == undefined || loggedUserName == null ) {
+            //nothing
+        } else {
+            navigate('/reception')
+
+        }
+    },[])
     
     const [capsError, setCapsError] = useState();
-
-    //show and hide password
-
-
-  
-
-    
-
-
-
 
         // CAPS LOCK 
         function testCapsLock(event) {
@@ -64,18 +66,6 @@ const Login = () => {
                 }else {
                     console.log("Not Working!");
                 }
-                // useEffect(() => {
-                //     let loggedUserName = sessionStorage.getItem('userName');
-                //     setUsername(loggedUserName);
-                // }, [])
-
-                // useEffect(() => {
-                //     let loggedUser =  sessionStorage.getItem('loggedOnUser');
-                //     if( loggedUser === '' || loggedUser === ' ' || loggedUser === undefined || loggedUser == null ) {
-                //         navigate('/')
-                //     } 
-                // }, [])
-
             });
     }
 
@@ -108,9 +98,6 @@ const Login = () => {
                 <p5>Welcome to the <b>Breast Cancer Clinic</b> where all your possible needs
                     are cared for. Sign in to continue your journey with us!</p5>
                 </div>
-                
-
-
         </>
     )
 

@@ -6,14 +6,29 @@ import { useNavigate } from 'react-router-dom'
 
 const Doctors = () => {
 
-    //name of loged in user 
-    const [ username, setUsername ] = useState('');
+    const navigate = useNavigate();
+
+        //logout
+        const logout = () => {
+            sessionStorage.clear();
+            navigate('/');
+        }    
+
     const [ userRank, setUserRank ] = useState('');
+    const [ username, setUsername ] = useState('');
+    
+    //name of logged in user 
     useEffect(() => {
         let loggedUserName = sessionStorage.getItem('activeUser');
         let rank = sessionStorage.getItem('rank');
         setUsername(loggedUserName);
         setUserRank(rank);
+        
+        if( loggedUserName == '' || loggedUserName == ' ' || loggedUserName == undefined || loggedUserName == null ) {
+            navigate('/')
+        } else {
+
+        }
     }, [])
 
     const [doctorInfo, setDoctorInfo] = useState();
@@ -87,6 +102,8 @@ const Doctors = () => {
             .then((res) => {
                 console.log(res)
             });
+            alert(docName.current.value + " has been successfully added")
+
         setRerender(true);
     }
 
@@ -99,7 +116,9 @@ const Doctors = () => {
         axios.post('http://localhost:8888/medicalApi/deleteDoctor.php', { id: id })
             .then((res) => {
 
-            })
+            });
+            alert(docName.current.value + " has been successfully deleted")
+
         setRerender(true);
     }
 
@@ -139,7 +158,9 @@ const Doctors = () => {
         axios.post('http://localhost:8888/medicalApi/updateDoctor.php', details)
             .then((res) => {
                 setDoctorsDetails([res.data[0].docRoom, res.data[0].email, res.data[0].number, res.data[0].pass])
-            })
+            });
+            alert(docName.current.value + " has been successfully updated")
+
         setRerender(true);
     }
 
@@ -216,9 +237,7 @@ const Doctors = () => {
                 <div className="user-image"></div>
                 <h18>Welcome back {username} | {userRank == 'Head' ? 'Head Receptionist' : 'General Receptionist'}</h18>
 
-                <div className="logout">
-                <li><a href="/">Log Out</a></li>
-                </div>
+                <div className="logout" onClick={logout}><div className="logout-button">Log out</div></div>
             </div>
 
             <div class="update-user">

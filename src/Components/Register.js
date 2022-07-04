@@ -1,11 +1,22 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 
 const Register = () => {
 
     const navigate = useNavigate();
+  
+    //name of logged in user 
+    useEffect(() => {
+        let loggedUserName = sessionStorage.getItem('activeUser');
+        
+        if( loggedUserName == '' || loggedUserName == ' ' || loggedUserName == undefined || loggedUserName == null ) {
+        } else {
+            navigate('/')
+
+        }
+    }, [])
 
         const [fullNameError, setFullNameError] = useState();
         const [genderError, setGenderError] = useState();
@@ -19,6 +30,11 @@ const Register = () => {
 
         //IMAGES
         const [ imageUrl, setImageUrl ] = useState('');
+
+        const [inputs, setInputs] = useState({
+            image: ''
+        });
+
         const imageVal = (e) => {
                 var file = e.target.files[0];
                 var reader = new FileReader();
@@ -26,6 +42,8 @@ const Register = () => {
                     console.log(reader.result);
                     let imgFile = reader.result;
                     setImageUrl(imgFile);
+
+                    setInputs({...inputs, image: imgFile});
 
                     var image = new Image();
                     image.src = reader.result;

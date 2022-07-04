@@ -5,15 +5,31 @@ import React, {useEffect, useRef, useState} from "react";
 
 const Reception = () => {
 
-    //name of loged in user 
-    const [ username, setUsername ] = useState('');
+    const navigate = useNavigate();
+    
+        //logout
+        const logout = () => {
+            sessionStorage.clear();
+            navigate('/');
+        }    
+
     const [ userRank, setUserRank ] = useState('');
+    const [ username, setUsername ] = useState('');
+    
+    //name of logged in user 
     useEffect(() => {
         let loggedUserName = sessionStorage.getItem('activeUser');
         let rank = sessionStorage.getItem('rank');
+
         setUsername(loggedUserName);
         setUserRank(rank);
-    }, [])
+        
+        if( loggedUserName == '' || loggedUserName == ' ' || loggedUserName == undefined || loggedUserName == null ) {
+            navigate('/')
+        } else {
+            console.log('test')
+        }
+    }, []) 
 
 
 
@@ -76,7 +92,7 @@ const Reception = () => {
         .then((res) => {
         console.log("🚀 ~ file: Reception.js ~ line 66 ~ .then ~ res", res)
         })
-        alert({username} + "has been successfully added")
+        alert(aName.current.value + " has been successfully added")
 
         setRerender(true);
     }
@@ -91,6 +107,8 @@ const Reception = () => {
             .then((res) => {
                 console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
             })
+            alert(aName.current.value + " has been successfully deleted")
+
         setRerender(true);
     }
 
@@ -134,6 +152,8 @@ const Reception = () => {
             .then((res) => {
                 console.log("🚀 ~ file: Patients.js ~ line 61 ~ .then ~ res", res)
             })
+            alert(aName.current.value + " has been successfully updated")
+
         setRerender(true);
     }
 
@@ -210,9 +230,7 @@ const Reception = () => {
 
             <h18>Welcome back {username} | {userRank == 'Head' ? 'Head Receptionist' : 'General Receptionist'}</h18>
 
-            <div className="logout">
-            <li><a href="/">Log Out</a></li>
-            </div>
+            <div className="logout" onClick={logout}><div className="logout-button">Log out</div></div>
         </div>
 
         <div class="update-user">

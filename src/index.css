@@ -63,26 +63,7 @@ html, p, body {
   border: solid 2px #F174AC;
 }
 
-.logout {
-  list-style: none;  
-}
 
-.logout a:hover, a:after {
-  color: rgb(171, 59, 171);  
-}
-
-.logout a, ul{
-  color: rgb(0, 0, 0);
-  font-family: 'Raleway', sans-serif;  
-  margin-top: -1vh;
-  margin-left: 10vh;
-  font-size: 11px;
-  position: absolute;
-  list-style-type: none;
-  text-decoration: none;
-  cursor: pointer;
-  
-}
 .box2 {
   height: 5vh;
   width: 65vh;
@@ -282,7 +263,7 @@ html, p, body {
   font-family: 'Raleway', sans-serif;  
   font-size: 20px;
   color: white;
-
+  cursor: pointer;
 }
 .button2 {
   height: 5vh;
@@ -298,6 +279,7 @@ html, p, body {
   font-family: 'Raleway', sans-serif;  
   font-size: 20px;
   color: white;
+  cursor: pointer;
 }
 .button3 {
   border-radius: 5vh;
@@ -309,6 +291,7 @@ html, p, body {
   position: absolute;
   background-color: white;
   box-shadow: 0px 1px 5px 1px #D8BBD7;
+  cursor: pointer;
 }
 .button4 {
   border-radius: 5vh;
@@ -320,6 +303,7 @@ html, p, body {
   position: absolute;
   background-color: white;
   box-shadow: 0px 1px 5px 1px #D8BBD7;
+  cursor: pointer;
 }
 
 
@@ -333,6 +317,7 @@ html, p, body {
   position: absolute;
   background-color: white;
   box-shadow: 0px 1px 5px 1px #D8BBD7;
+  cursor: pointer;
 }
 
 .add-user-button {
@@ -345,6 +330,7 @@ html, p, body {
   position: absolute;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 5px 1px #D8BBD7;
+  cursor: pointer;
 }
 .add-user-button3 {
   border-radius: 5vh;
@@ -356,6 +342,7 @@ html, p, body {
   position: absolute;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 5px 1px #D8BBD7;
+  cursor: pointer;
 }
 .button5 {
   border-radius: 5vh;
@@ -367,6 +354,7 @@ html, p, body {
   position: absolute;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 5px 1px #D8BBD7;
+  cursor: pointer;
 }
 .gender-button {
   border-radius: 5vh;
@@ -377,6 +365,7 @@ html, p, body {
   width: 32vh;
   position: absolute;
   border: 1px solid rgb(246, 220, 235);
+  cursor: pointer;
 }
 .login-link  {
   color: rgb(0, 0, 0);
@@ -567,9 +556,8 @@ p3 {
   border-style: none;
   background-color: #f9c8de;
   margin-top: 20vh;
+  cursor: pointer;
 }
-
-
 
 .delUser2 {
   height: 3vh;
@@ -581,6 +569,7 @@ p3 {
   box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
   margin-top: 10vh;
   position: absolute;
+  cursor: pointer;
 }
 .delUser3 {
   height: 3vh;
@@ -592,6 +581,7 @@ p3 {
   box-shadow: 0px 5px 10px 5px rgba(222, 186, 230, 0.3);
   margin-top: 10vh;
   position: absolute;
+  cursor: pointer;
 }
 
 h1 {
@@ -615,6 +605,8 @@ h1 {
   position: absolute;
 } */
 
+
+/* Navigation  */
 .side-nav {
   height: 133vh;
   width: 19vh;
@@ -623,17 +615,17 @@ h1 {
   background-color: rgb(153, 126, 143);
   position: absolute;
   border-radius: 5vh;
-}
+  cursor: pointer;
 
+}
 .nav a, ul {
   list-style-type: none;
   font-family: 'Raleway', sans-serif;  
   margin-top: 40vh;
+  margin-left: 12vh;
   line-height: 5vh;
   font-size: 12px;
 }
-
-
 a {
   line-height: 5vh;
   text-decoration: none;
@@ -642,13 +634,29 @@ a {
   padding-top: 5px;
   margin-left: -9vh;
 }
-
-a:hover, a:after {
-  height: 20px;
-  padding: 10px;
-  color: rgb(171, 59, 171);
+a:hover {
+  color: rgb(242, 178, 242);
 }
 
+/* Sign out */
+
+.logout-button:hover {
+  color: rgb(242, 178, 242);
+}
+
+.logout-button {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;  
+  margin-top: 1.5vh;
+  margin-left: 10.5vh;
+  font-size: 12px;
+  position: absolute;
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Images */
 .facebook {
   height: 5vh;
   width: 5vh;
@@ -1014,7 +1022,7 @@ label {
   float: left;
   border-radius: 5vh;
   width: 35vh;
-  height: 30vh;
+  height: 33vh;
   position: center;
   margin-right: 1vh;
   margin-left: 1vh;
@@ -1296,6 +1304,7 @@ h18 {
   position: absolute;
   margin-top: 10vh;
   margin-left: 2vh;
+  cursor: pointer;
 }
 .user-age {
   border-radius: 5vh;
@@ -1315,6 +1324,7 @@ h18 {
   margin-top:  17vh;
   width: 31vh;
   position: absolute;
+  cursor: pointer;
 }
 .user-email {
   border-radius: 5vh;
@@ -1325,6 +1335,7 @@ h18 {
   width: 31vh;
   position: absolute;
   border: 1px solid rgb(246, 220, 235);
+  cursor: pointer;
 } 
  .user-password {
   border-radius: 5vh;
@@ -1335,6 +1346,7 @@ h18 {
   width: 31vh;
   position: absolute;
   border: 1px solid rgb(246, 220, 235);
+  cursor: pointer;
 }
 .pat-password {
   border-radius: 5vh;
@@ -1365,6 +1377,7 @@ h18 {
   width: 31vh;
   position: absolute;
   border: 1px solid rgb(246, 220, 235);
+  cursor: pointer;
 }
 .pat-medicalaid {
   border-radius: 5vh;
@@ -1375,6 +1388,7 @@ h18 {
   width: 31vh;
   position: absolute;
   border: 1px solid rgb(246, 220, 235);
+  cursor: pointer;
 }
 .user-number {
   border-radius: 5vh;
@@ -1383,7 +1397,6 @@ h18 {
   margin-left: 2vh;
   margin-top:  31vh;
   width: 31vh;
-
   position: absolute;
   border: 1px solid rgb(246, 220, 235);
 }
@@ -1440,6 +1453,7 @@ h18 {
   position: absolute;
   background-color: white;
   box-shadow: 0px 1px 5px 1px #D8BBD7;
+  cursor: pointer;
 }
 
 button {
@@ -1451,6 +1465,7 @@ button {
   width: 10vh;
   position: absolute;
   background-color: rgb(248, 224, 250);
+  cursor: pointer;
 }
 
 h25 {
