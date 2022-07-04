@@ -16,7 +16,7 @@
 <p align="center">
 
   <a href="https://github.com/anchenayres/medical_term2.git">
-    <img src="/src/Images/cancerlogo.png" width="250" height="200" border-radius="50%">
+    <img src="/src/Images/mockup2.png" width="250" height="200" border-radius="50%">
   </a>
   
   <h3 align="center">The Breast Cancer Medical Clinic</h3>
@@ -157,10 +157,7 @@ The `Development Process` is the technical implementations and functionality don
 <!-- stipulate all of the functionality you included in the project -->
 <!-- This is your time to shine, explain the technical nuances of your project, how did you achieve the final outcome!-->
 
-* Utilized React `Charts.JS` dependency for Data visualization
 * Implemented Routing with `React-Router v6`.
-* API End Point: link Here 
-* `Plugin` for this.
 * ETC.
 
 #### Highlights
