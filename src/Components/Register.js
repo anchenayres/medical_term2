@@ -113,8 +113,9 @@ const Register = () => {
                      console.log(res);
         
                     if(res.status === 200){
-                        //navigate("/login");
-                        console.log("Working Fine");
+                       navigate("/Reception");
+                        console.log("Working Fine");  
+                        alert("You have successfully registered!")
                     }
                 });
         } 

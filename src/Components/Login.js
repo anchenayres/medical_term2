@@ -9,7 +9,7 @@ import hidePwdImg from '../Images/hidepwd.svg';
 
 
 const Login = () => {
-
+    const navigate = useNavigate();
     
     const [capsError, setCapsError] = useState();
 
@@ -46,28 +46,24 @@ const Login = () => {
         let password = useRef();
 
         const handleSubmit = (e) => {
+
             let inputs = {
                 name: name.current.value,
                 password: password.current.value,
             }
-
-
             e.preventDefault();
             console.log(inputs);                        //DELETE THIS IN FINAL PROJECT!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
             axios.post('http://localhost:8888/medicalApi/userLogin.php', inputs)
             .then(function(response) {
                 console.log(response.data[0].receptionStatus);
-
                 if(response.data !== false){
                     sessionStorage.setItem('activeUser', name.current.value);
                     sessionStorage.setItem('rank', response.data[0].receptionStatus);
-                    //navigate("reception");
+                    navigate("reception");
                 }else {
                     console.log("Not Working!");
                 }
-
-
                 // useEffect(() => {
                 //     let loggedUserName = sessionStorage.getItem('userName');
                 //     setUsername(loggedUserName);

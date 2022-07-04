@@ -75,8 +75,9 @@ const Reception = () => {
         axios.post("http://localhost:8888/medicalApi/addReception.php", details)
         .then((res) => {
         console.log("🚀 ~ file: Reception.js ~ line 66 ~ .then ~ res", res)
-
         })
+        alert({username} + "has been successfully added")
+
         setRerender(true);
     }
 
@@ -138,9 +139,7 @@ const Reception = () => {
 
     return (
     <>
-    {/* <div className="top-nav">
-
-    </div> */}
+   
     
         <div className="pat-appointments">
         <h10>Current Receptionists</h10>
