@@ -22,15 +22,15 @@
   <h3 align="center">The Breast Cancer Medical Clinic</h3>
 
   <p align="center">
-    A react project using the Solar System Api to demonstrate data visualization using charts js  <br>
+    This project is a medical web application where receptionists could manage appointments, doctors and patients.<br>
     
    <br />
    <br />
    <a href="path/to/demonstration/video">View Demo</a>
     ·
-    <a href="https://github.com/anchenayres/21100284_project_term_1/issues">Report Bug</a>
+    <a href="https://github.com/anchenayres/medical_term2/issues">Report Bug</a>
     ·
-    <a href="https://github.com/anchenayres/21100284_project_term_1/issues">Request Feature</a>
+    <a href="https://github.com/anchenayres/medical_term2/issues">Request Feature</a>
 </p>
 <!-- TABLE OF CONTENTS -->
 
@@ -116,22 +116,22 @@ Run the following in the command-line to install all the required dependencies:
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 ![image2](https://github.com/anchenayres/medical_term2/blob/main/src/Images/mockup1.png)
 
-### All The Latest Solar System Data! 
+### See all the available appointments in the appointments page! 
 
-Usding the Solar System API, we have collected and collated all the most relevant Solar System data into once seemless react experience!
+Here you are able to create an appointment, delete an appointment and update an appointment.
 
-![image3][image3]
 ### Feature 2
 
 Description of Feature
 
-![image4](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype3.png)
+![image3](https://github.com/anchenayres/medical_term2/blob/main/src/Images/mockup2.png)
 ### Feature 3
 
-Description of Feature
+Here you are able to see see all the available doctors which you can edit, update and delete at any time. It is a very functional and clean design for users.
 
-![image5](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype4.png)
+![image4](https://github.com/anchenayres/medical_term2/blob/main/src/Images/mockup3.png)
 
+Here you are able to see see all the receptionists which you can edit, update and delete at any time. Only the head receptionist which is logged in is able to edit this database.
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
@@ -142,20 +142,11 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Ideation
 
-![image5](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/pinterest1.png)
-<br>
-![image6](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/pinterest2.png)
+![image5](https://github.com/anchenayres/medical_term2/blob/main/src/Images/pinterest1.png)
 
 ### Wireframes
 
-![image7](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/screenshot1.png)
-![image8](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/wireframe2.png)
-![image9](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/wireframe3.png)
-
 ### Custom UI
-
-![image10](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype2.png)
-
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
@@ -174,50 +165,45 @@ The `Development Process` is the technical implementations and functionality don
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* How to implement Charts.js was exciting once I got it right although it did take me a while
-* I enjoyed searching for an API, there were so many to choose from and exploring various wireframes
-* I also enjoyed implementing my UI Element as well as choosing an overall theme for the web application
+* Learning the basics of PHP, backend development and SQL.
+* Implementing the caps lock function which creates an alert when a user accidentally had their caps lock on while logging in their password
+* Implementing the toggle between see and unsee password for the login page
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* I struggled to work between two laptops, I struggled to clone the repositories 
+* I struggled to work between a laptop and desktop because of data not showing
 * Regularly had bugs
 * The functionality of this project was very time consuming and I had to seek help in order to see if my functions were on the right track
-* Specifically adding my time line on the Dashboard, as I had to add a substring in order to view just the year of the data which I eventually found through Stack overflow
-
-
 
 #### Above And Beyond
 
 What aspects of this final build contribute to the `Above And Beyond` Component of your brief?
 <!-- what did you learn outside of the classroom and implement into your project-->
-* Gif
-* I added a gif on my Dashboard, Comparison and Time line page as my icon for the web application. Through so much trial and error I eventually figured out that it was actually simple, I just had to add the gif to the css and style it from there. 
+* Implementing the caps lock function which creates an alert when a user accidentally had their caps lock on while logging in their password
+* Implementing the toggle between see and unsee password for the login page
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-* The styling of my graphs could be much better! I could have made it a bit more visually appealing and spend more time on it and I started styling them too late.
-* There could be more features in the web application, as many of the pages feel unfinished although I just tried to keep them simple, there could have been a bit more exploration to that aspect.
+* I would focus on my time management and spreading out my work load throughout the term instead of stressing about functionalities not working as they should last minute
+* The imagery was unable to load on all the pages all though my functionality looks correct I was unable to successfuly load an image which was selected by the user 
 
 <!-- MOCKUPS -->
 ## Final Outcome
 
 ### Mockups
 
-![image11](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype1.png)
-<br>
-![image12](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype2.png)
+![image6](https://github.com/anchenayres/medical_term2/blob/main/src/Images/mockup4.png)
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
 
 To see a run through of the application, click below:
 
-[View Demonstration](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/demo.mov)
+<!-- [View Demonstration](https://github.com/anchenayres/medical_term2/blob/main/src/Images/demo.mov) -->
 
 
-See the [open issues](https://github.com/anchenayres/21100284_project_term_1/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/anchenayres/medical_term2/issues) for a list of proposed features (and known issues).
 
 <!-- AUTHORS -->
 ## Authors
@@ -233,7 +219,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Contact
 
 * **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/) 
-* **Project Link** - https://github.com/anchenayres/21100284_project_term_1
+* **Project Link** - https://github.com/anchenayres/medical_term2
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
