@@ -16,7 +16,7 @@
 <p align="center">
 
   <a href="https://github.com/anchenayres/medical_term2.git">
-    <img src="/src/Images/cancerlogo-01.png" width="250" height="200" border-radius="50%">
+    <img src="/src/Images/cancerlogo-01.png" width="200" height="200" border-radius="50%">
   </a>
   
   <h3 align="center">The Breast Cancer Medical Clinic</h3>
@@ -64,7 +64,7 @@
 ## About the Project
 
 <!-- header image of project -->
-![image1](https://github.com/anchenayres/medical_term2/blob/main/src/images/cancer5.jpg)
+![image1](https://github.com/anchenayres/medical_term2/blob/main/src/Images/cancer5.jpg)
 
 ### Project Description
 
